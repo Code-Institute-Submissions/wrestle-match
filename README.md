@@ -87,6 +87,46 @@ additions in aesthetics, gameplay, sound and so on as I continue to gain experie
 Javascript to produce user interatice elements as is to be expected from an IFD project. IF he impresses me with what I see 
 this might help me to decide if he is a good fit for an available position within our company.
 
+### Design Choices
+
+#### Colour Scheme
+
+![Colour palette](https://github.com/Gazroh87/wrestle-match/assets/images/readme/colour-scheme.png)
+
+- First colour is the dominant/primary element colour throughout the website. This colour is a good fit for various reasons. 
+It works well with background images, the gold accent colour, wrestling company logos I might add in 
+future and its a colour that works well with the theme of wrestling.
+- Second colour is the accent colour throughout the website.
+- Third colour is the main text colour.
+- Fourth & fifth colours are the contrasting neutral colours to use where necessary.
+- Sixth colour:
+
+#### Typography
+
+- Rubik is the font I have chosen to use for headings.
+- Roboto is the font I have chosen to use for all other text.
+- These fonts are imported via the head element of a html file from Google Fonts.
+- Sans-serif is the fallback font if for some reason the above fonts can't be imported into the site correctly.
+- Both the Rubik and Roboto fonts are very popular in the developer world and are also very easy to read, so they are both
+attractive and appropriate. 
+
+#### Icons/Imagery
+
+- Font Awesome was used to import icons into the website.
+- In the real world, professional wrestling matches are generally rated using an 'out of 5 stars' rating system so it made 
+sense to incorporate star icons into the design as visual feedback as to how the player performs during a game.
+- The background images I chosen for this website fit the professional wrestling them perfectly and add a little immersion
+and enticement to play the game.
+- The card images add lots of different colour, some very vibrant and others not so, but this occurs in short burts and adds
+variety without really detracting from the overall colour scheme.
+- In conclusion I feel all the icons and imagery in combination with the colour scheme and typography produce a modern and
+attractive looking design.
+
+
+
+
+
+
 
 
 
