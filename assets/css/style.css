@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+}
+
+#flex-container {
+  background: url(../images/background.jpg) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  animation-name: panoramic-scroll;
+  animation-direction: alternate;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-timing-function: linear;
+}
+
+@keyframes panoramic-scroll {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+@media (min-width: 480px) {
+}
+
+@media (min-width: 1280px) {
+  #desktop-wrapper {
+    background-image: url(../images/steel-cage.png);
+  }
+
+  #flex-container {
+    margin: 0 10%;
+    animation: none;
+  }
+}
+
+@media (min-width: 2560px) {
+}
+
+@media (min-width: 3840px) {
+}
