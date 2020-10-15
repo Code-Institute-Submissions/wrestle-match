@@ -19,7 +19,7 @@ real challenge is trying to get a 5-star rating whilst completing a game in the 
 a singleplayer game at it's core, users in the local vacinity to each other can take turns playing the game on a single 
 device, trying to beat eachothers star ratings and completion times. This particular game will be quite unique, in that the 
 images on the faces of cards can be a completely different set from one game to the next and this adds much more colour and 
-variety to the game board aswell as extra replayability as the user doesn't have to see the same small setof imagery each 
+variety to the game board aswell as extra replayability as the user doesn't have to see the same small set of imagery each 
 game they play.
 
 To play WRESTLE MATCH!, click [>>HERE<<](https://gazroh87.github.io/wrestle-match/)
@@ -70,6 +70,22 @@ in the game being accessible and playable on any device with an up to date brows
 users to return in the future.
 
 ### User Stories
+
+- As a new visitor to this website, I want to easily navigate around the site, so I can traverse efficiently.
+- As a new visitor, I would like to be able to easily understand how to play the game.
+- As a new visitor, I would like to Quickly recognise any interactive elements and build an understanding of how one thing 
+leads to another so the website flows well.
+- As a new visitor, I want responsiveness and a consistent design so I can play the game on a range of devices and screen 
+sizes and not be confused by any unnecessary, drastic changes.
+- As a returning visitor to this website, I would like to see some form of variation to what I have previously seen whether 
+it's just different art work or new animations or game modes in the form of updates so I can get increased replayability.
+- As a developer, I wanted to make my first game as gaming has always been my favourite activity in my spare time. Wrestling 
+is another interest of mine so this has been an easy way of killing two birds with one stone.
+- As a developer, I want to have options for projects I can continue to build on with updates introducing enhancements and 
+additions in aesthetics, gameplay, sound and so on as I continue to gain experience and expand on my skills.
+- As an employer, I want to see what Gary is capable of doing as a software developer by seeing clear and proper usage of 
+Javascript to produce user interatice elements as is to be expected from an IFD project. IF he impresses me with what I see 
+this might help me to decide if he is a good fit for an available position within our company.
 
 
 
