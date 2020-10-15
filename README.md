@@ -84,14 +84,14 @@ is another interest of mine so this has been an easy way of killing two birds wi
 - As a developer, I want to have options for projects I can continue to build on with updates introducing enhancements and 
 additions in aesthetics, gameplay, sound and so on as I continue to gain experience and expand on my skills.
 - As an employer, I want to see what Gary is capable of doing as a software developer by seeing clear and proper usage of 
-Javascript to produce user interatice elements as is to be expected from an IFD project. IF he impresses me with what I see 
+JavaScript to produce user interatice elements as is to be expected from an IFD project. IF he impresses me with what I see 
 this might help me to decide if he is a good fit for an available position within our company.
 
 ### Design Choices
 
 #### Colour Scheme
 
-![Colour palette](https://github.com/Gazroh87/wrestle-match/assets/images/readme/colour-scheme.png)
+![Colour palette](https://github.com/Gazroh87/wrestle-match/blob/master/assets/images/readme/colour-scheme.png)
 
 - First colour is the dominant/primary element colour throughout the website. This colour is a good fit for various reasons. 
 It works well with background images, the gold accent colour, wrestling company logos I might add in 
@@ -122,12 +122,44 @@ variety without really detracting from the overall colour scheme.
 - In conclusion I feel all the icons and imagery in combination with the colour scheme and typography produce a modern and
 attractive looking design.
 
+### Strategy
 
+The focus of this project is on using the knowledge I have learned of JavaScript to build a responsive application in this
+case a card matching memory game to demonstrate to anyone my capabilities in JavaScript alongside HTML and CSS. This game had
+to provide some fun and be memorable for some uniquesness.
 
+### Scope
 
+Now I would bucket my features into separate lists by priority:
+1. 'Will Do' features had to be completed by my given submission deadline for this project. These have one or both of 
+the following characteristics:
+    * Upper bound: Meet the requirements of a project based on the project specifications.
+    * Lower bound: Show as much prowess in course material as possible. Show that I can use the different facets of 
+    each language (HTML/CSS/JS).
+2. 'Stretch Goals' are features to try to implement if I had time left at the end of the project. These should be 
+relatively quick and easy to implement but only if the above features have been completed.
+3. 'Won't Do' features are features I won't get done before the project deadline but are features I may want to work 
+on in the future and include in future updates.
 
+### Structure
 
+I knew I had to limit what functions and mechanics I wanted to include if I was to finish this project by the final
+submission deadline. WEBSITE LAYOUT/PAGE DESCRIPTIONS HERE
 
+### Skeleton
+
+#### Wireframes
+
+Listed below are the mobile, tablet and desktop wireframes for my website, created using the Balsamiq Wireframes 
+application. These wireframes were produced to show the planned differences in appearance between large and small
+screen sizes, but please note that they do not reflect a 100% replicated end result of my website and were only used 
+as an original concept design to get the layout of each part or particular feature of my website started.
+
+1. Mobile Wireframes - [Click to View](https://github.com/Gazroh87/wrestle-match/blob/master/wireframes/mobile-wireframe.png)
+2. Tablet Wireframes - [Click to View](https://github.com/Gazroh87/wrestle-match/blob/master/wireframes/tablet-wireframe.png)
+3. Desktop Wireframes - [Click to View](https://github.com/Gazroh87/wrestle-match/blob/master/wireframes/desktop-wireframe.png)
+
+## Current Features
 
 
 
