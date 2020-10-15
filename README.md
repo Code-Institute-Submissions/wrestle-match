@@ -158,8 +158,56 @@ as an original concept design to get the layout of each part or particular featu
 1. Mobile Wireframes - [Click to View](https://github.com/Gazroh87/wrestle-match/blob/master/wireframes/mobile-wireframe.png)
 2. Tablet Wireframes - [Click to View](https://github.com/Gazroh87/wrestle-match/blob/master/wireframes/tablet-wireframe.png)
 3. Desktop Wireframes - [Click to View](https://github.com/Gazroh87/wrestle-match/blob/master/wireframes/desktop-wireframe.png)
+___
 
-## Current Features
+## Features
+
+### Current Features
+
+- Responsiveness to all device sizes makes the website easily accessible and simple to navigate.
+- Predominantly JavaScript powered interactive elements.
+
+
+### Future features/improvements to be implemented
+
+
+___
+
+## Technologies used
+
+### Languages
+
+- HTML5 - The main language used to build the basic layout of the website.
+- CSS3 - This language is used for styling and formatting the base HTML code to personalise my website.
+
+### Frameworks, libraries, editors and version control
+
+
+
+### Additional tools/apps
+___
+## Testing
+
+### User Story Testing
+___
+## Deployment
+
+### GitHub Pages
+
+### Making a Local Clone
+___
+## Credits
+
+### Code
+
+### Content
+
+### Media
+___
+## Disclaimer
+
+This project was created for educational purposes only, for submission to the Code Institute Full Stack Software Development Course for IFD Milestone 2 project grading.
+
 
 
 
