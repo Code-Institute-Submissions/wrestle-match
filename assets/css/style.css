@@ -5,6 +5,78 @@
 }
 
 body {
+  text-align: center;
+}
+
+p,
+h2 span {
+  font-family: Roboto, sans-serif;
+  font-size: 9px;
+  line-height: 13px;
+}
+
+h1,
+h2,
+h3 {
+  color: #fafafa;
+  font-family: Rubik, sans-serif;
+}
+
+header {
+  background-color: #8c2775;
+  border: #e6bb61 solid 1px;
+  position: relative;
+  padding: 4px;
+  margin: 0 8px;
+}
+
+header h2 {
+  font-size: 27px;
+  line-height: 38px;
+  font-weight: 700;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+
+header h2 span {
+  color: rgba(225, 225, 225, 0.75);
+  font-style: italic;
+  display: inline;
+  text-transform: capitalize;
+  padding: 7px;
+}
+
+header .far {
+  display: none;
+  position: absolute;
+}
+
+header .far:first-child {
+  top: 0;
+  left: 0;
+}
+
+header .far:nth-child(2) {
+  top: 0;
+  right: 0;
+}
+
+header .far:nth-child(3) {
+  bottom: 0;
+  left: 0;
+}
+
+header .far:nth-child(4) {
+  bottom: 0;
+  right: 0;
+}
+
+.five-stars .fa-star {
+  color: #e6bb61;
+  font-size: 9px;
+  line-height: 13px;
+  padding: 2.5px 10px;
+  margin: 2.5px 10px;
 }
 
 #flex-container {
@@ -13,10 +85,11 @@ body {
   height: 100vh;
   animation-name: panoramic-scroll;
   animation-direction: alternate;
-  animation-duration: 20s;
+  animation-duration: 12s;
   animation-iteration-count: infinite;
-  animation-play-state: running;
   animation-timing-function: linear;
+  background-color: #0a0a0a;
+  padding: 12px;
 }
 
 @keyframes panoramic-scroll {
@@ -28,12 +101,49 @@ body {
   }
 }
 
+#home-anchor h1 {
+  font-size: 36px;
+  line-height: 50px;
+  font-weight: 800;
+  display: inline;
+  margin: 0 auto;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  -o-text-overflow: ellipsis !important;
+  text-overflow: ellipsis !important;
+}
+
+#home-anchor h1 span:first-child {
+  display: inline-block;
+  animation-name: title-scroll;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  padding-left: 100%;
+  animation-direction: alternate;
+}
+
+@keyframes title-scroll {
+  0% {
+    transform: translate(-100%, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
 @media (min-width: 480px) {
+  #home-anchor h1 span:first-child {
+    animation: none;
+    padding: 0;
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: 1280px) {
   #desktop-wrapper {
     background-image: url(../images/steel-cage.png);
+    background-color: #0a0a0a;
   }
 
   #flex-container {
