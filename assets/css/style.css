@@ -47,28 +47,30 @@ header h2 span {
 }
 
 header .far {
-  display: none;
+  color: #e6bb61;
   position: absolute;
+  font-size: 9px;
+  line-height: 13px;
 }
 
 header .far:first-child {
-  top: 0;
-  left: 0;
+  top: 2px;
+  left: 2px;
 }
 
 header .far:nth-child(2) {
-  top: 0;
-  right: 0;
+  top: 2px;
+  right: 2px;
 }
 
 header .far:nth-child(3) {
-  bottom: 0;
-  left: 0;
+  bottom: 2px;
+  left: 2px;
 }
 
 header .far:nth-child(4) {
-  bottom: 0;
-  right: 0;
+  bottom: 2px;
+  right: 2px;
 }
 
 .five-stars .fa-star {
@@ -90,6 +92,11 @@ header .far:nth-child(4) {
   animation-timing-function: linear;
   background-color: #0a0a0a;
   padding: 12px;
+}
+
+#head-brand {
+  padding: 5px 2px 0 2px;
+  margin: 5px 2px 0 2px;
 }
 
 @keyframes panoramic-scroll {
@@ -132,7 +139,84 @@ header .far:nth-child(4) {
   }
 }
 
+@media (min-width: 400px) {
+  header h2 span {
+    display: block;
+    padding: 7px;
+  }
+}
+
 @media (min-width: 480px) {
+  p,
+  h2 span {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  header {
+    border: #e6bb61 solid 4px;
+    padding: 8px;
+    margin: 0 16px;
+  }
+
+  header h2 {
+    font-size: 36px;
+    line-height: 51px;
+  }
+
+  header .far {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  header .far:first-child {
+    top: 5px;
+    left: 5px;
+  }
+
+  header .far:nth-child(2) {
+    top: 5px;
+    right: 5px;
+  }
+
+  header .far:nth-child(3) {
+    bottom: 5px;
+    left: 5px;
+  }
+
+  header .far:nth-child(4) {
+    bottom: 5px;
+    right: 5px;
+  }
+
+  .five-stars .fa-star {
+    font-size: 12px;
+    line-height: 18px;
+    padding: 5px 12px;
+    margin: 5px 12px;
+  }
+
+  #flex-container {
+    padding: 24px;
+  }
+
+  #head-brand {
+    padding: 10px 5px 0 5px;
+    margin: 10px 5px 0 5px;
+  }
+
+  #home-anchor h1 {
+    font-size: 48px;
+    line-height: 67px;
+  }
+}
+
+@media (min-width: 600px) {
+  header {
+    margin: 0 auto;
+    width: 520px;
+  }
+
   #home-anchor h1 span:first-child {
     animation: none;
     padding: 0;
@@ -141,6 +225,56 @@ header .far:nth-child(4) {
 }
 
 @media (min-width: 1280px) {
+  p,
+  h2 span {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  header {
+    border: #e6bb61 solid 6px;
+    padding: 16px;
+    margin: 0 auto;
+    width: 700px;
+  }
+
+  header h2 {
+    font-size: 45px;
+    line-height: 64px;
+  }
+
+  header .far {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  header .far:first-child {
+    top: 10px;
+    left: 10px;
+  }
+
+  header .far:nth-child(2) {
+    top: 10px;
+    right: 10px;
+  }
+
+  header .far:nth-child(3) {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  header .far:nth-child(4) {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .five-stars .fa-star {
+    font-size: 15px;
+    line-height: 22px;
+    padding: 5px 20px;
+    margin: 5px 20px;
+  }
+
   #desktop-wrapper {
     background-image: url(../images/steel-cage.png);
     background-color: #0a0a0a;
@@ -149,6 +283,17 @@ header .far:nth-child(4) {
   #flex-container {
     margin: 0 10%;
     animation: none;
+    padding: 48px;
+  }
+
+  #head-brand {
+    padding: 12px 8px 0 8px;
+    margin: 12px 8px 0 8px;
+  }
+
+  #home-anchor h1 {
+    font-size: 60px;
+    line-height: 84px;
   }
 }
 
