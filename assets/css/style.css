@@ -15,6 +15,10 @@ h2 span {
   line-height: 13px;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 h1,
 h2,
 h3 {
@@ -283,12 +287,12 @@ header .far:nth-child(4) {
   #flex-container {
     margin: 0 10%;
     animation: none;
-    padding: 48px;
+    padding: 36px;
   }
 
   #head-brand {
-    padding: 12px 8px 0 8px;
-    margin: 12px 8px 0 8px;
+    padding: 12px 10px 0 10px;
+    margin: 12px 10px 0 10px;
   }
 
   #home-anchor h1 {
@@ -298,7 +302,131 @@ header .far:nth-child(4) {
 }
 
 @media (min-width: 2560px) {
+  p,
+  h2 span {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  header {
+    border: #e6bb61 solid 7px;
+    padding: 24px;
+    width: 800px;
+  }
+
+  header h2 {
+    font-size: 54px;
+    line-height: 77px;
+  }
+
+  header .far {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  header .far:first-child {
+    top: 20px;
+    left: 20px;
+  }
+
+  header .far:nth-child(2) {
+    top: 20px;
+    right: 20px;
+  }
+
+  header .far:nth-child(3) {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  header .far:nth-child(4) {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .five-stars .fa-star {
+    font-size: 18px;
+    line-height: 27px;
+    padding: 5px 25px;
+    margin: 5px 25px;
+  }
+
+  #flex-container {
+    padding: 48px;
+  }
+
+  #head-brand {
+    padding: 20px 12px 0 12px;
+    margin: 20px 12px 0 12px;
+  }
+
+  #home-anchor h1 {
+    font-size: 72px;
+    line-height: 100px;
+  }
 }
 
 @media (min-width: 3840px) {
+  p,
+  h2 span {
+    font-size: 21px;
+    line-height: 31px;
+  }
+
+  header {
+    border: #e6bb61 solid 10px;
+    padding: 32px;
+    width: 1000px;
+  }
+
+  header h2 {
+    font-size: 63px;
+    line-height: 89px;
+  }
+
+  header .far {
+    font-size: 21px;
+    line-height: 31px;
+  }
+
+  header .far:first-child {
+    top: 40px;
+    left: 40px;
+  }
+
+  header .far:nth-child(2) {
+    top: 40px;
+    right: 40px;
+  }
+
+  header .far:nth-child(3) {
+    bottom: 40px;
+    left: 40px;
+  }
+
+  header .far:nth-child(4) {
+    bottom: 40px;
+    right: 40px;
+  }
+
+  .five-stars .fa-star {
+    font-size: 21px;
+    line-height: 31px;
+    padding: 5px 30px;
+    margin: 5px 30px;
+  }
+
+  #flex-container {
+    padding: 60px;
+  }
+
+  #head-brand {
+    padding: 25px 20px 0 20px;
+    margin: 25px 20px 0 20px;
+  }
+
+  #home-anchor h1 {
+    font-size: 84px;
+    line-height: 118px;
+  }
 }
