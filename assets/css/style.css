@@ -20,14 +20,23 @@ a:hover {
 }
 
 h1,
-h2,
-h3 {
+h2 {
   color: #fafafa;
   font-family: Rubik, sans-serif;
 }
 
+h3 {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 500;
+}
+
+h1:hover {
+  color: #ebcb88;
+}
+
 header {
-  background-color: #8c2775;
+  background-color: #8c2755;
   border: #e6bb61 solid 1px;
   position: relative;
   padding: 4px;
@@ -40,6 +49,7 @@ header h2 {
   font-weight: 700;
   margin: 0 auto;
   text-transform: uppercase;
+  word-spacing: 6px;
 }
 
 header h2 span {
@@ -48,6 +58,7 @@ header h2 span {
   display: inline;
   text-transform: capitalize;
   padding: 7px;
+  letter-spacing: 2px;
 }
 
 header .far {
@@ -85,6 +96,66 @@ header .far:nth-child(4) {
   margin: 2.5px 10px;
 }
 
+main {
+  margin: 0 8px;
+}
+
+.btn-group-vertical {
+  width: 75%;
+}
+
+nav .btn-group-vertical .btn-block {
+  background-color: #e6bb61;
+  color: #0a0a0a;
+  border: white solid 1px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+nav .btn-group-vertical .btn-block i {
+  display: none;
+}
+
+nav .btn-group-vertical .btn-block h3 {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 118px;
+  transform: translateY(15%);
+}
+
+nav .btn-group-vertical .btn-block h3 {
+  display: inline;
+}
+
+.btn-group-vertical .btn-block:hover,
+nav .btn-group-vertical .btn-block:hover i {
+  background-color: #ebcb88;
+  color: #8c2755;
+  display: flex;
+}
+
+footer {
+  background-color: #8c2755;
+  border: #e6bb61 solid 1px;
+  padding: 4px;
+  margin: 0 auto;
+  width: 50%;
+}
+
+footer p {
+  color: #fafafa;
+  line-height: 9px;
+  font-weight: 200;
+  margin-bottom: 0;
+  letter-spacing: 2px;
+}
+
 #flex-container {
   background: url(../images/background.jpg) no-repeat center;
   background-size: cover;
@@ -96,11 +167,18 @@ header .far:nth-child(4) {
   animation-timing-function: linear;
   background-color: #0a0a0a;
   padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #head-brand {
   padding: 5px 2px 0 2px;
   margin: 5px 2px 0 2px;
+}
+
+#head-brand #home-anchor:hover {
+  color: #ebcb88;
 }
 
 @keyframes panoramic-scroll {
