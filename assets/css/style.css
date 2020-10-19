@@ -150,7 +150,6 @@ footer {
 
 footer p {
   color: #fafafa;
-  line-height: 9px;
   font-weight: 200;
   margin-bottom: 0;
   letter-spacing: 2px;
@@ -235,6 +234,11 @@ footer p {
     line-height: 18px;
   }
 
+  h3 {
+    font-size: 24px;
+    line-height: 35px;
+  }
+
   header {
     border: #e6bb61 solid 4px;
     padding: 8px;
@@ -278,6 +282,28 @@ footer p {
     margin: 5px 12px;
   }
 
+  .btn-group-vertical {
+    width: 50%;
+  }
+
+  nav .btn-group-vertical .btn-block {
+    border: white solid 4px;
+  }
+
+  nav .btn-group-vertical .btn-block h3 {
+    width: 168px;
+  }
+
+  .btn-block+.btn-block {
+    margin-top: 1rem;
+}
+
+  footer {
+    border: #e6bb61 solid 4px;
+    padding: 8px;
+    width: 50%;
+  }
+
   #flex-container {
     padding: 24px;
   }
@@ -311,6 +337,11 @@ footer p {
   h2 span {
     font-size: 15px;
     line-height: 22px;
+  }
+
+  h3 {
+    font-size: 30px;
+    line-height: 44px;
   }
 
   header {
@@ -357,6 +388,20 @@ footer p {
     margin: 5px 20px;
   }
 
+  nav .btn-group-vertical .btn-block {
+    border: white solid 6px;
+  }
+
+  nav .btn-group-vertical .btn-block h3 {
+    width: 200px;
+  }
+
+  footer {
+    border: #e6bb61 solid 6px;
+    padding: 16px;
+    width: 40%;
+  }
+
   #desktop-wrapper {
     background-image: url(../images/steel-cage.png);
     background-color: #0a0a0a;
@@ -384,6 +429,11 @@ footer p {
   h2 span {
     font-size: 18px;
     line-height: 27px;
+  }
+
+  h3 {
+    font-size: 36px;
+    line-height: 52px;
   }
 
   header {
@@ -429,6 +479,28 @@ footer p {
     margin: 5px 25px;
   }
 
+  .btn-group-vertical {
+    width: 40%;
+  }
+
+  nav .btn-group-vertical .btn-block {
+    border: white solid 7px;
+  }
+
+  nav .btn-group-vertical .btn-block h3 {
+    width: 250px;
+  }
+
+  .btn-block+.btn-block {
+    margin-top: 2rem;
+}
+
+  footer {
+    border: #e6bb61 solid 7px;
+    padding: 24px;
+    width: 25%;
+  }
+
   #flex-container {
     padding: 48px;
   }
@@ -449,6 +521,11 @@ footer p {
   h2 span {
     font-size: 21px;
     line-height: 31px;
+  }
+
+  h3 {
+    font-size: 42px;
+    line-height: 61px;
   }
 
   header {
@@ -492,6 +569,28 @@ footer p {
     line-height: 31px;
     padding: 5px 30px;
     margin: 5px 30px;
+  }
+
+  .btn-group-vertical {
+    width: 25%;
+  }
+
+  nav .btn-group-vertical .btn-block {
+    border: white solid 10px;
+  }
+
+  nav .btn-group-vertical .btn-block h3 {
+    width: 300px;
+  }
+
+  .btn-block+.btn-block {
+    margin-top: 3rem;
+}
+
+  footer {
+    border: #e6bb61 solid 10px;
+    padding: 32px;
+    width: 20%;
   }
 
   #flex-container {
