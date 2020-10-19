@@ -25,10 +25,28 @@ h2 {
   font-family: Rubik, sans-serif;
 }
 
+h2 {
+  font-size: 27px;
+  line-height: 38px;
+  font-weight: 700;
+  word-spacing: 6px;
+}
+
 h3 {
+  color: #0a0a0a;
   font-size: 18px;
   line-height: 26px;
   font-weight: 500;
+}
+
+h4 {
+  color: #0a0a0a;
+}
+
+h4,
+.modal-body .btn-lg:hover i {
+  font-size: 14px;
+  line-height: 20px;
 }
 
 h1:hover {
@@ -44,12 +62,8 @@ header {
 }
 
 header h2 {
-  font-size: 27px;
-  line-height: 38px;
-  font-weight: 700;
   margin: 0 auto;
   text-transform: uppercase;
-  word-spacing: 6px;
 }
 
 header h2 span {
@@ -104,7 +118,7 @@ main {
   width: 75%;
 }
 
-nav .btn-group-vertical .btn-block {
+.btn-lg {
   background-color: #e6bb61;
   color: #0a0a0a;
   border: white solid 1px;
@@ -118,26 +132,68 @@ nav .btn-group-vertical .btn-block {
   align-items: center;
 }
 
-nav .btn-group-vertical .btn-block i {
+.btn-lg i {
   display: none;
 }
 
-nav .btn-group-vertical .btn-block h3 {
+.btn-lg h3 {
   overflow: hidden;
   white-space: nowrap;
-  width: 118px;
-  transform: translateY(15%);
 }
 
-nav .btn-group-vertical .btn-block h3 {
-  display: inline;
+.btn-lg h3 {
+  display: block;
 }
 
-.btn-group-vertical .btn-block:hover,
-nav .btn-group-vertical .btn-block:hover i {
+h3:hover,
+h4:hover {
+  color: #6c2043;
+}
+
+nav .btn-lg:hover,
+nav .btn-lg:hover i {
   background-color: #ebcb88;
-  color: #8c2755;
+  color: #6c2043;
   display: flex;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.modal-dialog {
+  margin: 1rem;
+}
+
+.modal-content {
+  background-color: #8c2755;
+  border: #e6bb61 solid 1px;
+}
+
+.modal-header {
+  border-bottom: solid 1px #786336;
+}
+
+.close {
+  color: #fafafa;
+  text-shadow: 0 1px 0 #0a0a0a;
+}
+
+.modal-body .btn-group-vertical {
+  width: 100%;
+}
+
+.modal-body .btn-lg:hover,
+.modal-body .btn-lg:hover i {
+  background-color: #ebcb88;
+  color: #6c2043;
+  display: flex;
+}
+
+.modal-footer {
+  border-top: solid 1px #786336;
+}
+
+.modal-footer .btn-lg:hover i {
+  display: none;
 }
 
 footer {
@@ -234,9 +290,17 @@ footer p {
     line-height: 18px;
   }
 
-  h3 {
+  h3,
+  nav .btn-lg:hover i,
+  .modal-footer .btn-lg:hover i {
     font-size: 24px;
     line-height: 35px;
+  }
+
+  h4,
+  .modal-body .btn-lg:hover i {
+    font-size: 18px;
+    line-height: 26px;
   }
 
   header {
@@ -245,7 +309,7 @@ footer p {
     margin: 0 16px;
   }
 
-  header h2 {
+  h2 {
     font-size: 36px;
     line-height: 51px;
   }
@@ -283,20 +347,44 @@ footer p {
   }
 
   .btn-group-vertical {
-    width: 50%;
+    width: 60%;
   }
 
-  nav .btn-group-vertical .btn-block {
+  .btn-lg {
     border: white solid 4px;
   }
 
-  nav .btn-group-vertical .btn-block h3 {
+  .btn-lg h3 {
     width: 168px;
   }
 
-  .btn-block+.btn-block {
+  .btn-block + .btn-block {
     margin-top: 1rem;
-}
+  }
+
+  .modal-dialog {
+    min-width: 400px;
+    margin: 1rem auto;
+  }
+
+  .modal-content {
+    border: #e6bb61 solid 4px;
+  }
+
+  .modal-header {
+    border-bottom: solid 4px #786336;
+  }
+
+  .modal-footer {
+    border-top: solid 4px #786336;
+  }
+
+  .modal-footer .btn-lg:hover,
+  .modal-footer .btn-lg:hover i {
+    background-color: #ebcb88;
+    color: #6c2043;
+    display: flex;
+  }
 
   footer {
     border: #e6bb61 solid 4px;
@@ -325,6 +413,11 @@ footer p {
     width: 520px;
   }
 
+  .modal-dialog {
+    min-width: 550px;
+    margin: 2rem auto;
+  }
+
   #home-anchor h1 span:first-child {
     animation: none;
     padding: 0;
@@ -339,9 +432,17 @@ footer p {
     line-height: 22px;
   }
 
-  h3 {
+  h3,
+  nav .btn-lg:hover i,
+  .modal-footer .btn-lg:hover i {
     font-size: 30px;
     line-height: 44px;
+  }
+
+  h4,
+  .modal-body .btn-lg:hover i {
+    font-size: 22px;
+    line-height: 32px;
   }
 
   header {
@@ -351,7 +452,7 @@ footer p {
     width: 700px;
   }
 
-  header h2 {
+  h2 {
     font-size: 45px;
     line-height: 64px;
   }
@@ -388,12 +489,37 @@ footer p {
     margin: 5px 20px;
   }
 
-  nav .btn-group-vertical .btn-block {
+  .btn-group-vertical {
+    width: 40%;
+  }
+
+  .btn-lg {
     border: white solid 6px;
   }
 
-  nav .btn-group-vertical .btn-block h3 {
+  .btn-lg h3 {
     width: 200px;
+  }
+
+  .modal-dialog {
+    min-width: 800px;
+    margin: 3rem auto;
+  }
+
+  .modal-content {
+    border: #e6bb61 solid 6px;
+  }
+
+  .modal-header {
+    border-bottom: solid 6px #786336;
+  }
+
+  .modal-body .btn-group-vertical {
+    width: 75%;
+  }
+
+  .modal-footer {
+    border-top: solid 6px #786336;
   }
 
   footer {
@@ -431,9 +557,17 @@ footer p {
     line-height: 27px;
   }
 
-  h3 {
+  h3,
+  nav .btn-lg:hover i,
+  .modal-footer .btn-lg:hover i {
     font-size: 36px;
     line-height: 52px;
+  }
+
+  h4,
+  .modal-body .btn-lg:hover i {
+    font-size: 27px;
+    line-height: 39px;
   }
 
   header {
@@ -442,7 +576,7 @@ footer p {
     width: 800px;
   }
 
-  header h2 {
+  h2 {
     font-size: 54px;
     line-height: 77px;
   }
@@ -480,20 +614,41 @@ footer p {
   }
 
   .btn-group-vertical {
-    width: 40%;
+    width: 30%;
   }
 
-  nav .btn-group-vertical .btn-block {
+  .btn-lg {
     border: white solid 7px;
   }
 
-  nav .btn-group-vertical .btn-block h3 {
+  .btn-lg h3 {
     width: 250px;
   }
 
-  .btn-block+.btn-block {
+  .btn-block + .btn-block {
     margin-top: 2rem;
-}
+  }
+
+  .modal-dialog {
+    min-width: 1280px;
+    margin: 4rem auto;
+  }
+
+  .modal-content {
+    border: #e6bb61 solid 7px;
+  }
+
+  .modal-header {
+    border-bottom: solid 7px #786336;
+  }
+
+  .modal-body .btn-group-vertical {
+    width: 50%;
+  }
+
+  .modal-footer {
+    border-top: solid 7px #786336;
+  }
 
   footer {
     border: #e6bb61 solid 7px;
@@ -523,9 +678,17 @@ footer p {
     line-height: 31px;
   }
 
-  h3 {
+  h3,
+  nav .btn-lg:hover i,
+  .modal-footer .btn-lg:hover i {
     font-size: 42px;
     line-height: 61px;
+  }
+
+  h4,
+  .modal-body .btn-lg:hover i {
+    font-size: 32px;
+    line-height: 47px;
   }
 
   header {
@@ -534,7 +697,7 @@ footer p {
     width: 1000px;
   }
 
-  header h2 {
+  h2 {
     font-size: 63px;
     line-height: 89px;
   }
@@ -575,17 +738,34 @@ footer p {
     width: 25%;
   }
 
-  nav .btn-group-vertical .btn-block {
+  .btn-lg {
     border: white solid 10px;
   }
 
-  nav .btn-group-vertical .btn-block h3 {
+  .btn-lg h3 {
     width: 300px;
   }
 
-  .btn-block+.btn-block {
+  .btn-block + .btn-block {
     margin-top: 3rem;
-}
+  }
+
+  .modal-dialog {
+    min-width: 1920px;
+    margin: 5rem auto;
+  }
+
+  .modal-content {
+    border: #e6bb61 solid 10px;
+  }
+
+  .modal-header {
+    border-bottom: solid 10px #786336;
+  }
+
+  .modal-footer {
+    border-top: solid 10px #786336;
+  }
 
   footer {
     border: #e6bb61 solid 10px;
