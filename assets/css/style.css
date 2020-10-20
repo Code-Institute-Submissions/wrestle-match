@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Rubik";
+  src: url("rubik.woff2") format("woff2 supports variations");
+  font-weight: 300 900;
+  font-stretch: 25% 151%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -39,8 +46,10 @@ h3 {
   font-weight: 500;
 }
 
+h3,
 h4 {
   color: #0a0a0a;
+  font-family: Rubik, sans-serif;
 }
 
 h4,
@@ -51,6 +60,10 @@ h4,
 
 h1:hover {
   color: #ebcb88;
+}
+
+ul {
+  list-style: none;
 }
 
 header {
@@ -211,9 +224,7 @@ footer p {
   letter-spacing: 2px;
 }
 
-#flex-container {
-  background: url(../images/background.jpg) no-repeat center;
-  background-size: cover;
+.flex-container {
   height: 100vh;
   animation-name: panoramic-scroll;
   animation-direction: alternate;
@@ -225,6 +236,16 @@ footer p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.arena-bg {
+  background: url(../images/arena-bg.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.ring-bg {
+  background: url(../images/ring-bg.jpg) no-repeat center;
+  background-size: cover;
 }
 
 #head-brand {
@@ -392,13 +413,13 @@ footer p {
     width: 50%;
   }
 
-  #flex-container {
+  .flex-container {
     padding: 24px;
   }
 
   #head-brand {
-    padding: 10px 5px 0 5px;
-    margin: 10px 5px 0 5px;
+    padding: 5px 2px;
+    margin: 5px 2px;
   }
 
   #home-anchor h1 {
@@ -416,6 +437,11 @@ footer p {
   .modal-dialog {
     min-width: 550px;
     margin: 2rem auto;
+  }
+
+  #head-brand {
+    padding: 0;
+    margin: 0 auto;
   }
 
   #home-anchor h1 span:first-child {
@@ -533,15 +559,10 @@ footer p {
     background-color: #0a0a0a;
   }
 
-  #flex-container {
+  .flex-container {
     margin: 0 10%;
     animation: none;
     padding: 36px;
-  }
-
-  #head-brand {
-    padding: 12px 10px 0 10px;
-    margin: 12px 10px 0 10px;
   }
 
   #home-anchor h1 {
@@ -656,13 +677,8 @@ footer p {
     width: 25%;
   }
 
-  #flex-container {
+  .flex-container {
     padding: 48px;
-  }
-
-  #head-brand {
-    padding: 20px 12px 0 12px;
-    margin: 20px 12px 0 12px;
   }
 
   #home-anchor h1 {
@@ -773,13 +789,8 @@ footer p {
     width: 20%;
   }
 
-  #flex-container {
+  .flex-container {
     padding: 60px;
-  }
-
-  #head-brand {
-    padding: 25px 20px 0 20px;
-    margin: 25px 20px 0 20px;
   }
 
   #home-anchor h1 {
