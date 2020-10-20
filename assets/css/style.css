@@ -223,6 +223,11 @@ nav .btn-lg:hover i {
 
 .match-rating li {
   display: inline-block;
+  padding: 0.5em;
+}
+
+.move-count {
+  padding: 0.5em;
 }
 
 .deck {
@@ -289,7 +294,7 @@ footer p {
 }
 
 .flex-container {
-  height: 100%;
+  height: 100vh;
   animation-name: panoramic-scroll;
   animation-direction: alternate;
   animation-duration: 12s;
@@ -305,11 +310,13 @@ footer p {
 .arena-bg {
   background: url(../images/arena-bg.jpg) no-repeat center;
   background-size: cover;
+  height: 100%;
 }
 
 .ring-bg {
   background: url(../images/ring-bg.jpg) no-repeat center;
   background-size: cover;
+  height: 100%;
 }
 
 #head-brand {
@@ -471,6 +478,22 @@ footer p {
     display: flex;
   }
 
+  .deck {
+    height: 50em;
+    max-width: 40em;
+    border: #e6bb61 solid 1px;
+    padding: 2em;
+  }
+
+  .card {
+    background: #e6bb61;
+    cursor: pointer;
+    border: #fafafa solid 1px;
+    height: 100px;
+    width: 80px;
+    padding: 1em;
+  }
+
   footer {
     border: #e6bb61 solid 4px;
     padding: 8px;
@@ -610,6 +633,22 @@ footer p {
 
   .modal-footer {
     border-top: solid 6px #786336;
+  }
+
+  .deck {
+    height: 50em;
+    max-width: 40em;
+    border: #e6bb61 solid 1px;
+    padding: 2em;
+  }
+
+  .card {
+    background: #e6bb61;
+    cursor: pointer;
+    border: #fafafa solid 1px;
+    height: 100px;
+    width: 80px;
+    padding: 1em;
   }
 
   footer {
