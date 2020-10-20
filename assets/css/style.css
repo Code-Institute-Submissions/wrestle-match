@@ -246,7 +246,6 @@ nav .btn-lg:hover i {
   min-height: 300px;
   max-width: 400px;
   border: #e6bb61 solid 1px;
-  padding: 1em;
 }
 
 .card {
@@ -255,6 +254,11 @@ nav .btn-lg:hover i {
   border: #fafafa solid 1px;
   height: 50px;
   width: 40px;
+}
+
+.deck,
+.card {
+  box-shadow: 5px 2px 20px 0 rgba(50, 50, 50, 0.5);
   padding: 1em;
 }
 
@@ -481,17 +485,14 @@ footer p {
   .deck {
     height: 50em;
     max-width: 40em;
-    border: #e6bb61 solid 1px;
+    border: #e6bb61 solid 4px;
     padding: 2em;
   }
 
   .card {
-    background: #e6bb61;
-    cursor: pointer;
-    border: #fafafa solid 1px;
+    border: #fafafa solid 4px;
     height: 100px;
     width: 80px;
-    padding: 1em;
   }
 
   footer {
@@ -636,19 +637,16 @@ footer p {
   }
 
   .deck {
-    height: 50em;
-    max-width: 40em;
-    border: #e6bb61 solid 1px;
+    height: 70em;
+    max-width: 56em;
+    border: #e6bb61 solid 6px;
     padding: 2em;
   }
 
   .card {
-    background: #e6bb61;
-    cursor: pointer;
-    border: #fafafa solid 1px;
-    height: 100px;
-    width: 80px;
-    padding: 1em;
+    border: #fafafa solid 6px;
+    height: 150px;
+    width: 120px;
   }
 
   footer {
