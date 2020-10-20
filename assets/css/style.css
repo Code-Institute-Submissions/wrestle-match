@@ -134,7 +134,7 @@ main {
 .btn-lg {
   background-color: #e6bb61;
   color: #0a0a0a;
-  border: white solid 1px;
+  border: #fafafa solid 1px;
   cursor: pointer;
   font-size: 18px;
   line-height: 26px;
@@ -190,6 +190,11 @@ nav .btn-lg:hover i {
   text-shadow: 0 1px 0 #0a0a0a;
 }
 
+.close:hover,
+.close:focus {
+  color: #0a0a0a;
+}
+
 .modal-body .btn-group-vertical {
   width: 100%;
 }
@@ -209,6 +214,65 @@ nav .btn-lg:hover i {
   display: none;
 }
 
+.score-panel {
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+  padding: 2em;
+}
+
+.match-rating li {
+  display: inline-block;
+}
+
+.deck {
+  background: radial-gradient(
+    circle,
+    rgba(198, 147, 170, 0.5),
+    rgba(169, 93, 128, 0.5),
+    rgba(140, 39, 85, 0.5),
+    rgba(108, 32, 67, 0.5),
+    rgba(75, 25, 48, 0.5)
+  );
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 300px;
+  max-width: 400px;
+  border: #e6bb61 solid 1px;
+  padding: 1em;
+}
+
+.card {
+  background: #e6bb61;
+  cursor: pointer;
+  border: #fafafa solid 1px;
+  height: 50px;
+  width: 40px;
+  padding: 1em;
+}
+
+.card,
+.restart-btn {
+  cursor: pointer;
+}
+
+.game-won-modal {
+  display: none;
+}
+
+.game-won-modal .modal-content {
+  justify-content: center;
+  align-items: center;
+  margin: 5% auto;
+  width: 80%;
+}
+
+.modal-img {
+  display: inline-block;
+}
+
 footer {
   background-color: #8c2755;
   border: #e6bb61 solid 1px;
@@ -225,7 +289,7 @@ footer p {
 }
 
 .flex-container {
-  height: 100vh;
+  height: 100%;
   animation-name: panoramic-scroll;
   animation-direction: alternate;
   animation-duration: 12s;
@@ -372,7 +436,7 @@ footer p {
   }
 
   .btn-lg {
-    border: white solid 4px;
+    border: #fafafa solid 4px;
   }
 
   .btn-lg h3 {
@@ -520,7 +584,7 @@ footer p {
   }
 
   .btn-lg {
-    border: white solid 6px;
+    border: #fafafa solid 6px;
   }
 
   .btn-lg h3 {
@@ -639,7 +703,7 @@ footer p {
   }
 
   .btn-lg {
-    border: white solid 7px;
+    border: #fafafa solid 7px;
   }
 
   .btn-lg h3 {
@@ -755,7 +819,7 @@ footer p {
   }
 
   .btn-lg {
-    border: white solid 10px;
+    border: #fafafa solid 10px;
   }
 
   .btn-lg h3 {
