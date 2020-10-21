@@ -1,3 +1,4 @@
+// Card Deck Array
 const cardDeck = [
   "a-black.jpg",
   "a-styles.jpg",
@@ -155,3 +156,20 @@ const cardDeck = [
   "xpac.jpg",
   "yokozuna.jpg",
 ];
+
+// Shuffle function credit to https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array?
+function shuffle(cardDeck) {
+    let currentIndex = cardDeck.length, temporaryValue, randomIndex;
+
+    while (0 !== currentIndex) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        temporaryValue = cardDeck[currentIndex];
+        cardDeck[currentIndex] = cardDeck[randomIndex];
+        cardDeck[randomIndex] = temporaryValue;
+    }
+    return cardDeck;
+}
+
+shuffle(cardDeck);
+console.log(cardDeck);
