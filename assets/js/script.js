@@ -157,20 +157,23 @@ const cardDeck = [
   "yokozuna.jpg",
 ];
 
-// Shuffle function credit to https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array?
-function shuffle(cardDeck) {
-  let currentIndex = cardDeck.length,
+// Access the .deck ul class
+const deck = document.querySelector(".deck");
+
+// Shuffle arrays function credit to https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array?
+function shuffle(array) {
+  let currentIndex = array.length,
     temporaryValue,
     randomIndex;
 
   while (0 !== currentIndex) {
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex -= 1;
-    temporaryValue = cardDeck[currentIndex];
-    cardDeck[currentIndex] = cardDeck[randomIndex];
-    cardDeck[randomIndex] = temporaryValue;
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
   }
-  return cardDeck;
+  return array;
 }
 
 shuffle(cardDeck);
@@ -180,14 +183,13 @@ console.log(cardDeck);
 let cardLimit = 8;
 let currentCards = 0;
 
-// Store the new shuffled cardDeck array in a new variable called shuffledDeck and call the shuffle function on it
+// Store the new shuffled cardDeck array in a new variable called shuffDeck and call the shuffle function on it
 // Slice 4 objects from the array
-let shuffDeck = {};
-shuffDeck = shuffle(cardDeck).slice(0, 4);
+let shuffDeck = shuffle(cardDeck).slice(0, 4);
 console.log(shuffDeck);
 
 // Create a new array by merging two copies of the new shuffDeck together
-shuffDeck.deck = shuffDeck.concat(shuffDeck);
+shuffDeck = shuffDeck.concat(shuffDeck);
 console.log(shuffDeck.deck);
 
 // Added a helper function to add multiple attributes to img elements credit to https://stackoverflow.com/questions/12274748/setting-multiple-attributes-for-an-element-at-once-with-javascript?
@@ -208,8 +210,7 @@ for (let i = 0; i < shuffDeck.length; i++) {
     src: "../assets/images/cards/" + shuffDeck[i],
     alt: "image of a professional wrestler",
   });
-  const cardDeck = document.querySelector(".deck");
-  cardDeck.appendChild(liEl);
+  deck.appendChild(liEl);
 } // End of for loop
 
 if (currentCards < cardLimit) {
