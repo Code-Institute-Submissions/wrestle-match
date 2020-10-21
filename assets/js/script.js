@@ -177,14 +177,25 @@ shuffle(cardDeck);
 console.log(cardDeck);
 
 // Store the new shuffled cardDeck array in a new variable called shuffledDeck and call the shuffle function on it
-const shuffledDeck = shuffle(cardDeck);
+const shuffDeck = shuffle(cardDeck);
+
+// Added a helper function to add multiple attributes to img elements credit to https://stackoverflow.com/questions/12274748/setting-multiple-attributes-for-an-element-at-once-with-javascript?
+function setAttributes(addImg, attrs) {
+  for (let key in attrs) {
+    addImg.setAttribute(key, attrs[key]);
+  }
+}
+
 // Repeat over cardDeck array
-for (let i = 0; i <= cardDeck.length; i++) {
+for (let i = 0; i <= shuffDeck.length; i++) {
   const liEl = document.createElement("li");
   liEl.classList.add("card");
   const addImg = document.createElement("img");
   liEl.appendChild(addImg);
-  addImg.setAttribute("src", "../assets/images/cards/" + shuffledDeck[i]);
+  setAttributes(addImg, {
+    src: "../assets/images/cards/" + shuffDeck[i],
+    alt: "image of a professional wrestler",
+  });
   const cardDeck = document.querySelector(".deck");
   cardDeck.appendChild(liEl);
 } // End of for loop
