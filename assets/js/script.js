@@ -176,8 +176,19 @@ function shuffle(cardDeck) {
 shuffle(cardDeck);
 console.log(cardDeck);
 
+// Set card limit and number of current cards
+let cardLimit = 8;
+let currentCards = 0;
+
 // Store the new shuffled cardDeck array in a new variable called shuffledDeck and call the shuffle function on it
-const shuffDeck = shuffle(cardDeck);
+// Slice 4 objects from the array
+let shuffDeck = {};
+shuffDeck = shuffle(cardDeck).slice(0, 4);
+console.log(shuffDeck);
+
+// Create a new array by merging two copies of the new shuffDeck together
+shuffDeck.deck = shuffDeck.concat(shuffDeck);
+console.log(shuffDeck.deck);
 
 // Added a helper function to add multiple attributes to img elements credit to https://stackoverflow.com/questions/12274748/setting-multiple-attributes-for-an-element-at-once-with-javascript?
 function setAttributes(addImg, attrs) {
@@ -187,11 +198,12 @@ function setAttributes(addImg, attrs) {
 }
 
 // Repeat over cardDeck array
-for (let i = 0; i <= shuffDeck.length; i++) {
+for (let i = 0; i < shuffDeck.length; i++) {
   const liEl = document.createElement("li");
   liEl.classList.add("card");
   const addImg = document.createElement("img");
   liEl.appendChild(addImg);
+
   setAttributes(addImg, {
     src: "../assets/images/cards/" + shuffDeck[i],
     alt: "image of a professional wrestler",
@@ -200,4 +212,7 @@ for (let i = 0; i <= shuffDeck.length; i++) {
   cardDeck.appendChild(liEl);
 } // End of for loop
 
+if (currentCards < cardLimit) {
+  currentCards++;
+}
 console.log(cardDeck);
