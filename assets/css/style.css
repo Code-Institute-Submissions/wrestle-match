@@ -241,11 +241,12 @@ nav .btn-lg:hover i {
   );
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   min-height: 300px;
   max-width: 400px;
   border: #e6bb61 solid 1px;
+  padding: 0.5em;
 }
 
 .card {
@@ -256,10 +257,15 @@ nav .btn-lg:hover i {
   width: 40px;
 }
 
+.card-img {
+  height: 50px;
+  width: 40px;
+}
+
 .deck,
 .card {
   box-shadow: 5px 2px 20px 0 rgba(50, 50, 50, 0.5);
-  padding: 1em;
+  padding: 0.5em;
 }
 
 .card,
@@ -493,6 +499,12 @@ footer p {
     border: #fafafa solid 4px;
     height: 100px;
     width: 80px;
+    padding: 0.5em;
+  }
+
+  .card-img {
+    height: 100px;
+    width: 80px;
   }
 
   footer {
@@ -645,6 +657,11 @@ footer p {
 
   .card {
     border: #fafafa solid 6px;
+    height: 150px;
+    width: 120px;
+  }
+
+  .card-img {
     height: 150px;
     width: 120px;
   }
