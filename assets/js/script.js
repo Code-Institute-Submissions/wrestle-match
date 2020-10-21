@@ -1,4 +1,4 @@
-// Card Deck Array
+// Card deck image array
 const cardDeck = [
   "a-black.jpg",
   "a-styles.jpg",
@@ -159,17 +159,34 @@ const cardDeck = [
 
 // Shuffle function credit to https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array?
 function shuffle(cardDeck) {
-    let currentIndex = cardDeck.length, temporaryValue, randomIndex;
+  let currentIndex = cardDeck.length,
+    temporaryValue,
+    randomIndex;
 
-    while (0 !== currentIndex) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-        temporaryValue = cardDeck[currentIndex];
-        cardDeck[currentIndex] = cardDeck[randomIndex];
-        cardDeck[randomIndex] = temporaryValue;
-    }
-    return cardDeck;
+  while (0 !== currentIndex) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+    temporaryValue = cardDeck[currentIndex];
+    cardDeck[currentIndex] = cardDeck[randomIndex];
+    cardDeck[randomIndex] = temporaryValue;
+  }
+  return cardDeck;
 }
 
 shuffle(cardDeck);
+console.log(cardDeck);
+
+// Store the new shuffled cardDeck array in a new variable called shuffledDeck and call the shuffle function on it
+const shuffledDeck = shuffle(cardDeck);
+// Repeat over cardDeck array
+for (let i = 0; i <= cardDeck.length; i++) {
+  const liEl = document.createElement("li");
+  liEl.classList.add("card");
+  const addImg = document.createElement("img");
+  liEl.appendChild(addImg);
+  addImg.setAttribute("src", "../assets/images/cards/" + shuffledDeck[i]);
+  const cardDeck = document.querySelector(".deck");
+  cardDeck.appendChild(liEl);
+} // End of for loop
+
 console.log(cardDeck);

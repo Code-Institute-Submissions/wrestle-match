@@ -260,6 +260,7 @@ nav .btn-lg:hover i {
 .card-img {
   height: 50px;
   width: 40px;
+  opacity: 0;
 }
 
 .deck,
