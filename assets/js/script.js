@@ -160,6 +160,12 @@ const cardDeck = [
 // Access the .deck ul class
 const deck = document.querySelector(".deck");
 
+// Global arrays
+// Create an empty array to store flipped cards
+let flipped = [];
+// Create an empty array to store matched cards
+let paired = [];
+
 // Shuffle arrays function credit to https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array?
 function shuffle(array) {
   let currentIndex = array.length,
@@ -190,7 +196,7 @@ console.log(shuffDeck);
 
 // Create a new array by merging two copies of the new shuffDeck together
 shuffDeck = shuffDeck.concat(shuffDeck);
-console.log(shuffDeck.deck);
+console.log(shuffDeck);
 
 // Added a helper function to add multiple attributes to img elements credit to https://stackoverflow.com/questions/12274748/setting-multiple-attributes-for-an-element-at-once-with-javascript?
 function setAttributes(addImg, attrs) {
@@ -217,3 +223,45 @@ if (currentCards < cardLimit) {
   currentCards++;
 }
 console.log(cardDeck);
+
+// Event listener if a card is selected
+deck.addEventListener("click", function (evt) {
+  if (evt.target.nodeName === "li") {
+    console.log(evt.target.nodeName + " Was clicked");
+    // Call functions
+    flipCard();
+    addToFlipped();
+    compareTwo();
+  }
+
+  function flipCard() {
+    // When card is selected add .flip class to reveal card face image
+    evt.target.classList.add("flip");
+  }
+
+  function addToFlipped() {
+    // If the flipped array has 0 or 1 image push another into the array for comparison
+    if (flipped.length === 0 || flipped.length === 1) {
+        // Push image to flipped array
+      flipped.push(evt.target.firstElementChild);
+    }
+    // If two cards have been flipped disable further mouse clicks on any cards
+    if (flipped.length === 2) {
+      document.body.style.pointerEvents = "none";
+    }
+  }
+
+  function compareTwo() {
+    if (flipped.length === 2 && flipped[0].src === opened[1].src) {
+      console.log("Matched cards");
+    } else {
+      console.log("Not a match");
+    }
+  }
+
+  function match() {
+      
+  }
+  console.log(paired);
+  console.log(flipped);
+});
