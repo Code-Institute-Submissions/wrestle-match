@@ -266,10 +266,10 @@ nav .btn-lg:hover i {
 
 .flip img {
   visibility: visible;
+  transform: rotateY(0);
 }
 
 .match img {
-  visibility: visible;
 }
 
 .deck,

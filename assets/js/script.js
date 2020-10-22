@@ -165,6 +165,7 @@ const deck = document.querySelector(".deck");
 let flipped = [];
 // Create an empty array to store matched cards
 let paired = [];
+let moveCount = 0;
 
 // Shuffle arrays function credit to https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array?
 function shuffle(array) {
@@ -241,32 +242,47 @@ deck.addEventListener("click", function (evt) {
   function addToFlipped() {
     // If the flipped array has 0 or 1 image push another into the array for comparison
     if (flipped.length === 0 || flipped.length === 1) {
-        // Push image to flipped array
+      // Push image to flipped array
       flipped.push(evt.target.firstElementChild);
-    }
-    // If two cards have been flipped disable further mouse clicks on any cards
-    if (flipped.length === 2) {
-      document.body.style.pointerEvents = "none";
     }
     compareTwo();
   }
-
-  function compareTwo() {
-    if (flipped.length === 2 && flipped[0].src === opened[1].src) {
-      console.log("Matched cards");
-    } else {
-      console.log("Not a match");
-      noPair();
-    }
-  }
-
-  function match() {
-    // Retrieve the two flipped cards and add .match class to the li element  
-    flipped[0].parentElement.classList.add("match");
-    flipped[1].parentElement.classList.add("match");
-    paired.push(flipped);
-    flipped = [];  
-  }
-  console.log(paired);
-  console.log(flipped);
 });
+
+function compareTwo() {
+  if (flipped.length === 2 && flipped[0].src === flipped[1].src) {
+    console.log("Matched cards");
+  } else if (flipped.length === 2 && flipped[0].src != flipped[1].src) {
+    noPair();
+    console.log("Not a match");
+  }
+}
+
+function match() {
+  // Retrieve the two flipped cards and add .match class to the li element
+  flipped[0].parentElement.classList.add("match");
+  flipped[1].parentElement.classList.add("match");
+  paired.push(flipped);
+  flipped = [];
+  // Add 1 to move count
+  moveCounter();
+}
+
+function noPair() {
+  setTimeout(function () {
+    flipped[0].parentElement.classList.remove("flip");
+    flipped[1].parentElement.classList.remove("flip");
+    flipped = [];
+  }, 800);
+  // Add 1 to move count
+  moveCounter();
+}
+
+function moveCounter() {
+  moveCount = document.querySelector(".move-count");
+  moveCount.innerHTML++;
+}
+
+console.log(paired);
+console.log(flipped);
+console.log(flipped.length);
