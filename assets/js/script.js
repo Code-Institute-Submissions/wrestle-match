@@ -230,13 +230,12 @@ deck.addEventListener("click", function (evt) {
     console.log(evt.target.nodeName + " Was clicked");
     // Call functions
     flipCard();
-    addToFlipped();
-    compareTwo();
   }
 
   function flipCard() {
     // When card is selected add .flip class to reveal card face image
     evt.target.classList.add("flip");
+    addToFlipped();
   }
 
   function addToFlipped() {
@@ -249,6 +248,7 @@ deck.addEventListener("click", function (evt) {
     if (flipped.length === 2) {
       document.body.style.pointerEvents = "none";
     }
+    compareTwo();
   }
 
   function compareTwo() {
@@ -256,11 +256,16 @@ deck.addEventListener("click", function (evt) {
       console.log("Matched cards");
     } else {
       console.log("Not a match");
+      noPair();
     }
   }
 
   function match() {
-      
+    // Retrieve the two flipped cards and add .match class to the li element  
+    flipped[0].parentElement.classList.add("match");
+    flipped[1].parentElement.classList.add("match");
+    paired.push(flipped);
+    flipped = [];  
   }
   console.log(paired);
   console.log(flipped);
