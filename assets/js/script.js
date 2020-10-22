@@ -165,15 +165,24 @@ const deck = document.querySelector(".deck");
 let flipped = [];
 // Create an empty array to store matched cards
 let paired = [];
-let moveCount = 0;
+
+const modal = document.getElementById("gameWon");
+
+const moveCount = document.querySelector(".move-count");
+let moves = 0;
+
+const timeCount = document.querySelector(".timer");
+let time;
+let minutes = 0;
+let seconds = 0;
+let startTime = false;
 
 // Shuffle arrays function credit to https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array?
 function shuffle(array) {
   let currentIndex = array.length,
     temporaryValue,
     randomIndex;
-
-  while (0 !== currentIndex) {
+  while (currentIndex !== 0) {
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex -= 1;
     temporaryValue = array[currentIndex];
@@ -183,74 +192,109 @@ function shuffle(array) {
   return array;
 }
 
-shuffle(cardDeck);
-console.log(cardDeck);
-
 // Set card limit and number of current cards
 let cardLimit = 8;
 let currentCards = 0;
+function startGame() {
+  // Store the new shuffled cardDeck array in a new variable called shuffDeck and call the shuffle function on it
+  // Slice 4 objects from the array
+  let shuffDeck = shuffle(cardDeck).slice(0, 4);
+  console.log(shuffDeck);
 
-// Store the new shuffled cardDeck array in a new variable called shuffDeck and call the shuffle function on it
-// Slice 4 objects from the array
-let shuffDeck = shuffle(cardDeck).slice(0, 4);
-console.log(shuffDeck);
+  // Create a new array by merging two copies of the new shuffDeck together
+  newDeck = shuffDeck.concat(shuffDeck);
+  console.log(newDeck);
 
-// Create a new array by merging two copies of the new shuffDeck together
-shuffDeck = shuffDeck.concat(shuffDeck);
-console.log(shuffDeck);
-
-// Added a helper function to add multiple attributes to img elements credit to https://stackoverflow.com/questions/12274748/setting-multiple-attributes-for-an-element-at-once-with-javascript?
-function setAttributes(addImg, attrs) {
-  for (let key in attrs) {
-    addImg.setAttribute(key, attrs[key]);
+  // Repeat over cardDeck array
+  for (let i = 0; i < newDeck.length; i++) {
+    const liEl = document.createElement("LI");
+    liEl.classList.add("card");
+    const addImg = document.createElement("IMG");
+    liEl.appendChild(addImg);
+    // Added a helper function to add multiple attributes to img elements credit to https://stackoverflow.com/questions/12274748/setting-multiple-attributes-for-an-element-at-once-with-javascript?
+    function setAttributes(addImg, attrs) {
+      for (let key in attrs) {
+        addImg.setAttribute(key, attrs[key]);
+      }
+    }
+    setAttributes(addImg, {
+      src: "../assets/images/cards/" + newDeck[i],
+      alt: "image of a professional wrestler",
+    });
+    deck.appendChild(liEl);
   }
+  newDeck.sort(shuffle);
+  (function ($) {
+    $.fn.shuffle = function () {
+      var allElems = this.get(),
+        getRandom = function (max) {
+          return Math.floor(Math.random() * max);
+        },
+        shuffled = $.map(allElems, function () {
+          var random = getRandom(allElems.length),
+            randEl = $(allElems[random]).clone(true)[0];
+          allElems.splice(random, 1);
+          return randEl;
+        });
+
+      this.each(function (i) {
+        $(this).replaceWith($(shuffled[i]));
+      });
+
+      return $(shuffled);
+    };
+  })(jQuery);
+  $("li img").shuffle();
 }
-
-// Repeat over cardDeck array
-for (let i = 0; i < shuffDeck.length; i++) {
-  const liEl = document.createElement("li");
-  liEl.classList.add("card");
-  const addImg = document.createElement("img");
-  liEl.appendChild(addImg);
-
-  setAttributes(addImg, {
-    src: "../assets/images/cards/" + shuffDeck[i],
-    alt: "image of a professional wrestler",
-  });
-  deck.appendChild(liEl);
-} // End of for loop
-
 if (currentCards < cardLimit) {
   currentCards++;
+  console.log(currentCards);
 }
-console.log(cardDeck);
+startGame();
 
-// Event listener if a card is selected
-deck.addEventListener("click", function (evt) {
-  if (evt.target.nodeName === "li") {
-    console.log(evt.target.nodeName + " Was clicked");
-    // Call functions
-    flipCard();
+/*
+Remove all child nodes from the deck <li> tags and
+<img> tags.  To be called in set everything function only
+*/
+function removeCard() {
+  // As long as <ul> deck has a child node, remove it
+  while (deck.hasChildNodes()) {
+    deck.removeChild(deck.firstChild);
   }
+}
 
-  function flipCard() {
-    // When card is selected add .flip class to reveal card face image
-    evt.target.classList.add("flip");
-    addToFlipped();
-  }
-
-  function addToFlipped() {
-    // If the flipped array has 0 or 1 image push another into the array for comparison
-    if (flipped.length === 0 || flipped.length === 1) {
-      // Push image to flipped array
-      flipped.push(evt.target.firstElementChild);
+function timer() {
+  time = setInterval(function () {
+    seconds++;
+    if (seconds === 60) {
+      minutes++;
+      seconds = 0;
     }
-    compareTwo();
-  }
-});
+    timeCount.innerHTML =
+      "<i class='fas fa-stopwatch'></i>" +
+      " Timer: " +
+      minutes +
+      " Mins " +
+      seconds +
+      " Secs";
+  }, 1000);
+}
+
+function stopTime() {
+  clearInterval(time);
+}
+
+function moveCounter() {
+  moveCount.innerHTML++;
+  moves++;
+}
 
 function compareTwo() {
+  if (flipped.length === 2) {
+    document.body.style.pointerEvents = "none";
+  }
   if (flipped.length === 2 && flipped[0].src === flipped[1].src) {
+    match();
     console.log("Matched cards");
   } else if (flipped.length === 2 && flipped[0].src != flipped[1].src) {
     noPair();
@@ -260,35 +304,85 @@ function compareTwo() {
 
 function match() {
   // Retrieve the two flipped cards and add .match class to the li element
-  flipped[0].parentElement.classList.add("match");
-  flipped[1].parentElement.classList.add("match");
-  paired.push(flipped);
-  flipped = [];
+  setTimeout(function () {
+    flipped[0].parentElement.classList.add("match");
+    flipped[1].parentElement.classList.add("match");
+    paired.push(...flipped);
+    // Allow further selecting of cards
+    document.body.style.pointerEvents = "auto";
+    gameWon();
+    flipped = [];
+  }, 500);
   // Add 1 to move count
   moveCounter();
-  gameWon();
 }
 
 function noPair() {
   setTimeout(function () {
     flipped[0].parentElement.classList.remove("flip");
     flipped[1].parentElement.classList.remove("flip");
+    // Allow further selecting of cards
+    document.body.style.pointerEvents = "auto";
     flipped = [];
   }, 800);
   // Add 1 to move count
   moveCounter();
 }
 
-function moveCounter() {
-  moveCount = document.querySelector(".move-count");
-  moveCount.innerHTML++;
+function displayModal() {
+  const closeModal = document.getElementsByClassName("close")[0];
+  modal.style.display = "block";
+  closeModal.onclick = function () {
+    modal.style.display = "none";
+  };
 }
 
 function gameWon() {
-    if (matchMedia.length === 4) {
-        console.log("Winner!");
-    }
+  if (paired.length === 8) {
+    console.log("Winner!");
+    stopTime();
+    displayModal();
+  }
 }
+
+/*----------------------------------  
+Main Event Listener
+------------------------------------*/
+/*
+Event Listener if a card <li> is clicked
+call flipCard()
+*/
+deck.addEventListener("click", function (evt) {
+  if (evt.target.nodeName === "LI") {
+    console.log(evt.target.nodeName + " Was clicked");
+    // Start the timer after the first click of one card
+    // Executes the timer() function
+    if (startTime === false) {
+      startTime = true;
+      timer();
+    }
+    // Call flipCard() function
+    flipCard();
+  }
+
+  //Flip the card and display cards img
+  function flipCard() {
+    // When <li> is clicked add the class .flip to show img
+    evt.target.classList.add("flip");
+    // Call addToOpened() function
+    addToFlipped();
+  }
+
+  //Add the fliped cards to the empty array of flipped
+  function addToFlipped() {
+    if (flipped.length === 0 || flipped.length === 1) {
+      // Push that imgage to flipped array
+      flipped.push(evt.target.firstElementChild);
+    }
+    // Call compareTwo() function
+    compareTwo();
+  }
+});
 
 console.log(paired);
 console.log(paired.length);
