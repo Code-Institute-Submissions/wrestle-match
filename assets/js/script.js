@@ -266,6 +266,7 @@ function match() {
   flipped = [];
   // Add 1 to move count
   moveCounter();
+  gameWon();
 }
 
 function noPair() {
@@ -283,6 +284,13 @@ function moveCounter() {
   moveCount.innerHTML++;
 }
 
+function gameWon() {
+    if (matchMedia.length === 4) {
+        console.log("Winner!");
+    }
+}
+
 console.log(paired);
+console.log(paired.length);
 console.log(flipped);
 console.log(flipped.length);
