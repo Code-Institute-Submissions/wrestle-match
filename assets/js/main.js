@@ -200,43 +200,6 @@ function shuffle(array) {
 }
 
 // Set card limit and number of current cards
-let cardLimit = 8;
-let currentCards = 0;
-function startGame() {
-  // Store the new shuffled cardDeck array in a new variable called shuffDeck and call the shuffle function on it
-  // Slice 4 objects from the array
-  let shuffDeck = shuffle(cardDeck).slice(0, 4);
-  console.log(shuffDeck);
-
-  // Create a new array by merging two copies of the new shuffDeck together
-  newDeck = shuffDeck.concat(shuffDeck);
-  shuffle(newDeck);
-  console.log(newDeck);
-
-  // Repeat over cardDeck array
-  for (let i = 0; i < newDeck.length; i++) {
-    const liEl = document.createElement("LI");
-    liEl.classList.add("card");
-    const addImg = document.createElement("IMG");
-    liEl.appendChild(addImg);
-    // Added a helper function to add multiple attributes to img elements credit to https://stackoverflow.com/questions/12274748/setting-multiple-attributes-for-an-element-at-once-with-javascript?
-    function setAttributes(addImg, attrs) {
-      for (let key in attrs) {
-        addImg.setAttribute(key, attrs[key]);
-      }
-    }
-    setAttributes(addImg, {
-      src: "../assets/images/cards/" + newDeck[i],
-      alt: "image of a professional wrestler",
-    });
-    deck.appendChild(liEl);
-  }
-}
-if (currentCards < cardLimit) {
-  currentCards++;
-  console.log(currentCards);
-}
-startGame();
 
 /*
 Remove all child nodes from the deck <li> tags and
@@ -268,6 +231,34 @@ function timer() {
 
 function stopTime() {
   clearInterval(time);
+}
+
+function resetAll() {
+  stopTime();
+  timeStart = false;
+  seconds = 0;
+  minutes = 0;
+  timeCount.innerHTML =
+    "<i class='fas fa-stopwatch'></i>" +
+    " Timer: 00:00" +
+    minutes +
+    " Mins " +
+    seconds +
+    " Secs";
+  star[1].firstElementChild.classList.add("fa-star");
+  star[2].firstElementChild.classList.add("fa-star");
+  star[3].firstElementChild.classList.add("fa-star");
+  star[4].firstElementChild.classList.add("fa-star");
+  starCount = 5;
+
+  moves = 0;
+  moveCount.innerHTML = 0;
+
+  paired = [];
+
+  flipped = [];
+  removeCard();
+  startGame();
 }
 
 function moveCounter() {
@@ -317,28 +308,6 @@ function noPair() {
   matchRating();
 }
 
-function matchRating() {
-  if (moves === 4) {
-    star[4].firstElementChild.classList.remove("fa-star");
-    starCount--;
-  }
-
-  if (moves === 6) {
-    star[3].firstElementChild.classList.remove("fa-star");
-    starCount--;
-  }
-
-  if (moves === 8) {
-    star[2].firstElementChild.classList.remove("fa-star");
-    starCount--;
-  }
-
-  if (moves === 10) {
-    star[1].firstElementChild.classList.remove("fa-star");
-    starCount--;
-  }
-}
-
 function modalStats() {
   const stats = document.querySelector(".modal-content");
   // Create three different paragraphs
@@ -366,50 +335,6 @@ function displayModal() {
     modal.style.display = "none";
   };
 }
-
-function gameWon() {
-  if (paired.length === 8) {
-    console.log("Winner!");
-    stopTime();
-    modalStats();
-    displayModal();
-  }
-}
-
-function resetAll() {
-  stopTime();
-  timeStart = false;
-  seconds = 0;
-  minutes = 0;
-  timeCount.innerHTML =
-    "<i class='fas fa-stopwatch'></i>" +
-    " Timer: 00:00" +
-    minutes +
-    " Mins " +
-    seconds +
-    " Secs";
-  star[1].firstElementChild.classList.add("fa-star");
-  star[2].firstElementChild.classList.add("fa-star");
-  star[3].firstElementChild.classList.add("fa-star");
-  star[4].firstElementChild.classList.add("fa-star");
-  starCount = 5;
-
-  moves = 0;
-  moveCount.innerHTML = 0;
-
-  paired = [];
-
-  flipped = [];
-  removeCard();
-  startGame();
-}
-
-restart.addEventListener("click", resetAll);
-
-newGame.addEventListener("click", function () {
-  modal.style.display = "none";
-  resetAll();
-});
 
 /*----------------------------------  
 Main Event Listener
@@ -454,3 +379,10 @@ console.log(paired);
 console.log(paired.length);
 console.log(flipped);
 console.log(flipped.length);
+
+restart.addEventListener("click", resetAll);
+
+newGame.addEventListener("click", function () {
+  modal.style.display = "none";
+  resetAll();
+});
