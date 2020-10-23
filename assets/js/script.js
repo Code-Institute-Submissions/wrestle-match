@@ -171,6 +171,8 @@ const modal = document.getElementById("gameWon");
 const moveCount = document.querySelector(".move-count");
 let moves = 0;
 
+let starCount = 5;
+
 const timeCount = document.querySelector(".timer");
 let time;
 let minutes = 0;
@@ -335,6 +337,26 @@ function matchRating() {
   }
 }
 
+function modalStats() {
+  const stats = document.querySelector(".modal-content");
+  // Create three different paragraphs
+  for (let i = 1; i <= 3; i++) {
+    // Create a new Paragraph
+    const statsEl = document.createElement("p");
+    // Add a class to the new Paragraph
+    statsEl.classList.add("stats");
+    // Add the new created <p> tag to the modal content
+    stats.appendChild(statsEl);
+  }
+  // Select all p tags with the class of stats and update the content
+  let p = stats.querySelectorAll("p.stats");
+  // Set the new <p> to have the content of stats (time, moves and star rating)
+  p[0].innerHTML =
+    "Time to complete: " + minutes + " Minutes and " + seconds + " Seconds";
+  p[1].innerHTML = "Moves Made: " + moves;
+  p[2].innerHTML = "Your Match Rating is: " + starCount + " out of 5";
+}
+
 function displayModal() {
   const closeModal = document.getElementsByClassName("close")[0];
   modal.style.display = "block";
@@ -347,6 +369,7 @@ function gameWon() {
   if (paired.length === 8) {
     console.log("Winner!");
     stopTime();
+    modalStats();
     displayModal();
   }
 }
