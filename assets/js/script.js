@@ -159,6 +159,7 @@ const cardDeck = [
 
 // Access the .deck ul class
 const deck = document.querySelector(".deck");
+const cards = document.querySelector(".card");
 
 // Global arrays
 // Create an empty array to store flipped cards
@@ -168,9 +169,13 @@ let paired = [];
 
 const modal = document.getElementById("gameWon");
 
+const restart = document.querySelector(".restart-btn");
+const newGame = document.querySelector(".new-game-btn");
+
 const moveCount = document.querySelector(".move-count");
 let moves = 0;
 
+const star = document.getElementById("match-rating").querySelectorAll(".star");
 let starCount = 5;
 
 const timeCount = document.querySelector(".timer");
@@ -313,9 +318,6 @@ function noPair() {
 }
 
 function matchRating() {
-  const star = document
-    .getElementById("match-rating")
-    .querySelectorAll(".star");
   if (moves === 4) {
     star[4].firstElementChild.classList.remove("fa-star");
     starCount--;
@@ -373,6 +375,41 @@ function gameWon() {
     displayModal();
   }
 }
+
+function resetAll() {
+  stopTime();
+  timeStart = false;
+  seconds = 0;
+  minutes = 0;
+  timeCount.innerHTML =
+    "<i class='fas fa-stopwatch'></i>" +
+    " Timer: 00:00" +
+    minutes +
+    " Mins " +
+    seconds +
+    " Secs";
+  star[1].firstElementChild.classList.add("fa-star");
+  star[2].firstElementChild.classList.add("fa-star");
+  star[3].firstElementChild.classList.add("fa-star");
+  star[4].firstElementChild.classList.add("fa-star");
+  starCount = 5;
+
+  moves = 0;
+  moveCount.innerHTML = 0;
+
+  paired = [];
+
+  flipped = [];
+  removeCard();
+  startGame();
+}
+
+restart.addEventListener("click", resetAll);
+
+newGame.addEventListener("click", function () {
+  modal.style.display = "none";
+  resetAll();
+});
 
 /*----------------------------------  
 Main Event Listener
