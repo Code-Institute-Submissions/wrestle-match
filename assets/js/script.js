@@ -294,6 +294,7 @@ function match() {
   }, 500);
   // Add 1 to move count
   moveCounter();
+  matchRating();
 }
 
 function noPair() {
@@ -306,6 +307,32 @@ function noPair() {
   }, 800);
   // Add 1 to move count
   moveCounter();
+  matchRating();
+}
+
+function matchRating() {
+  const star = document
+    .getElementById("match-rating")
+    .querySelectorAll(".star");
+  if (moves === 4) {
+    star[4].firstElementChild.classList.remove("fa-star");
+    starCount--;
+  }
+
+  if (moves === 6) {
+    star[3].firstElementChild.classList.remove("fa-star");
+    starCount--;
+  }
+
+  if (moves === 8) {
+    star[2].firstElementChild.classList.remove("fa-star");
+    starCount--;
+  }
+
+  if (moves === 10) {
+    star[1].firstElementChild.classList.remove("fa-star");
+    starCount--;
+  }
 }
 
 function displayModal() {
