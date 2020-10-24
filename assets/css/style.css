@@ -5,6 +5,8 @@
   font-stretch: 25% 151%;
 }
 
+/* Global Styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +17,41 @@ body {
   text-align: center;
 }
 
+ul {
+  list-style: none;
+}
+
+img {
+  user-select: none;
+}
+
+.flex-container {
+  animation-name: panoramic-scroll;
+  animation-direction: alternate;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  background-color: #0a0a0a;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+@keyframes panoramic-scroll {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 p,
 h2 span {
   font-family: Roboto, sans-serif;
@@ -22,9 +59,22 @@ h2 span {
   line-height: 13px;
 }
 
-a:hover {
-  text-decoration: none;
+/* Colors */
+
+/* Background images */
+
+.arena-bg {
+  background: url(../images/arena-bg.jpg) no-repeat center;
+  background-size: cover;
 }
+
+.ring-bg {
+  background: url(../images/ring-bg.jpg) no-repeat center;
+  background-size: cover;
+  height: 100%;
+}
+
+/* Headings */
 
 h1,
 h2 {
@@ -50,6 +100,16 @@ h3,
 h4 {
   color: #0a0a0a;
   font-family: Rubik, sans-serif;
+  margin: 0;
+}
+
+h1:hover {
+  color: #ebcb88;
+}
+
+h3:hover,
+h4:hover {
+  color: #6c2043;
 }
 
 h4,
@@ -58,25 +118,37 @@ h4,
   line-height: 20px;
 }
 
-h1:hover {
-  color: #ebcb88;
-}
-
-ul {
-  list-style: none;
-}
+/* Header */
 
 header {
   background-color: #8c2755;
   border: #e6bb61 solid 1px;
   position: relative;
   padding: 4px;
-  margin: 0 8px;
+}
+
+.mode-head {
+  border-top: solid 1px #f0dbae;
 }
 
 header h2 {
   margin: 0 auto;
   text-transform: uppercase;
+}
+
+header .far {
+  color: #e6bb61;
+  position: absolute;
+  font-size: 9px;
+  line-height: 13px;
+}
+
+.five-stars .fa-star {
+  color: #e6bb61;
+  font-size: 9px;
+  line-height: 13px;
+  padding: 2.5px 10px;
+  margin: 2.5px 10px;
 }
 
 header h2 span {
@@ -86,13 +158,6 @@ header h2 span {
   text-transform: capitalize;
   padding: 7px;
   letter-spacing: 2px;
-}
-
-header .far {
-  color: #e6bb61;
-  position: absolute;
-  font-size: 9px;
-  line-height: 13px;
 }
 
 header .far:first-child {
@@ -115,17 +180,47 @@ header .far:nth-child(4) {
   right: 2px;
 }
 
-.five-stars .fa-star {
-  color: #e6bb61;
-  font-size: 9px;
-  line-height: 13px;
-  padding: 2.5px 10px;
-  margin: 2.5px 10px;
+#head-brand {
+  padding: 5px 2px 0 2px;
+  margin: 5px 2px 0 2px;
 }
 
-main {
-  margin: 0 8px;
+#home-anchor h1 {
+  font-size: 36px;
+  line-height: 50px;
+  font-weight: 800;
+  display: inline;
+  margin: 0 auto;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  -o-text-overflow: ellipsis !important;
+  text-overflow: ellipsis !important;
 }
+
+#home-anchor h1 span:first-child {
+  display: inline-block;
+  animation-name: title-scroll;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  padding-left: 100%;
+  animation-direction: alternate;
+}
+
+#head-brand #home-anchor:hover {
+  color: #ebcb88;
+}
+
+@keyframes title-scroll {
+  0% {
+    transform: translate(-100%, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* General buttons */
 
 .btn-group-vertical {
   width: 75%;
@@ -149,28 +244,26 @@ main {
   display: none;
 }
 
+.btn-lg:hover i {
+  display: inline;
+}
+
 .btn-lg h3 {
   overflow: hidden;
   white-space: nowrap;
-}
-
-.btn-lg h3 {
   display: block;
 }
 
-h3:hover,
-h4:hover {
-  color: #6c2043;
-}
-
-nav .btn-lg:hover,
-nav .btn-lg:hover i {
+.btn-group-vertical .btn-lg:hover,
+.btn-group-vertical .btn-lg:hover i,
+.btn-group-vertical .btn-lg:hover h3 {
   background-color: #ebcb88;
   color: #6c2043;
-  display: flex;
   font-size: 18px;
   line-height: 26px;
 }
+
+/* General modal */
 
 .modal {
   background-color: rgba(46, 61, 73, 0.6);
@@ -183,6 +276,7 @@ nav .btn-lg:hover i {
 .modal-content {
   background-color: #8c2755;
   border: #e6bb61 solid 1px;
+  border-radius: 0;
 }
 
 .modal-header {
@@ -205,10 +299,10 @@ nav .btn-lg:hover i {
 }
 
 .modal-body .btn-lg:hover,
-.modal-body .btn-lg:hover i {
+.modal-body .btn-lg:hover i,
+.modal-body .btn-lg:hover h4 {
   background-color: #ebcb88;
   color: #6c2043;
-  display: flex;
 }
 
 .modal-footer {
@@ -219,10 +313,15 @@ nav .btn-lg:hover i {
   display: none;
 }
 
+.modal-footer .btn-lg:hover,
+.modal-footer .btn-lg:hover h3 {
+  background-color: #ebcb88;
+  color: #6c2043;
+}
+
+/* Game */
+
 .score-panel {
-  display: flex;
-  justify-content: space-between;
-  width: 25%;
   padding: 2em;
 }
 
@@ -262,10 +361,6 @@ nav .btn-lg:hover i {
   height: 50px;
   width: 40px;
   border-radius: 0;
-}
-
-img {
-  user-select: none;
 }
 
 .deck img {
@@ -321,6 +416,13 @@ img {
   }
 }
 
+/* Game modal */
+
+.modal-img {
+  display: inline-block;
+  width: 20em;
+}
+
 .game-won-modal .modal-content {
   justify-content: center;
   align-items: center;
@@ -328,10 +430,7 @@ img {
   width: 80%;
 }
 
-.modal-img {
-  display: inline-block;
-  width: 20em;
-}
+/* Footer */
 
 footer {
   background-color: #8c2755;
@@ -346,81 +445,6 @@ footer p {
   font-weight: 200;
   margin-bottom: 0;
   letter-spacing: 2px;
-}
-
-.flex-container {
-  height: 100vh;
-  animation-name: panoramic-scroll;
-  animation-direction: alternate;
-  animation-duration: 12s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  background-color: #0a0a0a;
-  padding: 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.arena-bg {
-  background: url(../images/arena-bg.jpg) no-repeat center;
-  background-size: cover;
-  height: 100%;
-}
-
-.ring-bg {
-  background: url(../images/ring-bg.jpg) no-repeat center;
-  background-size: cover;
-  height: 100%;
-}
-
-#head-brand {
-  padding: 5px 2px 0 2px;
-  margin: 5px 2px 0 2px;
-}
-
-#head-brand #home-anchor:hover {
-  color: #ebcb88;
-}
-
-@keyframes panoramic-scroll {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 100% 0;
-  }
-}
-
-#home-anchor h1 {
-  font-size: 36px;
-  line-height: 50px;
-  font-weight: 800;
-  display: inline;
-  margin: 0 auto;
-  white-space: nowrap !important;
-  overflow: hidden !important;
-  -o-text-overflow: ellipsis !important;
-  text-overflow: ellipsis !important;
-}
-
-#home-anchor h1 span:first-child {
-  display: inline-block;
-  animation-name: title-scroll;
-  animation-duration: 12s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  padding-left: 100%;
-  animation-direction: alternate;
-}
-
-@keyframes title-scroll {
-  0% {
-    transform: translate(-100%, 0);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
 }
 
 @media (min-width: 400px) {
@@ -532,11 +556,10 @@ footer p {
     border-top: solid 4px #786336;
   }
 
-  .modal-footer .btn-lg:hover,
   .modal-footer .btn-lg:hover i {
     background-color: #ebcb88;
     color: #6c2043;
-    display: flex;
+    display: inline;
   }
 
   .deck {
