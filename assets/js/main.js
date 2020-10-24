@@ -159,7 +159,6 @@ const cardDeck = [
 
 // Access the .deck ul class
 const deck = document.querySelector(".deck");
-const cards = document.querySelector(".card");
 
 // Global arrays
 // Create an empty array to store flipped cards
@@ -201,6 +200,12 @@ function shuffle(array) {
 
 // Set card limit and number of current cards
 
+function setAttributes(addImg, attrs) {
+      for (let key in attrs) {
+        addImg.setAttribute(key, attrs[key]);
+      }
+    }
+
 /*
 Remove all child nodes from the deck <li> tags and
 <img> tags.  To be called in set everything function only
@@ -221,7 +226,7 @@ function timer() {
     }
     timeCount.innerHTML =
       "<i class='fas fa-stopwatch'></i>" +
-      " Timer: " +
+      " Match Time: " +
       minutes +
       " Mins " +
       seconds +
@@ -235,12 +240,12 @@ function stopTime() {
 
 function resetAll() {
   stopTime();
-  timeStart = false;
+  startTime = false;
   seconds = 0;
   minutes = 0;
   timeCount.innerHTML =
     "<i class='fas fa-stopwatch'></i>" +
-    " Timer: 00:00" +
+    " Match Time: 00:00" +
     minutes +
     " Mins " +
     seconds +
@@ -323,9 +328,9 @@ function modalStats() {
   let p = stats.querySelectorAll("p.stats");
   // Set the new <p> to have the content of stats (time, moves and star rating)
   p[0].innerHTML =
-    "Time to complete: " + minutes + " Minutes and " + seconds + " Seconds";
-  p[1].innerHTML = "Moves Made: " + moves;
-  p[2].innerHTML = "Your Match Rating is: " + starCount + " out of 5";
+    "Match Finish Time: " + minutes + " Minutes and " + seconds + " Seconds";
+  p[1].innerHTML = moves + " Moves Made";
+  p[2].innerHTML = "Your Match Rating is: " + starCount + " out of 5 stars";
 }
 
 function displayModal() {

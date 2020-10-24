@@ -1,9 +1,9 @@
-let cardLimit = 8;
+let cardLimit = 60;
 let currentCards = 0;
 function startGame() {
   // Store the new shuffled cardDeck array in a new variable called shuffDeck and call the shuffle function on it
   // Slice 4 objects from the array
-  let shuffDeck = shuffle(cardDeck).slice(0, 4);
+  let shuffDeck = shuffle(cardDeck).slice(0, 30);
   console.log(shuffDeck);
 
   // Create a new array by merging two copies of the new shuffDeck together
@@ -32,29 +32,29 @@ if (currentCards < cardLimit) {
 startGame();
 
 function matchRating() {
-  if (moves === 6) {
+  if (moves === 48) {
     star[4].firstElementChild.classList.remove("fa-star");
     starCount--;
   }
 
-  if (moves === 10) {
+  if (moves === 66) {
     star[3].firstElementChild.classList.remove("fa-star");
     starCount--;
   }
 
-  if (moves === 14) {
+  if (moves === 84) {
     star[2].firstElementChild.classList.remove("fa-star");
     starCount--;
   }
 
-  if (moves === 18) {
+  if (moves === 100) {
     star[1].firstElementChild.classList.remove("fa-star");
     starCount--;
   }
 }
 
 function gameWon() {
-  if (paired.length === 8) {
+  if (paired.length === 60) {
     console.log("Winner!");
     stopTime();
     modalStats();

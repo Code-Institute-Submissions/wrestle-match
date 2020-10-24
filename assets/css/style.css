@@ -231,7 +231,8 @@ nav .btn-lg:hover i {
   padding: 0.5em;
 }
 
-.move-count {
+.move-count,
+.pair-count {
   padding: 0.5em;
 }
 
