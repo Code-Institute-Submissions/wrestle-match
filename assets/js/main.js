@@ -201,10 +201,10 @@ function shuffle(array) {
 // Set card limit and number of current cards
 
 function setAttributes(addImg, attrs) {
-      for (let key in attrs) {
-        addImg.setAttribute(key, attrs[key]);
-      }
-    }
+  for (let key in attrs) {
+    addImg.setAttribute(key, attrs[key]);
+  }
+}
 
 /*
 Remove all child nodes from the deck <li> tags and
@@ -226,11 +226,11 @@ function timer() {
     }
     timeCount.innerHTML =
       "<i class='fas fa-stopwatch'></i>" +
-      " Match Time: " +
+      " MATCH TIME: " +
       minutes +
-      " Mins " +
+      " MINS " +
       seconds +
-      " Secs";
+      " SECS";
   }, 1000);
 }
 
@@ -245,11 +245,11 @@ function resetAll() {
   minutes = 0;
   timeCount.innerHTML =
     "<i class='fas fa-stopwatch'></i>" +
-    " Match Time: 00:00" +
+    " MATCH TIME: " +
     minutes +
-    " Mins " +
+    " MINS " +
     seconds +
-    " Secs";
+    " SECS";
   star[1].firstElementChild.classList.add("fa-star");
   star[2].firstElementChild.classList.add("fa-star");
   star[3].firstElementChild.classList.add("fa-star");
@@ -287,6 +287,8 @@ function compareTwo() {
 function match() {
   // Retrieve the two flipped cards and add .match class to the li element
   setTimeout(function () {
+    flipped[0].parentElement.classList.remove("no-match");
+    flipped[1].parentElement.classList.remove("no-match");
     flipped[0].parentElement.classList.add("match");
     flipped[1].parentElement.classList.add("match");
     paired.push(...flipped);
@@ -302,6 +304,8 @@ function match() {
 
 function noPair() {
   setTimeout(function () {
+    flipped[0].parentElement.classList.add("no-match");
+    flipped[1].parentElement.classList.add("no-match");
     flipped[0].parentElement.classList.remove("flip");
     flipped[1].parentElement.classList.remove("flip");
     // Allow further selecting of cards
