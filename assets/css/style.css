@@ -179,6 +179,7 @@ h3,
 nav button:hover i {
   font-size: 18px;
   line-height: 26px;
+  margin: 0 auto;
 }
 
 h4,
@@ -695,15 +696,6 @@ footer p {
     width: 20em;
   }
 
-  .game-won-modal .modal-content {
-    margin: 5% auto;
-  }
-
-  .new-game-btn {
-    margin: 0 auto;
-    width: 50%;
-  }
-
   .game-won-modal p {
     letter-spacing: 2px;
   }
@@ -883,18 +875,18 @@ footer p {
   }
 
   .move-count {
-    padding: 0.5em;
+    padding: 1em;
   }
 
   .match-rating .star {
-    padding: 0.5em;
+    padding: 1em;
     font-size: 15px;
     line-height: 22px;
     margin: 2.5px;
   }
 
   .timer span:last-child {
-    padding: 0.5em;
+    padding: 1em;
     margin: 8px;
   }
 
@@ -924,15 +916,6 @@ footer p {
 
   .modal-img {
     width: 30em;
-  }
-
-  .game-won-modal .modal-content {
-    margin: 5% auto;
-  }
-
-  .new-game-btn {
-    margin: 0 auto;
-    width: 50%;
   }
 
   .game-won-modal p {
@@ -1080,19 +1063,13 @@ footer p {
     border-top: solid 7px #786336;
   }
 
-  .move-count {
-    padding: 0.5em;
-  }
-
   .match-rating .star {
-    padding: 0.5em;
     font-size: 18px;
     line-height: 27px;
     margin: 2.5px;
   }
 
   .timer span:last-child {
-    padding: 0.5em;
     margin: 8px;
   }
 
@@ -1122,15 +1099,6 @@ footer p {
 
   .modal-img {
     width: 40em;
-  }
-
-  .game-won-modal .modal-content {
-    margin: 5% auto;
-  }
-
-  .new-game-btn {
-    margin: 0 auto;
-    width: 50%;
   }
 
   .game-won-modal p {
@@ -1270,19 +1238,13 @@ footer p {
     border-top: solid 10px #786336;
   }
 
-  .move-count {
-    padding: 0.5em;
-  }
-
   .match-rating .star {
-    padding: 0.5em;
     font-size: 21px;
     line-height: 31px;
     margin: 2.5px;
   }
 
   .timer span:last-child {
-    padding: 0.5em;
     margin: 8px;
   }
 
@@ -1312,15 +1274,6 @@ footer p {
 
   .modal-img {
     width: 50em;
-  }
-
-  .game-won-modal .modal-content {
-    margin: 5% auto;
-  }
-
-  .new-game-btn {
-    margin: 0 auto;
-    width: 50%;
   }
 
   .game-won-modal p {
