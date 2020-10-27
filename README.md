@@ -5,7 +5,7 @@
     by Gary Hughes
 </div>
 
-INSERT HERE: ami.responsivedesign.is demo
+<img src="assets/images/readme/wrestlematch-responsive-demo.png" style="margin: 0;">
 
 ## Introduction
 
