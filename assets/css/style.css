@@ -64,7 +64,9 @@ a:hover {
 }
 
 p,
-h2 span {
+h2 span,
+.move-panel,
+.timer-panel {
   font-family: Roboto, sans-serif;
   font-size: 9px;
   line-height: 13px;
@@ -80,7 +82,8 @@ h2 span {
 .ring-bg {
   background: url(../images/ring-bg.jpg) no-repeat center;
   background-size: cover;
-  height: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Colors */
@@ -410,12 +413,9 @@ header .far:nth-child(4) {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  min-height: 175px;
-  max-width: 400px;
   padding: 0.5em;
   align-items: center;
   align-content: space-evenly;
-  max-height: 1300px;
 }
 
 .card {
@@ -488,21 +488,21 @@ header .far:nth-child(4) {
   margin: 5% auto;
 }
 
-.game-won-modal p {
-  color: #fafafa;
-  letter-spacing: 2px;
-}
-
 .new-game-btn {
   margin: 0 auto;
   width: 50%;
+}
+
+.game-won-modal p {
+  color: #fafafa;
+  letter-spacing: 2px;
 }
 
 /* Footer */
 
 footer {
   padding: 4px;
-  margin: 0 auto;
+  margin: 0.5em auto;
   width: 50%;
 }
 
@@ -521,15 +521,52 @@ footer p {
 }
 
 @media (min-width: 480px) {
+  p {
+    margin-bottom: 1rem;
+  }
+
+  .flex-container {
+    padding: 24px;
+  }
+
   p,
-  h2 span {
+  h2 span,
+  header .far,
+  .move-panel,
+  .timer-panel {
     font-size: 12px;
     line-height: 18px;
   }
 
+  header,
+  .modal-content,
+  .score-panel,
+  .deck,
+  footer {
+    border: #e6bb61 solid 4px;
+  }
+
+  .btn-lg,
+  .rating-panel,
+  .timer span:last-child,
+  .restart-btn,
+  .card,
+  .deck .card.flip {
+    border: #fafafa solid 4px;
+  }
+
+  h2 {
+    font-size: 36px;
+    line-height: 51px;
+  }
+
+  h3 {
+    width: 200px;
+  }
+
   h3,
-  nav .btn-lg:hover i,
-  .modal-footer .btn-lg:hover i {
+  nav button:hover i,
+  .restart-btn {
     font-size: 24px;
     line-height: 35px;
   }
@@ -540,20 +577,21 @@ footer p {
     line-height: 26px;
   }
 
-  header {
-    border: #e6bb61 solid 4px;
+  header,
+  .score-panel {
     padding: 8px;
-    margin: 0 16px;
+    margin: 0.5em 16px;
   }
 
-  h2 {
-    font-size: 36px;
-    line-height: 51px;
+  .mode-head {
+    border-top: solid 4px #f0dbae;
   }
 
-  header .far {
+  .five-stars .fa-star {
     font-size: 12px;
     line-height: 18px;
+    padding: 5px 12px;
+    margin: 5px 12px;
   }
 
   header .far:first-child {
@@ -576,28 +614,18 @@ footer p {
     right: 5px;
   }
 
-  .five-stars .fa-star {
-    font-size: 12px;
-    line-height: 18px;
-    padding: 5px 12px;
-    margin: 5px 12px;
+  #head-brand {
+    padding: 5px 2px;
+    margin: 5px 2px;
   }
 
-  .btn {
-    margin-top: 1em;
-    padding: 1em;
+  #home-anchor h1 {
+    font-size: 48px;
+    line-height: 67px;
   }
 
   .btn-group-vertical {
     width: 60%;
-  }
-
-  .btn-lg {
-    border: #fafafa solid 4px;
-  }
-
-  .btn-lg h3 {
-    width: 168px;
   }
 
   .btn-block + .btn-block {
@@ -607,10 +635,6 @@ footer p {
   .modal-dialog {
     min-width: 400px;
     margin: 1rem auto;
-  }
-
-  .modal-content {
-    border: #e6bb61 solid 4px;
   }
 
   .modal-header {
@@ -627,55 +651,80 @@ footer p {
     display: inline;
   }
 
-  .deck {
-    height: 50em;
-    max-width: 40em;
-    border: #e6bb61 solid 4px;
-    padding: 2em;
-  }
-
-  .card {
-    border: #fafafa solid 4px;
-    height: 100px;
-    width: 80px;
+  .move-count {
     padding: 0.5em;
   }
 
-  .deck img {
-    height: 100px;
-    width: 80px;
+  .match-rating .star {
+    padding: 0.5em;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 2.5px;
   }
 
-  footer {
-    border: #e6bb61 solid 4px;
-    padding: 8px;
+  .timer span:last-child {
+    padding: 0.5em;
+    margin: 8px;
+  }
+
+  .deck {
+    padding: 1em;
+  }
+
+  .card {
+    width: 80px;
+    height: 100px;
+    margin: 3.75px auto;
+  }
+
+  .no-match {
+    border: #e15864 solid 4px;
+  }
+
+  .deck img,
+  .flip img {
+    width: 80px;
+    height: 100px;
+  }
+
+  .deck .card.match {
+    border: #239658 solid 4px;
+  }
+
+  .modal-img {
+    width: 20em;
+  }
+
+  .game-won-modal .modal-content {
+    margin: 5% auto;
+  }
+
+  .new-game-btn {
+    margin: 0 auto;
     width: 50%;
   }
 
-  .flex-container {
-    padding: 24px;
+  .game-won-modal p {
+    letter-spacing: 2px;
   }
 
-  #head-brand {
-    padding: 5px 2px;
-    margin: 5px 2px;
+  footer {
+    padding: 8px;
+    width: 50%;
+    margin: 1em auto;
   }
 
-  #home-anchor h1 {
-    font-size: 48px;
-    line-height: 67px;
+  footer p {
+    letter-spacing: 2px;
+    padding: 1em;
   }
 }
 
 @media (min-width: 600px) {
-  header {
-    margin: 0 auto;
+  header,
+  .score-panel {
+    margin: 0.5em auto;
     width: 520px;
-  }
-
-  .modal-dialog {
-    min-width: 550px;
-    margin: 2rem auto;
   }
 
   #head-brand {
@@ -688,18 +737,73 @@ footer p {
     padding: 0;
     margin: 0 auto;
   }
+
+  .modal-dialog {
+    min-width: 550px;
+    margin: 2rem auto;
+  }
+}
+
+@media (min-height: 1150px) {
+  .ring-bg {
+    height: 100vh;
+  }
 }
 
 @media (min-width: 1280px) {
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  .flex-container {
+    animation: none;
+    padding: 36px;
+    margin: 0 10%;
+  }
+
   p,
-  h2 span {
+  h2 span,
+  header .far,
+  .move-panel,
+  .timer-panel {
     font-size: 15px;
     line-height: 22px;
   }
 
+  header,
+  .modal-content,
+  .score-panel,
+  .deck,
+  footer {
+    border: #e6bb61 solid 6px;
+  }
+
+  .btn-lg,
+  .rating-panel,
+  .timer span:last-child,
+  .restart-btn,
+  .card,
+  .deck .card.flip {
+    border: #fafafa solid 6px;
+  }
+
+  #desktop-wrapper {
+    background-image: url(../images/steel-cage.png);
+    background-color: #0a0a0a;
+  }
+
+  h2 {
+    font-size: 45px;
+    line-height: 64px;
+  }
+
+  h3 {
+    width: 250px;
+  }
+
   h3,
-  nav .btn-lg:hover i,
-  .modal-footer .btn-lg:hover i {
+  nav button:hover i,
+  .restart-btn {
     font-size: 30px;
     line-height: 44px;
   }
@@ -710,21 +814,22 @@ footer p {
     line-height: 32px;
   }
 
-  header {
-    border: #e6bb61 solid 6px;
+  header,
+  .score-panel {
     padding: 16px;
-    margin: 0 auto;
+    margin: 0.5em auto;
     width: 700px;
   }
 
-  h2 {
-    font-size: 45px;
-    line-height: 64px;
+  .mode-head {
+    border-top: solid 6px #f0dbae;
   }
 
-  header .far {
+  .five-stars .fa-star {
     font-size: 15px;
     line-height: 22px;
+    padding: 5px 20px;
+    margin: 5px 20px;
   }
 
   header .far:first-child {
@@ -747,32 +852,22 @@ footer p {
     right: 10px;
   }
 
-  .five-stars .fa-star {
-    font-size: 15px;
-    line-height: 22px;
-    padding: 5px 20px;
-    margin: 5px 20px;
+  #home-anchor h1 {
+    font-size: 60px;
+    line-height: 84px;
   }
 
   .btn-group-vertical {
     width: 40%;
   }
 
-  .btn-lg {
-    border: #fafafa solid 6px;
-  }
-
-  .btn-lg h3 {
-    width: 200px;
+  .btn-block + .btn-block {
+    margin-top: 2rem;
   }
 
   .modal-dialog {
     min-width: 800px;
     margin: 3rem auto;
-  }
-
-  .modal-content {
-    border: #e6bb61 solid 6px;
   }
 
   .modal-header {
@@ -783,65 +878,131 @@ footer p {
     width: 75%;
   }
 
-  .modal-img {
-    width: 30em;
-  }
-
   .modal-footer {
     border-top: solid 6px #786336;
   }
 
+  .move-count {
+    padding: 0.5em;
+  }
+
+  .match-rating .star {
+    padding: 0.5em;
+    font-size: 15px;
+    line-height: 22px;
+    margin: 2.5px;
+  }
+
+  .timer span:last-child {
+    padding: 0.5em;
+    margin: 8px;
+  }
+
   .deck {
-    height: 70em;
-    max-width: 56em;
-    border: #e6bb61 solid 6px;
     padding: 2em;
   }
 
   .card {
-    border: #fafafa solid 6px;
-    height: 150px;
     width: 120px;
+    height: 150px;
+    margin: 3.75px auto;
   }
 
-  .deck img {
-    height: 150px;
+  .no-match {
+    border: #e15864 solid 6px;
+  }
+
+  .deck img,
+  .flip img {
     width: 120px;
+    height: 150px;
+  }
+
+  .deck .card.match {
+    border: #239658 solid 6px;
+  }
+
+  .modal-img {
+    width: 30em;
+  }
+
+  .game-won-modal .modal-content {
+    margin: 5% auto;
+  }
+
+  .new-game-btn {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .game-won-modal p {
+    letter-spacing: 2px;
   }
 
   footer {
-    border: #e6bb61 solid 6px;
     padding: 16px;
     width: 40%;
+    margin: 2em auto;
   }
 
-  #desktop-wrapper {
-    background-image: url(../images/steel-cage.png);
-    background-color: #0a0a0a;
-  }
-
-  .flex-container {
-    margin: 0 10%;
-    animation: none;
-    padding: 36px;
-  }
-
-  #home-anchor h1 {
-    font-size: 60px;
-    line-height: 84px;
+  footer p {
+    letter-spacing: 2px;
+    padding: 1em;
   }
 }
 
 @media (min-width: 2560px) {
+  p {
+    margin-bottom: 2rem;
+  }
+
+  .flex-container {
+    padding: 48px;
+    margin: 0 10%;
+  }
+
   p,
-  h2 span {
+  h2 span,
+  header .far,
+  .move-panel,
+  .timer-panel {
     font-size: 18px;
     line-height: 27px;
   }
 
+  .ring-bg {
+    height: auto;
+  }
+
+  header,
+  .modal-content,
+  .score-panel,
+  .deck,
+  footer {
+    border: #e6bb61 solid 7px;
+  }
+
+  .btn-lg,
+  .rating-panel,
+  .timer span:last-child,
+  .restart-btn,
+  .card,
+  .deck .card.flip {
+    border: #fafafa solid 7px;
+  }
+
+  h2 {
+    font-size: 54px;
+    line-height: 77px;
+  }
+
+  h3 {
+    width: 300px;
+  }
+
   h3,
-  nav .btn-lg:hover i,
-  .modal-footer .btn-lg:hover i {
+  nav button:hover i,
+  .restart-btn {
     font-size: 36px;
     line-height: 52px;
   }
@@ -852,20 +1013,21 @@ footer p {
     line-height: 39px;
   }
 
-  header {
-    border: #e6bb61 solid 7px;
+  header,
+  .score-panel {
     padding: 24px;
     width: 800px;
   }
 
-  h2 {
-    font-size: 54px;
-    line-height: 77px;
+  .mode-head {
+    border-top: solid 7px #f0dbae;
   }
 
-  header .far {
+  .five-stars .fa-star {
     font-size: 18px;
     line-height: 27px;
+    padding: 5px 25px;
+    margin: 5px 25px;
   }
 
   header .far:first-child {
@@ -888,36 +1050,22 @@ footer p {
     right: 20px;
   }
 
-  .five-stars .fa-star {
-    font-size: 18px;
-    line-height: 27px;
-    padding: 5px 25px;
-    margin: 5px 25px;
+  #home-anchor h1 {
+    font-size: 72px;
+    line-height: 100px;
   }
 
   .btn-group-vertical {
     width: 30%;
   }
 
-  .btn-lg {
-    border: #fafafa solid 7px;
-  }
-
-  .btn-lg h3 {
-    width: 250px;
-  }
-
   .btn-block + .btn-block {
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 
   .modal-dialog {
     min-width: 1280px;
     margin: 4rem auto;
-  }
-
-  .modal-content {
-    border: #e6bb61 solid 7px;
   }
 
   .modal-header {
@@ -932,32 +1080,123 @@ footer p {
     border-top: solid 7px #786336;
   }
 
+  .move-count {
+    padding: 0.5em;
+  }
+
+  .match-rating .star {
+    padding: 0.5em;
+    font-size: 18px;
+    line-height: 27px;
+    margin: 2.5px;
+  }
+
+  .timer span:last-child {
+    padding: 0.5em;
+    margin: 8px;
+  }
+
+  .deck {
+    padding: 3em;
+  }
+
+  .card {
+    width: 240px;
+    height: 300px;
+    margin: 3.75px auto;
+  }
+
+  .no-match {
+    border: #e15864 solid 7px;
+  }
+
+  .deck img,
+  .flip img {
+    width: 240px;
+    height: 300px;
+  }
+
+  .deck .card.match {
+    border: #239658 solid 7px;
+  }
+
+  .modal-img {
+    width: 40em;
+  }
+
+  .game-won-modal .modal-content {
+    margin: 5% auto;
+  }
+
+  .new-game-btn {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .game-won-modal p {
+    letter-spacing: 2px;
+  }
+
   footer {
-    border: #e6bb61 solid 7px;
     padding: 24px;
     width: 25%;
+    margin: 3em auto;
   }
 
-  .flex-container {
-    padding: 48px;
-  }
-
-  #home-anchor h1 {
-    font-size: 72px;
-    line-height: 100px;
+  footer p {
+    letter-spacing: 2px;
+    padding: 1em;
   }
 }
 
 @media (min-width: 3840px) {
+  p {
+    margin-bottom: 2.5rem;
+  }
+
+  .flex-container {
+    padding: 60px;
+    margin: 0 10%;
+  }
+
   p,
-  h2 span {
+  h2 span,
+  header .far,
+  .move-panel,
+  .timer-panel {
     font-size: 21px;
     line-height: 31px;
   }
 
+  header,
+  .modal-content,
+  .score-panel,
+  .deck,
+  footer {
+    border: #e6bb61 solid 10px;
+  }
+
+  .btn-lg,
+  .rating-panel,
+  .timer span:last-child,
+  .restart-btn,
+  .card,
+  .deck .card.flip {
+    border: #fafafa solid 10px;
+  }
+
+  h2 {
+    font-size: 63px;
+    line-height: 89px;
+  }
+
+  h3 {
+    width: 350px;
+  }
+
   h3,
-  nav .btn-lg:hover i,
-  .modal-footer .btn-lg:hover i {
+  nav button:hover i,
+  .restart-btn {
     font-size: 42px;
     line-height: 61px;
   }
@@ -968,20 +1207,21 @@ footer p {
     line-height: 47px;
   }
 
-  header {
-    border: #e6bb61 solid 10px;
+  header,
+  .score-panel {
     padding: 32px;
     width: 1000px;
   }
 
-  h2 {
-    font-size: 63px;
-    line-height: 89px;
+  .mode-head {
+    border-top: solid 10px #f0dbae;
   }
 
-  header .far {
+  .five-stars .fa-star {
     font-size: 21px;
     line-height: 31px;
+    padding: 5px 30px;
+    margin: 5px 30px;
   }
 
   header .far:first-child {
@@ -1004,36 +1244,22 @@ footer p {
     right: 40px;
   }
 
-  .five-stars .fa-star {
-    font-size: 21px;
-    line-height: 31px;
-    padding: 5px 30px;
-    margin: 5px 30px;
+  #home-anchor h1 {
+    font-size: 84px;
+    line-height: 118px;
   }
 
   .btn-group-vertical {
     width: 25%;
   }
 
-  .btn-lg {
-    border: #fafafa solid 10px;
-  }
-
-  .btn-lg h3 {
-    width: 300px;
-  }
-
   .btn-block + .btn-block {
-    margin-top: 3rem;
+    margin-top: 4rem;
   }
 
   .modal-dialog {
     min-width: 1920px;
     margin: 5rem auto;
-  }
-
-  .modal-content {
-    border: #e6bb61 solid 10px;
   }
 
   .modal-header {
@@ -1044,18 +1270,71 @@ footer p {
     border-top: solid 10px #786336;
   }
 
+  .move-count {
+    padding: 0.5em;
+  }
+
+  .match-rating .star {
+    padding: 0.5em;
+    font-size: 21px;
+    line-height: 31px;
+    margin: 2.5px;
+  }
+
+  .timer span:last-child {
+    padding: 0.5em;
+    margin: 8px;
+  }
+
+  .deck {
+    padding: 4em;
+  }
+
+  .card {
+    width: 288px;
+    height: 360px;
+    margin: 3.75px auto;
+  }
+
+  .no-match {
+    border: #e15864 solid 10px;
+  }
+
+  .deck img,
+  .flip img {
+    width: 288px;
+    height: 360px;
+  }
+
+  .deck .card.match {
+    border: #239658 solid 10px;
+  }
+
+  .modal-img {
+    width: 50em;
+  }
+
+  .game-won-modal .modal-content {
+    margin: 5% auto;
+  }
+
+  .new-game-btn {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .game-won-modal p {
+    letter-spacing: 2px;
+  }
+
   footer {
-    border: #e6bb61 solid 10px;
     padding: 32px;
     width: 20%;
+    margin: 4em auto;
   }
 
-  .flex-container {
-    padding: 60px;
-  }
-
-  #home-anchor h1 {
-    font-size: 84px;
-    line-height: 118px;
+  footer p {
+    letter-spacing: 2px;
+    padding: 1em;
   }
 }
