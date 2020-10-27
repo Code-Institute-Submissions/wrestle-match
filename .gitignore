@@ -4,3 +4,8 @@ core.python*
 env.py
 __pycache__/
 *.py[cod]
+“.gitpod.dockerfile”
+gitpod.dockerfile
+.gitpod.dockerfile
+.gitpod.yml
+.theia
