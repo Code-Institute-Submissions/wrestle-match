@@ -304,9 +304,13 @@ header .far:nth-child(4) {
 
 /* General buttons */
 
-.btn-group-vertical {
-  width: 80%;
+main .btn-group-vertical {
   align-items: center;
+  width: 75%;
+}
+
+.btn-block {
+  display: block;
 }
 
 .btn-lg {
@@ -316,6 +320,8 @@ header .far:nth-child(4) {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .btn-lg i {
@@ -353,6 +359,10 @@ header .far:nth-child(4) {
 .close:focus {
   color: #0a0a0a;
   cursor: pointer;
+}
+
+.modal-body .btn-group-vertical {
+width: 75%;
 }
 
 .modal-footer {
@@ -629,10 +639,6 @@ footer {
     line-height: 67px;
   }
 
-  .btn-group-vertical {
-    width: 60%;
-  }
-
   .btn-block + .btn-block {
     margin-top: 1rem;
   }
@@ -847,8 +853,8 @@ footer {
     line-height: 84px;
   }
 
-  .btn-group-vertical {
-    width: 40%;
+  main .btn-group-vertical {
+    width: 50%;
   }
 
   .btn-block + .btn-block {
@@ -862,10 +868,6 @@ footer {
 
   .modal-header {
     border-bottom: solid 6px #786336;
-  }
-
-  .modal-body .btn-group-vertical {
-    width: 75%;
   }
 
   .modal-footer {
@@ -1030,10 +1032,6 @@ footer {
     line-height: 100px;
   }
 
-  .btn-group-vertical {
-    width: 30%;
-  }
-
   .btn-block + .btn-block {
     margin-top: 3rem;
   }
@@ -1045,10 +1043,6 @@ footer {
 
   .modal-header {
     border-bottom: solid 7px #786336;
-  }
-
-  .modal-body .btn-group-vertical {
-    width: 50%;
   }
 
   .modal-footer {
@@ -1201,10 +1195,6 @@ footer {
   #home-anchor h1 {
     font-size: 84px;
     line-height: 118px;
-  }
-
-  .btn-group-vertical {
-    width: 25%;
   }
 
   .btn-block + .btn-block {

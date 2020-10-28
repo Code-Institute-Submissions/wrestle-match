@@ -158,7 +158,7 @@ const cardDeck = [
 ];
 
 const deck = document.querySelector(".deck"),
-  modal = document.querySelector("gameWon"),
+  modal = document.querySelector("#gameWon"),
   restart = document.querySelector(".restart-btn"),
   newGame = document.querySelector(".new-game-btn"),
   moveCount = document.querySelector(".move-count"),
