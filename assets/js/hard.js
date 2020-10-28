@@ -19,7 +19,7 @@ function startGame() {
     liEl.appendChild(addImg);
     // Added a helper function to add multiple attributes to img elements credit to https://stackoverflow.com/questions/12274748/setting-multiple-attributes-for-an-element-at-once-with-javascript?
     setAttributes(addImg, {
-      src: "../assets/images/cards/" + newDeck[i],
+      src: "assets/images/cards/" + newDeck[i],
       alt: "image of a professional wrestler",
     });
     deck.appendChild(liEl);
@@ -33,22 +33,22 @@ startGame();
 
 function matchRating() {
   if (moves === 32) {
-    star[4].firstElementChild.classList.remove("fa-star");
+    stars[4].firstElementChild.classList.remove("fa-star");
     starCount--;
   }
 
   if (moves === 44) {
-    star[3].firstElementChild.classList.remove("fa-star");
+    stars[3].firstElementChild.classList.remove("fa-star");
     starCount--;
   }
 
   if (moves === 56) {
-    star[2].firstElementChild.classList.remove("fa-star");
+    stars[2].firstElementChild.classList.remove("fa-star");
     starCount--;
   }
 
   if (moves === 68) {
-    star[1].firstElementChild.classList.remove("fa-star");
+    stars[1].firstElementChild.classList.remove("fa-star");
     starCount--;
   }
 }
