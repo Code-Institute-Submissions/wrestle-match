@@ -63,13 +63,27 @@ a:hover {
   text-decoration: none;
 }
 
+ol li,
+.game-won-modal p,
+footer p {
+  color: #fafafa;
+  font-weight: 300;
+  margin-bottom: 0;
+  letter-spacing: 2px;
+  padding: 1em;
+}
+
 p,
 h2 span,
+header .far,
 .move-panel,
-.timer-panel {
+.timer-panel,
+ol li,
+.game-won-modal p,
+footer p {
   font-family: Roboto, sans-serif;
-  font-size: 9px;
-  line-height: 13px;
+  font-size: 10px;
+  line-height: 14px;
 }
 
 /* Background images */
@@ -207,14 +221,14 @@ header h2 {
 header .far {
   color: #e6bb61;
   position: absolute;
-  font-size: 9px;
-  line-height: 13px;
+  font-size: 10px;
+  line-height: 14px;
 }
 
 .five-stars .fa-star {
   color: #e6bb61;
-  font-size: 9px;
-  line-height: 13px;
+  font-size: 10px;
+  line-height: 14px;
   padding: 2.5px 10px;
   margin: 2.5px 10px;
 }
@@ -379,8 +393,8 @@ header .far:nth-child(4) {
   display: inline-block;
   padding: 0.5em;
   color: #e6bb61;
-  font-size: 9px;
-  line-height: 13px;
+  font-size: 10px;
+  line-height: 14px;
   margin: 2.5px;
 }
 
@@ -494,25 +508,12 @@ header .far:nth-child(4) {
   width: 50%;
 }
 
-.game-won-modal p {
-  color: #fafafa;
-  letter-spacing: 2px;
-}
-
 /* Footer */
 
 footer {
   padding: 4px;
   margin: 0.5em auto;
   width: 50%;
-}
-
-footer p {
-  color: #fafafa;
-  font-weight: 200;
-  margin-bottom: 0;
-  letter-spacing: 2px;
-  padding: 1em;
 }
 
 @media (min-width: 400px) {
@@ -534,7 +535,10 @@ footer p {
   h2 span,
   header .far,
   .move-panel,
-  .timer-panel {
+  .timer-panel,
+  ol li,
+  .game-won-modal p,
+  footer p {
     font-size: 12px;
     line-height: 18px;
   }
@@ -696,19 +700,10 @@ footer p {
     width: 20em;
   }
 
-  .game-won-modal p {
-    letter-spacing: 2px;
-  }
-
   footer {
     padding: 8px;
     width: 50%;
     margin: 1em auto;
-  }
-
-  footer p {
-    letter-spacing: 2px;
-    padding: 1em;
   }
 }
 
@@ -736,7 +731,7 @@ footer p {
   }
 }
 
-@media (min-height: 1150px) {
+@media (min-height: 640px) {
   .ring-bg {
     height: 100vh;
   }
@@ -757,7 +752,10 @@ footer p {
   h2 span,
   header .far,
   .move-panel,
-  .timer-panel {
+  .timer-panel,
+  ol li,
+  .game-won-modal p,
+  footer p {
     font-size: 15px;
     line-height: 22px;
   }
@@ -918,19 +916,10 @@ footer p {
     width: 30em;
   }
 
-  .game-won-modal p {
-    letter-spacing: 2px;
-  }
-
   footer {
     padding: 16px;
     width: 40%;
     margin: 2em auto;
-  }
-
-  footer p {
-    letter-spacing: 2px;
-    padding: 1em;
   }
 }
 
@@ -948,7 +937,10 @@ footer p {
   h2 span,
   header .far,
   .move-panel,
-  .timer-panel {
+  .timer-panel,
+  ol li,
+  .game-won-modal p,
+  footer p {
     font-size: 18px;
     line-height: 27px;
   }
@@ -1101,19 +1093,10 @@ footer p {
     width: 40em;
   }
 
-  .game-won-modal p {
-    letter-spacing: 2px;
-  }
-
   footer {
     padding: 24px;
     width: 25%;
     margin: 3em auto;
-  }
-
-  footer p {
-    letter-spacing: 2px;
-    padding: 1em;
   }
 }
 
@@ -1131,7 +1114,10 @@ footer p {
   h2 span,
   header .far,
   .move-panel,
-  .timer-panel {
+  .timer-panel,
+  ol li,
+  .game-won-modal p,
+  footer p {
     font-size: 21px;
     line-height: 31px;
   }
@@ -1276,18 +1262,9 @@ footer p {
     width: 50em;
   }
 
-  .game-won-modal p {
-    letter-spacing: 2px;
-  }
-
   footer {
     padding: 32px;
     width: 20%;
     margin: 4em auto;
-  }
-
-  footer p {
-    letter-spacing: 2px;
-    padding: 1em;
   }
 }
