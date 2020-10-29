@@ -1,8 +1,14 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @font-face {
   font-family: "Rubik";
   src: url("rubik.woff2") format("woff2 supports variations");
   font-weight: 300 900;
-  font-stretch: 25% 151%;
 }
 
 /* Global Styles */
@@ -16,6 +22,7 @@
 *,
 *::before,
 *::after {
+  -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
 
@@ -33,21 +40,45 @@ ul {
 }
 
 img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
 .flex-container {
+  -webkit-animation-name: panoramic-scroll;
   animation-name: panoramic-scroll;
+  -webkit-animation-direction: alternate;
   animation-direction: alternate;
+  -webkit-animation-duration: 12s;
   animation-duration: 12s;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
   background-color: #0a0a0a;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   height: 100vh;
   padding: 12px;
+}
+
+@-webkit-keyframes panoramic-scroll {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
 }
 
 @keyframes panoramic-scroll {
@@ -105,6 +136,7 @@ footer p {
 .btn,
 .deck,
 .card {
+  -webkit-box-shadow: 5px 2px 20px 0 rgba(50, 50, 50, 0.5);
   box-shadow: 5px 2px 20px 0 rgba(50, 50, 50, 0.5);
 }
 
@@ -286,19 +318,37 @@ header .far:nth-child(4) {
 
 #home-anchor h1 span:first-child {
   display: inline-block;
+  -webkit-animation-name: title-scroll;
   animation-name: title-scroll;
+  -webkit-animation-duration: 12s;
   animation-duration: 12s;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
   padding-left: 100%;
+  -webkit-animation-direction: alternate;
   animation-direction: alternate;
+}
+
+@-webkit-keyframes title-scroll {
+  0% {
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
 }
 
 @keyframes title-scroll {
   0% {
+    -webkit-transform: translate(-100%, 0);
     transform: translate(-100%, 0);
   }
   100% {
+    -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
   }
 }
@@ -306,6 +356,8 @@ header .far:nth-child(4) {
 /* General buttons */
 
 main .btn-group-vertical {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 75%;
 }
@@ -317,9 +369,18 @@ main .btn-group-vertical {
 .btn-lg {
   color: #0a0a0a;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin: 0 auto;
   width: 80%;
@@ -428,6 +489,14 @@ main .btn-group-vertical {
 /* Game Board */
 
 .deck {
+  background: -o-radial-gradient(
+    circle,
+    rgba(198, 147, 170, 0.5),
+    rgba(169, 93, 128, 0.5),
+    rgba(140, 39, 85, 0.5),
+    rgba(108, 32, 67, 0.5),
+    rgba(75, 25, 48, 0.5)
+  );
   background: radial-gradient(
     circle,
     rgba(198, 147, 170, 0.5),
@@ -436,11 +505,18 @@ main .btn-group-vertical {
     rgba(108, 32, 67, 0.5),
     rgba(75, 25, 48, 0.5)
   );
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   padding: 0.5em;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-line-pack: space-evenly;
   align-content: space-evenly;
 }
 
@@ -478,26 +554,49 @@ main .btn-group-vertical {
 
 .deck .card.flip {
   cursor: default;
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
-  transition: transform 0.2s linear;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  -o-transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
   pointer-events: none;
 }
 
 .deck .card.match {
   visibility: visible;
   cursor: default;
+  -webkit-animation: pulse 1s;
   animation: pulse 1s;
   border: #239658 solid 1px;
 }
 
-@keyframes pulse {
+@-webkit-keyframes pulse {
   0% {
+    -webkit-transform: scale(1);
     transform: scale(1);
   }
   80% {
+    -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
   100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  80% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
     transform: scale(1);
   }
 }
@@ -510,6 +609,8 @@ main .btn-group-vertical {
 }
 
 .game-won-modal .modal-content {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin: 5% auto;
 }
@@ -728,6 +829,7 @@ footer {
   }
 
   #home-anchor h1 span:first-child {
+    -webkit-animation: none;
     animation: none;
     padding: 0;
     margin: 0 auto;
@@ -751,6 +853,7 @@ footer {
   }
 
   .flex-container {
+    -webkit-animation: none;
     animation: none;
     padding: 36px;
     margin: 0 10%;
