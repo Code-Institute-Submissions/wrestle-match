@@ -157,15 +157,20 @@ const cardDeck = [
   "yokozuna.jpg",
 ];
 
-const deck = document.querySelector(".deck"),
+const mode = ["fatal4", "kingofthering", "battleroyal", "royalrumble"],
+  title = document.querySelector(".mode-head"),
+  deck = document.querySelector(".deck"),
   modal = document.querySelector("#gameWon"),
   restart = document.querySelector(".restart-btn"),
   newGame = document.querySelector(".new-game-btn"),
   moveCount = document.querySelector(".move-count"),
   stars = document.querySelector(".match-rating").querySelectorAll(".star"),
-  timeCount = document.querySelector(".timer");
-
-let flipped = [],
+  timeCount = document.querySelector(".timer"),
+  stats = document.querySelector(".modal-body");
+  
+let currentCards = 0,
+  cardLimit = 0,
+  flipped = [],
   paired = [],
   moves = 0,
   starCount = 5,
@@ -196,6 +201,52 @@ function setAttributes(addImg, attrs) {
     addImg.setAttribute(key, attrs[key]);
   }
 }
+
+function startGame(mode) {
+  const urlParams = new URLSearchParams(window.location.search);
+  const myParam = urlParams.get("mode");
+  if (myParam === "fatal4") {
+    title.innerHTML = "Fatal 4 (Easy)";
+    cardLimit = 8;
+  } else if (myParam === "kingofthering") {
+    title.innerHTML = "King of the Ring (Medium)";
+    cardLimit = 16;
+  } else if (myParam === "battleroyal") {
+    title.innerHTML = "Battle Royal (Hard)";
+    cardLimit = 40;
+  } else if (myParam === "royalrumble") {
+    title.innerHTML = "Royal Rumble (Extreme)";
+    cardLimit = 60;
+  }
+  // Store the new shuffled cardDeck array in a new variable called shuffDeck and call the shuffle function on it
+  // Slice 4 objects from the array
+  let shuffDeck = shuffle(cardDeck).slice(0, cardLimit / 2);
+  console.log(shuffDeck);
+
+  // Create a new array by merging two copies of the new shuffDeck together
+  let newDeck = shuffDeck.concat(shuffDeck);
+  shuffle(newDeck);
+  console.log(newDeck);
+
+  // Repeat over cardDeck array
+  for (let i = 0; i < newDeck.length; i++) {
+    const liEl = document.createElement("LI");
+    liEl.classList.add("card");
+    const addImg = document.createElement("IMG");
+    liEl.appendChild(addImg);
+    // Added a helper function to add multiple attributes to img elements credit to https://stackoverflow.com/questions/12274748/setting-multiple-attributes-for-an-element-at-once-with-javascript?
+    setAttributes(addImg, {
+      src: "assets/images/cards/" + newDeck[i],
+      alt: "image of a professional wrestler",
+    });
+    deck.appendChild(liEl);
+  }
+}
+if (currentCards < cardLimit) {
+  currentCards++;
+  console.log(currentCards);
+}
+startGame(mode);
 
 /*
 Remove all child nodes from the deck <li> tags and
@@ -254,12 +305,35 @@ function resetAll() {
 
   flipped = [];
   removeCard();
-  startGame();
+  stats.remove("p");
+  startGame(mode);
 }
 
 function moveCounter() {
   moveCount.innerHTML++;
   moves++;
+}
+
+function matchRating() {
+  if (moves === 6) {
+    stars[4].firstElementChild.classList.remove("fa-star");
+    starCount--;
+  }
+
+  if (moves === 10) {
+    stars[3].firstElementChild.classList.remove("fa-star");
+    starCount--;
+  }
+
+  if (moves === 14) {
+    stars[2].firstElementChild.classList.remove("fa-star");
+    starCount--;
+  }
+
+  if (moves === 18) {
+    stars[1].firstElementChild.classList.remove("fa-star");
+    starCount--;
+  }
 }
 
 function compareTwo() {
@@ -311,9 +385,8 @@ function noPair() {
 }
 
 function modalStats() {
-  const stats = document.querySelector(".modal-content");
   // Create three different paragraphs
-  for (let i = 1; i <= 3; i++) {
+  for (let i = 1; i <= 4; i++) {
     // Create a new Paragraph
     const statsEl = document.createElement("p");
     // Add a class to the new Paragraph
@@ -324,10 +397,11 @@ function modalStats() {
   // Select all p tags with the class of stats and update the content
   let p = stats.querySelectorAll("p.stats");
   // Set the new <p> to have the content of stats (time, moves and star rating)
-  p[0].innerHTML =
+  p[0].innerHTML = "You found all " + cardLimit / 2 + " card pairs";
+  p[1].innerHTML =
     "Match Finish Time: " + minutes + " Minutes and " + seconds + " Seconds";
-  p[1].innerHTML = moves + " Moves Made";
-  p[2].innerHTML = "Your Match Rating is: " + starCount + " out of 5 stars";
+  p[2].innerHTML = moves + " Moves Made";
+  p[3].innerHTML = "Your Match Rating is: " + starCount + " out of 5 stars";
 }
 
 function displayModal() {
@@ -336,6 +410,15 @@ function displayModal() {
   closeModal.onclick = function () {
     modal.style.display = "none";
   };
+}
+
+function gameWon() {
+  if (paired.length === cardLimit) {
+    console.log("Winner!");
+    stopTime();
+    modalStats();
+    displayModal();
+  }
 }
 
 /*----------------------------------  
