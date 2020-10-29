@@ -139,13 +139,9 @@ footer {
 
 .btn-lg:hover,
 .btn-lg:hover i,
-.btn-lg:hover h3,
-.btn-lg:hover h4,
 .modal-body .btn-lg:hover,
 .modal-body .btn-lg:hover i,
-.modal-body .btn-lg:hover h4,
 .modal-footer .btn-lg:hover,
-.modal-footer .btn-lg:hover h3,
 .restart-btn:hover {
   background: #ebcb88;
   color: #6c2043;
@@ -154,9 +150,11 @@ footer {
 /* Headings */
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: Rubik, sans-serif;
   color: #fafafa;
+  margin-bottom: 0;
 }
 
 h2 {
@@ -166,15 +164,17 @@ h2 {
   word-spacing: 6px;
 }
 
-h3 {
+.nav-btn {
   font-weight: 500;
   overflow: hidden;
   white-space: nowrap;
   display: block;
 }
 
-h3,
-h4 {
+.nav-btn,
+.mode-name,
+.restart-btn,
+.new-game-btn {
   font-family: Rubik, sans-serif;
   color: #0a0a0a;
   margin: 0;
@@ -184,19 +184,20 @@ h1:hover {
   color: #ebcb88;
 }
 
-h3:hover,
-h4:hover {
+.nav-btn:hover,
+.mode-name:hover {
   color: #6c2043;
 }
 
-h3,
+.nav-btn,
 nav button:hover i {
   font-size: 18px;
   line-height: 26px;
   margin: 0 auto;
 }
 
-h4,
+h3,
+.mode-name,
 .modal-body .btn-lg:hover i {
   font-size: 14px;
   line-height: 20px;
@@ -409,7 +410,7 @@ main .btn-group-vertical {
 }
 
 .score-panel,
-.score-panel h3 {
+.score-panel .nav-btn {
   color: #fafafa;
 }
 
@@ -575,18 +576,15 @@ footer {
     line-height: 51px;
   }
 
-  h3 {
-    width: 200px;
-  }
-
-  h3,
+  .nav-btn,
   nav button:hover i,
   .restart-btn {
     font-size: 24px;
     line-height: 35px;
   }
 
-  h4,
+  h3,
+  .mode-name,
   .modal-body .btn-lg:hover i {
     font-size: 18px;
     line-height: 26px;
@@ -650,6 +648,10 @@ footer {
 
   .modal-header {
     border-bottom: solid 4px #786336;
+  }
+
+  .close {
+    font-size: 2rem;
   }
 
   .modal-footer {
@@ -797,18 +799,15 @@ footer {
     line-height: 64px;
   }
 
-  h3 {
-    width: 250px;
-  }
-
-  h3,
+  .nav-btn,
   nav button:hover i,
   .restart-btn {
     font-size: 30px;
     line-height: 44px;
   }
 
-  h4,
+  h3,
+  .mode-name,
   .modal-body .btn-lg:hover i {
     font-size: 22px;
     line-height: 32px;
@@ -872,6 +871,10 @@ footer {
 
   .modal-header {
     border-bottom: solid 6px #786336;
+  }
+
+  .close {
+    font-size: 2.5rem;
   }
 
   .modal-footer {
@@ -973,18 +976,15 @@ footer {
     line-height: 77px;
   }
 
-  h3 {
-    width: 300px;
-  }
-
-  h3,
+  .nav-btn,
   nav button:hover i,
   .restart-btn {
     font-size: 36px;
     line-height: 52px;
   }
 
-  h4,
+  h3,
+  .mode-name,
   .modal-body .btn-lg:hover i {
     font-size: 27px;
     line-height: 39px;
@@ -1043,6 +1043,10 @@ footer {
 
   .modal-header {
     border-bottom: solid 7px #786336;
+  }
+
+  .close {
+    font-size: 3rem;
   }
 
   .modal-footer {
@@ -1138,18 +1142,15 @@ footer {
     line-height: 89px;
   }
 
-  h3 {
-    width: 350px;
-  }
-
-  h3,
+  .nav-btn,
   nav button:hover i,
   .restart-btn {
     font-size: 42px;
     line-height: 61px;
   }
 
-  h4,
+  h3,
+  .mode-name,
   .modal-body .btn-lg:hover i {
     font-size: 32px;
     line-height: 47px;
@@ -1208,6 +1209,10 @@ footer {
 
   .modal-header {
     border-bottom: solid 10px #786336;
+  }
+
+  .close {
+    font-size: 4rem;
   }
 
   .modal-footer {
