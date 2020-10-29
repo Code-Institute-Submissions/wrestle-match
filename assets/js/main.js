@@ -167,7 +167,7 @@ const mode = ["fatal4", "kingofthering", "battleroyal", "royalrumble"],
   stars = document.querySelector(".match-rating").querySelectorAll(".star"),
   timeCount = document.querySelector(".timer"),
   stats = document.querySelector(".modal-body");
-  
+
 let currentCards = 0,
   cardLimit = 0,
   flipped = [],
@@ -202,7 +202,7 @@ function setAttributes(addImg, attrs) {
   }
 }
 
-function startGame(mode) {
+function startGame() {
   const urlParams = new URLSearchParams(window.location.search);
   const myParam = urlParams.get("mode");
   if (myParam === "fatal4") {
@@ -315,22 +315,22 @@ function moveCounter() {
 }
 
 function matchRating() {
-  if (moves === 6) {
+  if (moves === cardLimit * .75) {
     stars[4].firstElementChild.classList.remove("fa-star");
     starCount--;
   }
 
-  if (moves === 10) {
+  if (moves === cardLimit) {
     stars[3].firstElementChild.classList.remove("fa-star");
     starCount--;
   }
 
-  if (moves === 14) {
+  if (moves === cardLimit * 1.5) {
     stars[2].firstElementChild.classList.remove("fa-star");
     starCount--;
   }
 
-  if (moves === 18) {
+  if (moves === cardLimit * 2) {
     stars[1].firstElementChild.classList.remove("fa-star");
     starCount--;
   }
