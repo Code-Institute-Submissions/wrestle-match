@@ -458,7 +458,6 @@ function displayModal() {
 
 function gameWon() {
   if (paired.length === cardLimit) {
-    console.log("Winner!");
     stopTime();
     displayModal();
     modalStats();
