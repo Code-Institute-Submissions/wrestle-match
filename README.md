@@ -178,47 +178,64 @@ as an original concept design to get the layout of each part or particular featu
 
 ### Languages
 
-- HTML5 - The main language used to build the basic layout of the website.
-- CSS3 - This language is used for styling and formatting the base HTML code to personalise my website.
-- JavaScript -
+- HTML5 - used to build the basic layout of the website.
+- CSS3 - used for styling and formatting the base HTML code to personalise my website.
+- JavaScript - used for adding functionality and user interactivity to the website.
 
 ### Frameworks, libraries, editors and version control
 
-- [Bootstrap 4.5.3](https://getbootstrap.com/) -
+- [Bootstrap 4.5.3 CDN](https://getbootstrap.com/) - Bootstrap was used to assist with some of the structuring and responsiveness
+  of the website and build off of or modify some of it's existing components and styling to save time.
 
-- [Google Fonts](https://fonts.google.com/) -
+- [Google Fonts](https://fonts.google.com/) - Google Fonts were used to embed and link the 'Rubik' and 'Roboto' fonts into the HTML.
 
-- [Hover.css 2.3.1](https://cdnjs.com/libraries/hover.css/2.3.1) -
+- [Font Awesome](https://fontawesome.com/) - Font Awesome was used to provide the icons throughout the website for aesthetic
+  and UX design purposes.
 
-- [Font Awesome](https://fontawesome.com/) -
+- [jQuery 3.5.1](https://jquery.com/) - jQuery comes as part of the Bootstrap framework.
 
-- [jQuery 3.5.1](https://jquery.com/) -
-
-- [Git](https://git-scm.com/) / [Gitpod](https://www.gitpod.io/) - Git was used for version control by utilizing the Gitpod
-  terminal to commit files to Git and push them to GitHub.
+- [Git](https://git-scm.com/) / [Gitpod](https://www.gitpod.io/) - Git was used for version control by utilizing the Gitpod IDE
+  terminal to commit files to Git and push them to GitHub. Gitpod was the primary development tool for the building and maintenance
+  of the website.
 
 - [GitHub](https://github.com/) - GitHub is used to store the project's code within a repository including all previous
   versions or commits of the project after being pushed from Gitpod and is used to host the deployed website for public viewing.
 
 ### Additional tools/apps
 
-- [HTML Color Codes](https://htmlcolorcodes.com/) -
+- [HTML Color Codes](https://htmlcolorcodes.com/) - HTML Color Codes was used to help choose the colour scheme and obtain
+  the relative hex codes for each colour.
 
-- [Coolors](https://coolors.co/) -
+- [Coolors](https://coolors.co/) - Coolors was used to quickly get 'inbetween' colours and relative hex codes and save my 
+chosen scheme as an image.
 
-- [Shutterstock](https://www.shutterstock.com/home) -
+- [Shutterstock](https://www.shutterstock.com/home) - Shutterstock provided the ring and steel cage background images.
 
-- [Adobe Illustrator](https://www.adobe.com/uk/products/illustrator.html) -
+- [Adobe Illustrator](https://www.adobe.com/uk/products/illustrator.html) - Adobe Illustrator was used for testing colour
+  and shading compatibility with my chosen colour scheme and tweaking if desired. It was also used for cropping and scaling
+  images.
 
-- [Balsamiq Wireframes](https://balsamiq.com/wireframes/) -
+- [Balsamiq Wireframes](https://balsamiq.com/wireframes/) - I used the Balsamiq Wireframes desktop application to create all
+  my [wireframes](https://github.com/Gazroh87/wrestle-match/tree/master/wireframes) during the design process.
 
-- [tiny jpg](https://tinyjpg.com/) & [tiny png](https://tinypng.com/) -
+- [tiny jpg](https://tinyjpg.com/) & [tiny png](https://tinypng.com/) - These websites were used to compress the images used
+  throughout the website to reduce data size, decreasing load times without sacrificing the integrity or quality of the original
+  images.
 
-- [Google Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) -
+- [Google Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) - The Chrome DevTools were used throughout
+  the building, testing and debugging of the website to quickly see the result of any changes made to any code via visualization
+  in a live browser tab and/or the developer console.
 
-- [Autoprefixer CSS](https://autoprefixer.github.io/) -
+- [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/?utm_source=devtools) - Google Lighthouse was used for 
+website auditing. This addon of DevTools can generate a report of each web pages performance, accessibility, best practices 
+and SEO to aid in the testing and improvement of my website.
 
-- [Am I Responsive Design?](http://ami.responsivedesign.is/) -
+- [Autoprefixer CSS](https://autoprefixer.github.io/) - Autoprefixer was used to help with making the CSS code compatible and
+  valid for all internet browers as much as possible.
+
+- [Am I Responsive Design?](http://ami.responsivedesign.is/) - This web tool was used to generate screencaps of my website at
+  different viewport sizes to form a static demo presentation of my website's responsiveness as can be seen towards the top of this
+  document.
 
 ---
 
