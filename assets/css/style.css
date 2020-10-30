@@ -5,11 +5,15 @@
 * Browsers: last 4 version
 */
 
+/* Imported variable font from Google fonts */
+
 @font-face {
   font-family: "Rubik";
   src: url("rubik.woff2") format("woff2 supports variations");
   font-weight: 300 900;
 }
+
+/* Mobile styling */
 
 /* Global Styles */
 
@@ -18,6 +22,8 @@
   padding: 0;
   text-decoration: none;
 }
+
+/* Border box fix */
 
 *,
 *::before,
@@ -628,11 +634,15 @@ footer {
   width: 50%;
 }
 
+/* All media queries follow from here in similar order as above */
+
 @media (min-width: 400px) {
   header h2 span {
     display: block;
   }
 }
+
+/* Tablet styling */
 
 @media (min-width: 480px) {
   p {
@@ -847,6 +857,8 @@ footer {
   }
 }
 
+/* Smaller laptop/desktop sstyling */
+
 @media (min-width: 1280px) and (min-height: 720px) {
   p {
     margin-bottom: 1.5rem;
@@ -1034,6 +1046,8 @@ footer {
     margin: 2em auto;
   }
 }
+
+/* Larger screen sizes and 4K styling */
 
 @media (min-width: 2560px) {
   p {

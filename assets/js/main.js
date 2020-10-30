@@ -1,4 +1,5 @@
 // Card deck image array
+
 const cardDeck = [
   "a-black.jpg",
   "a-styles.jpg",
@@ -157,6 +158,8 @@ const cardDeck = [
   "yokozuna.jpg",
 ];
 
+// Global constant variables
+
 const mode = ["fatal4", "kingofthering", "battleroyal", "royalrumble"],
   title = document.querySelector(".mode-head"),
   deck = document.querySelector(".deck"),
@@ -168,18 +171,25 @@ const mode = ["fatal4", "kingofthering", "battleroyal", "royalrumble"],
   timeCount = document.querySelector(".timer"),
   stats = document.querySelector(".modal-body");
 
+// Global changeable variables
+
 let currentCards = 0,
   cardLimit = 0,
-  flipped = [],
-  paired = [],
   moves = 0,
   starCount = 5,
   time,
   minutes = 0,
   seconds = 0,
-  startTime = false;
+  startTime = false,
+  // Global array stores flipped cards
+
+  flipped = [],
+  // Global array Stores paired cards
+
+  paired = [];
 
 // Shuffle arrays function credit to https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array?
+
 function shuffle(array) {
   let currentIndex = array.length,
     temporaryValue,
@@ -194,13 +204,15 @@ function shuffle(array) {
   return array;
 }
 
-// Set card limit and number of current cards
+// A function to add multiple attributes to img elements credit to https://stackoverflow.com/questions/12274748/setting-multiple-attributes-for-an-element-at-once-with-javascript?
 
 function setAttributes(addImg, attrs) {
   for (let key in attrs) {
     addImg.setAttribute(key, attrs[key]);
   }
 }
+
+// Load the correct game mode and number of cards on the board from the mode selected on the index page
 
 function startGame() {
   const urlParams = new URLSearchParams(window.location.search);
@@ -218,50 +230,58 @@ function startGame() {
     title.innerHTML = "Royal Rumble (Extreme)";
     cardLimit = 60;
   }
-  // Store the new shuffled cardDeck array in a new variable called shuffDeck and call the shuffle function on it
-  // Slice 4 objects from the array
-  let shuffDeck = shuffle(cardDeck).slice(0, cardLimit / 2);
-  console.log(shuffDeck);
 
-  // Create a new array by merging two copies of the new shuffDeck together
+  // Declare a new array as the result of shuffling the cardDeck array then selecting the number of cards equal to half the card limit
+
+  let shuffDeck = shuffle(cardDeck).slice(0, cardLimit / 2);
+
+  // Create a new array by merging two copies of shuffDeck together and shuffle
+
   let newDeck = shuffDeck.concat(shuffDeck);
   shuffle(newDeck);
-  console.log(newDeck);
 
-  // Repeat over cardDeck array
+  // Repeat over newDeck array
   for (let i = 0; i < newDeck.length; i++) {
+    // Create the <li> with the class of card then nest an image inside the list item
+
     const liEl = document.createElement("LI");
     liEl.classList.add("card");
     const addImg = document.createElement("IMG");
     liEl.appendChild(addImg);
-    // Added a helper function to add multiple attributes to img elements credit to https://stackoverflow.com/questions/12274748/setting-multiple-attributes-for-an-element-at-once-with-javascript?
+
+    // Set multiple attributes for the images
+
     setAttributes(addImg, {
       src: "assets/images/cards/" + newDeck[i],
       alt: "image of a professional wrestler",
     });
+
+    // Add the list item to the <ul> with the class of deck
+
     deck.appendChild(liEl);
   }
 }
 if (currentCards < cardLimit) {
   currentCards++;
-  console.log(currentCards);
 }
 startGame(mode);
 
-/*
-Remove all child nodes from the deck <li> tags and
-<img> tags.  To be called in set everything function only
-*/
+// Remove all cards from the deck <ul></ul>
+
 function removeCard() {
-  // As long as <ul> deck has a child node, remove it
   while (deck.hasChildNodes()) {
     deck.removeChild(deck.firstChild);
   }
 }
 
+/* Timer function is invoked in an event listener on the first selection of a card
+Credit to https://www.w3schools.com/js/js_timing.asp */
+
 function timer() {
   time = setInterval(function () {
+    // Update the timeCount every second
     seconds++;
+    // Every 60 seconds update the minutes and reset the seconds
     if (seconds === 60) {
       minutes++;
       seconds = 0;
@@ -276,9 +296,13 @@ function timer() {
   }, 1000);
 }
 
+// Stop the timer once all cards have been matched
+
 function stopTime() {
   clearInterval(time);
 }
+
+// Reset all global variables and generated html content
 
 function resetAll() {
   stopTime();
@@ -309,13 +333,18 @@ function resetAll() {
   startGame(mode);
 }
 
+// Function updates the move count html
+
 function moveCounter() {
   moveCount.innerHTML++;
   moves++;
 }
 
+/* Function updates the match rating. Once the number of moves made reaches the card limit number 
+and any multiplication applied, remove a star from the match rating */
+
 function matchRating() {
-  if (moves === cardLimit * .75) {
+  if (moves === cardLimit * 0.75) {
     stars[4].firstElementChild.classList.remove("fa-star");
     starCount--;
   }
@@ -336,38 +365,49 @@ function matchRating() {
   }
 }
 
+// Compare two selected cards to determine if they are a match or not
+
 function compareTwo() {
+  // If there are 2 cards in the flipped array disable any other selections
   if (flipped.length === 2) {
     document.body.style.pointerEvents = "none";
   }
+  // Compare the cards by image src
   if (flipped.length === 2 && flipped[0].src === flipped[1].src) {
+    // Call the match function
     match();
-    console.log("Matched cards");
   } else if (flipped.length === 2 && flipped[0].src != flipped[1].src) {
     setTimeout(function () {
+      // Add red border around card
       flipped[0].parentElement.classList.add("no-match");
       flipped[1].parentElement.classList.add("no-match");
     }, 200);
+    // Call the no pair function
     noPair();
-    console.log("Not a match");
   }
 }
 
+// Retrieve the two flipped cards and add .match class to the li element
+
 function match() {
-  // Retrieve the two flipped cards and add .match class to the li element
   setTimeout(function () {
     flipped[0].parentElement.classList.add("match");
     flipped[1].parentElement.classList.add("match");
+    // Push the matched cards in the flipped array to the paired array
     paired.push(...flipped);
     // Allow further selecting of cards
     document.body.style.pointerEvents = "auto";
+    // Check to see if the user has won their game
     gameWon();
+    // Reset the flipped array
     flipped = [];
   }, 500);
   // Add 1 to move count
   moveCounter();
   matchRating();
 }
+
+// Remove flip and no-match classes after 800 milliseconds
 
 function noPair() {
   setTimeout(function () {
@@ -377,6 +417,7 @@ function noPair() {
     flipped[1].parentElement.classList.remove("no-match");
     // Allow further selecting of cards
     document.body.style.pointerEvents = "auto";
+    // Reset the flipped array
     flipped = [];
   }, 800);
   // Add 1 to move count
@@ -385,18 +426,16 @@ function noPair() {
 }
 
 function modalStats() {
-  // Create three different paragraphs
+  // Create four different paragraphs
   for (let i = 1; i <= 4; i++) {
-    // Create a new Paragraph
     const statsEl = document.createElement("p");
-    // Add a class to the new Paragraph
+    // Add stats class to the new Paragraph
     statsEl.classList.add("stats");
     // Add the new created <p> tag to the modal content
     stats.appendChild(statsEl);
   }
   // Select all p tags with the class of stats and update the content
   let p = stats.querySelectorAll("p.stats");
-  // Set the new <p> to have the content of stats (time, moves and star rating)
   p[0].innerHTML = "You found all " + cardLimit / 2 + " card pairs";
   p[1].innerHTML =
     "Match Finish Time: " + minutes + " Minutes and " + seconds + " Seconds";
@@ -404,41 +443,42 @@ function modalStats() {
   p[3].innerHTML = "Your Match Rating is: " + starCount + " out of 5 stars";
 }
 
+// Open the modal and apply the close button.
+
 function displayModal() {
   const closeModal = document.getElementsByClassName("close")[0];
   modal.style.display = "block";
+  // On selecting the close button, hide the modal again
   closeModal.onclick = function () {
     modal.style.display = "none";
   };
 }
 
+// Check the number of paired cards against the card limit and if true stop the timer and display the modal with stats
+
 function gameWon() {
   if (paired.length === cardLimit) {
     console.log("Winner!");
     stopTime();
-    modalStats();
     displayModal();
+    modalStats();
   }
 }
 
 /*----------------------------------  
-Main Event Listener
+Main Event Listeners
 ------------------------------------*/
-/*
-Event Listener if a card <li> is clicked
-call flipCard()
-*/
+
+// Event Listener if a card is clicked call flipCard function
+
 deck.addEventListener("click", function (evt) {
-  console.log(evt.target.nodeName + " Was clicked");
   if (evt.target.nodeName === "LI") {
-    console.log(evt.target.nodeName + " Was clicked");
-    // Start the timer after the first click of one card
-    // Executes the timer() function
+    // Start the timer after the first selection of a card
     if (startTime === false) {
       startTime = true;
+      // Executes the timer() function
       timer();
     }
-    // Call flipCard() function
     flipCard();
   }
 
@@ -461,13 +501,14 @@ deck.addEventListener("click", function (evt) {
   }
 });
 
-console.log(paired);
-console.log(paired.length);
-console.log(flipped);
-console.log(flipped.length);
+/*----------------------------------  
+Button Event Listeners
+------------------------------------*/
 
+// Restart button calls for resetAll function
 restart.addEventListener("click", resetAll);
 
+// New Game button hides the modal and calls for resetAll function
 newGame.addEventListener("click", function () {
   modal.style.display = "none";
   resetAll();
