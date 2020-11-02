@@ -167,8 +167,53 @@ as an original concept design to get the layout of each part or particular featu
 
 ### Current Features
 
+- Two page website consisting of a homepage and the game page where a score panel and board where cards are laid out.
 - Responsiveness to all device sizes makes the website easily accessible and simple to navigate.
 - Predominantly JavaScript powered interactive elements.
+- All interactive elements have a slightly different visual appearance when in a hover state.
+
+#### Homepage
+
+- At the top of the page is a header section containing the name of the website which always serves as a link back to
+  the homepage and a subheading telling the user the nature of this website. I wanted the website name to always remain
+  on a single line and still be fairly large in size so for smaller screen widths I used a scrolling animation on the text.
+- On smaller screen widths a background image of a filled wrestling arena also uses a scrolling animation similar to
+  a camera panning back and forth across a crowd.
+- In the center of the page are two main menu buttons.
+- The 'START GAME' triggers a modal to open where the user chooses
+  a mode/difficulty setting before proceeding to the game page. Alternatively the user can select the 'RETURN' button
+  below these options, to go back to the main menu.
+- The 'HOW TO PLAY' button triggers a different modal to open that provides the user with instructions on how to navigate
+  around the website, how to play the game and how the score system works. Again the user can select the 'RETURN' button
+  below the instructions, to go back to the main menu, for consistency, or the user can select the 'PLAY' button to open
+  the 'Choose Mode...' modal to choose a mode/difficulty setting before proceeding to the game page.
+- At the bottom of the bottom of the page is a footer section with copyright.
+
+#### Game page
+
+- The top of the page again features a header section with the same website name text and link, then just below it,
+  depending on the game mode selected from the main menu of the homepage, the name of the mode and it's difficulty will
+  appear as the subtitle text providing clear indication to the user where they are within the website. They can be sure
+  that what they click on will take them where they are supposed to go.
+- Below the header is the score panel section which houses the match rating box, number of moves made, game duration
+  timer, and 'HOME' and 'RESTART' buttons. The 'HOME' button allows the user to return to the homepage and the 'RESTART'
+  button resets the whole game to before it began, so the cards selected from a larger deck are randomized and shuffled
+  and their positions are also randomized again.
+- Below the score panel is the game board. The game board is where the cards in play are laid out with the card face
+  images facing away and hidden from the user before the game starts. The number of cards in play are set to 4 pairs of
+  cards totalling 8 on the easy game setting and up to 30 pairs of cards totalling 60 on the extreme game setting.
+- The game begins when the user selects their first card to flip over and the clock starts ticking. Cards are animated
+  using CSS linked to JavaScript event listeners.
+- Each matching attempt of two cards is classed as one move made and the more moves the user makes before finishing a
+  game, the lower match rating they will receive as stars are deducted at certain move count thresholds. An unlimited
+  number of moves can be made and there is no time limit in place to complete a game.
+- By deafult cards have a white border. When a matching attempt is made, the selected card's borders will either turn
+  red, indicating a failed match or green, indicating a successful match.
+- Once all cards have been matched, all card borders will be green and a modal will pop-up in the center of the screen
+  declaring the user as a winner and detailing some game stats including how many pairs found, how long it took the user
+  to finish the game, number of moves made and the user's final match rating out of five stars. Below the stats is a
+  button asking the user if they would like to start a new game straight away.
+- Again at the bottom of the bottom of the page is the same footer section.
 
 ### Future features/improvements to be implemented
 
@@ -206,8 +251,8 @@ as an original concept design to get the layout of each part or particular featu
 - [HTML Color Codes](https://htmlcolorcodes.com/) - HTML Color Codes was used to help choose the colour scheme and obtain
   the relative hex codes for each colour.
 
-- [Coolors](https://coolors.co/) - Coolors was used to quickly get 'inbetween' colours and relative hex codes and save my 
-chosen scheme as an image.
+- [Coolors](https://coolors.co/) - Coolors was used to quickly get 'inbetween' colours and relative hex codes and save my
+  chosen scheme as an image.
 
 - [Shutterstock](https://www.shutterstock.com/home) - Shutterstock provided the ring and steel cage background images.
 
@@ -226,9 +271,9 @@ chosen scheme as an image.
   the building, testing and debugging of the website to quickly see the result of any changes made to any code via visualization
   in a live browser tab and/or the developer console.
 
-- [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/?utm_source=devtools) - Google Lighthouse was used for 
-website auditing. This addon of DevTools can generate a report of each web pages performance, accessibility, best practices 
-and SEO to aid in the testing and improvement of my website.
+- [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/?utm_source=devtools) - Google Lighthouse was used for
+  website auditing. This addon of DevTools can generate a report of each web pages performance, accessibility, best practices
+  and SEO to aid in the testing and improvement of my website.
 
 - [Autoprefixer CSS](https://autoprefixer.github.io/) - Autoprefixer was used to help with making the CSS code compatible and
   valid for all internet browers as much as possible.
@@ -277,6 +322,11 @@ GitHub repository, type `git remote rm origin` into the terminal and hit 'Enter'
 ### Content
 
 ### Media
+
+### Special thanks / Acknowledgements
+
+- And just a big thank you to everyone involved with Code Institute, the mentors and fellow students on Slack who have
+  helped to make this project possible.
 
 ---
 
