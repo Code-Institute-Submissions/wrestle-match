@@ -217,6 +217,19 @@ as an original concept design to get the layout of each part or particular featu
 
 ### Future features/improvements to be implemented
 
+- Add a new game mode that sees users trying to match members of tag-teams together. So here, the images to match would be
+  different and instead, to help those unfamiliar with professional wrestling, text on the cards indicating which tag-team
+  the person in the image is/was apart of, would be provided. The text might be an option to toggle on or off to increase or
+  decrease the challenge.
+- Implement sound effects/music.
+- Add better/more animation especially to the cards.
+- Spend more time on the layout of elements.
+- Implement a high score leaderboard. The user would submit a form with some way to identify themselves and update the
+  leaderboard.
+- Make further improvements to accessibility and performance.
+- Existing or aadditional game modes could be added with different visual themes.
+- Experiment with automated testing using Jasmine.
+
 ---
 
 ## Technologies used
