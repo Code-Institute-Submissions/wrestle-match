@@ -85,7 +85,7 @@ Developer expectations:
 - As a developer, I want to have options for projects I can continue to build on with updates introducing enhancements and
   additions in aesthetics, gameplay, sound and so on as I continue to gain experience and expand on my skills.
 - As an employer, I want to see what Gary is capable of doing as a software developer by seeing clear and proper usage of
-  JavaScript to produce user interatice elements as is to be expected from an IFD project. IF he impresses me with what I see
+  JavaScript to produce user interatice elements as is to be expected from an IFD project. If he impresses me with what I see
   this might help me to decide if he is a good fit for an available position within our company.
 
 ### Design Choices
@@ -357,6 +357,29 @@ ensure there are no syntax errors in the project code.
   only included to help identify query parameters to set the game mode and it works as intended.
 
 ### User Story Testing
+
+- A game can be finished in a very short amount of time and you can play many games that will different every time
+  within a short time frame. The game is fun with flip and matched cards animations. The game is very easy for anyone
+  to play with no complications during the process.
+- Instructions are provided from the homepage menu screen.
+- The colour palette works well and it's both pleasant and easy on the eyes. Imagery used on the card faces during
+  play provides added bursts of different colours and variety.
+- The user is quickly able to develop a clear understanding of the website navigation through a consistent layout of
+  buttons and modals in matching colours.
+- The homepage provides quick access to the game via the 'START GAME' button.
+- The user is quickly able to recognise any interative element by background colour and hover state.
+- The user gets a fully responsive and consistent design so they can play the game and enjoy it on a wide range of
+  devices and screen sizes. Switching between devices and screen sizes, the user won't notice any confusing changes
+  between game sessions.
+- Returning users can see variation in their game, every time they start a new game. The card images can differ greatly
+  from game to game.
+- As the developer of this project, I have made my first game which has always been of great interest to me. I have
+  managed to combine another interest of mine, in professional wrestling, to the making of this game.
+- Having completed this project, I have both a game that works as intended and can easily be accessed and played by
+  others, but this also gives me another option for a project that I can continue to build on with potential updates
+  introducing enhancements and additions in aesthetics, gameplay, sound as my journey in the coding world continues.
+- An employer is able to see my capability as a software developer, up to the completion of this project by seeing clear
+  and proper usage of JavaScript to produce user interactive elements as they might expect from an IFD project.
 
 ---
 
