@@ -299,6 +299,63 @@ as an original concept design to get the layout of each part or particular featu
 
 ## Testing
 
+My process of testing included:
+
+- Testing my user stories as set out in the UX section.
+- Validating all custom HTML, CSS and JavaScript files.
+- Reviewing website compatibility on different browsers and devices.
+- Reviewing design responsiveness from custom mobile screen sizes of 320 x 480px to desktop 4K resolutions in DevTools.
+- Making sure all links function correctly.
+
+The vast majority of testing conducted across the website was carried out by myself. and involved recreating typical
+scenarios a website like mine can face for a game session and make note of any glaring visual problems, unwanted side-
+effects/results, bugs and errors I could see both in the main browser window and anything captured in DevTools, particularly
+the 'Console' and 'Network' tabs.
+
+A typical instance of testing would involve the following:
+
+- Selecting any new links and awaiting the outcome.
+- Starting a new game and then immediately attempt to select another option.
+- Testing new buttons and repeating selection of buttons and cards very fast.
+- Testing CSS states of new interactive elements.
+- Spamming refresh requests to the browser to monitor load times, hangs or error messages.
+- Console logging variables, arrays and functions.
+
+My website utilises as much vanilla JavaScript that I have a good understanding of and that fits with a game of this type,
+as possible. Part way through the project I was unable to get the game to function as desired without some snippets of jQuery
+but with further hours of learning and assistance this code has been replaced with JavaScript whilst taking up less space.
+
+My website has been tested on the latest popular web browsers including:
+
+- Google Chrome
+- Mozilla Firefox
+- Microsoft Edge
+- Apple Safari
+- Microsoft Internet Explorer
+- Amazon Silk
+
+I used the following physical devices for development and testing:
+
+- AMD Ryzen 7 2700X PC running Windows 10, Chrome, Firefox and Edge browsers on two monitors; 1920x1200px and 2560x1440px natively.
+- Apple iphone 6S and SE running Safari browser.
+- Laptop running Chrome, Internet Explorer and Edge browsers.
+- Amazon Fire HD tablet running Silk browser.
+
+This project has not received any automated testing like Jasmine, because of a lack of deeper understanding in this kind
+of testing. But this is something I will continue to learn more of and implement in future.
+
+The following validators were used to validate all of the HTML, CSS and JavaScript files that make up this project, to
+ensure there are no syntax errors in the project code.
+
+- HTML - [W3C Markup Validation Service](https://validator.w3.org/) - No errors or warnings.
+- CSS - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) - No errors but this website displays warnings
+  concerned with unknown vendor extensions, most of which have been added to my code via the Autoprefixer. These are
+  considered unimportant warnings and can be ignored as many of these extensions prevent animation and rendering bugs across
+  different browser types. This makes the implementation of these vendor extensions very helpful.
+- JavaScript - [JSHint Validator](https://jshint.com/) - No errors but I have warnings which should cause no concern
+  as the majority of modern web browsers support ECMA6. There is also an undefined variable 'URLSearchParams'. This was
+  only included to help identify query parameters to set the game mode and it works as intended.
+
 ### User Story Testing
 
 ---
