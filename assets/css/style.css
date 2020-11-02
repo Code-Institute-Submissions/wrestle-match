@@ -78,6 +78,10 @@ img {
   padding: 12px;
 }
 
+.container-fluid {
+  padding: 0;
+}
+
 @-webkit-keyframes panoramic-scroll {
   0% {
     background-position: 0 0;
@@ -152,6 +156,7 @@ footer {
 }
 
 .btn-lg,
+.home-btn,
 .restart-btn,
 .card {
   background: #e6bb61;
@@ -168,6 +173,7 @@ footer {
 .btn-lg,
 .rating-panel,
 .timer span:last-child,
+.home-btn,
 .restart-btn,
 .card,
 .deck .card.flip {
@@ -179,6 +185,7 @@ footer {
 .modal-body .btn-lg:hover,
 .modal-body .btn-lg:hover i,
 .modal-footer .btn-lg:hover,
+.home-btn:hover,
 .restart-btn:hover {
   background: #ebcb88;
   color: #6c2043;
@@ -210,6 +217,7 @@ h2 {
 
 .nav-btn,
 .mode-name,
+.home-btn,
 .restart-btn,
 .new-game-btn {
   font-family: Rubik, sans-serif;
@@ -432,7 +440,8 @@ main .btn-group-vertical {
   width: 75%;
 }
 
-.modal-footer {
+.modal-footer,
+.score-panel-footer {
   border-top: solid 1px #786336;
 }
 
@@ -458,6 +467,21 @@ main .btn-group-vertical {
   padding: 0.5em;
 }
 
+.score-panel-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0.75em;
+  border-bottom-right-radius: calc(0.3rem - 1px);
+  border-bottom-left-radius: calc(0.3rem - 1px);
+}
+
+.score-panel-footer .row {
+  margin-right: 0;
+}
+
+.home-btn,
 .restart-btn {
   color: #0a0a0a;
   cursor: pointer;
@@ -553,8 +577,14 @@ main .btn-group-vertical {
 }
 
 .card,
+.home-btn,
 .restart-btn {
   cursor: pointer;
+}
+
+.home,
+.restart {
+  padding: 0;
 }
 
 .deck .card.flip {
@@ -675,6 +705,7 @@ footer {
   .btn-lg,
   .rating-panel,
   .timer span:last-child,
+  .home-btn,
   .restart-btn,
   .card,
   .deck .card.flip {
@@ -688,6 +719,7 @@ footer {
 
   .nav-btn,
   nav button:hover i,
+  .home-btn,
   .restart-btn {
     font-size: 24px;
     line-height: 35px;
@@ -764,7 +796,8 @@ footer {
     font-size: 2rem;
   }
 
-  .modal-footer {
+  .modal-footer,
+  .score-panel-footer {
     border-top: solid 4px #786336;
   }
 
@@ -897,6 +930,7 @@ footer {
   .btn-lg,
   .rating-panel,
   .timer span:last-child,
+  .home-btn,
   .restart-btn,
   .card,
   .deck .card.flip {
@@ -915,6 +949,7 @@ footer {
 
   .nav-btn,
   nav button:hover i,
+  .home-btn,
   .restart-btn {
     font-size: 30px;
     line-height: 44px;
@@ -991,7 +1026,8 @@ footer {
     font-size: 2.5rem;
   }
 
-  .modal-footer {
+  .modal-footer,
+  .score-panel-footer {
     border-top: solid 6px #786336;
   }
 
@@ -1081,6 +1117,7 @@ footer {
   .btn-lg,
   .rating-panel,
   .timer span:last-child,
+  .home-btn,
   .restart-btn,
   .card,
   .deck .card.flip {
@@ -1094,6 +1131,7 @@ footer {
 
   .nav-btn,
   nav button:hover i,
+  .home-btn,
   .restart-btn {
     font-size: 36px;
     line-height: 52px;
@@ -1165,7 +1203,8 @@ footer {
     font-size: 3rem;
   }
 
-  .modal-footer {
+  .modal-footer,
+  .score-panel-footer {
     border-top: solid 7px #786336;
   }
 
@@ -1247,6 +1286,7 @@ footer {
   .btn-lg,
   .rating-panel,
   .timer span:last-child,
+  .home-btn,
   .restart-btn,
   .card,
   .deck .card.flip {
@@ -1260,6 +1300,7 @@ footer {
 
   .nav-btn,
   nav button:hover i,
+  .home-btn,
   .restart-btn {
     font-size: 42px;
     line-height: 61px;
@@ -1331,7 +1372,8 @@ footer {
     font-size: 4rem;
   }
 
-  .modal-footer {
+  .modal-footer,
+  .score-panel-footer {
     border-top: solid 10px #786336;
   }
 
