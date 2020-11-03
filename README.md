@@ -174,7 +174,7 @@ as an original concept design to get the layout of each part or particular featu
 
 #### Homepage
 
-![Main Menu Image](https://github.com/Gazroh87/wrestle-match/blob/master/assets/readme/home-menu-screenshot.png)
+![Main Menu Image](https://github.com/Gazroh87/wrestle-match/blob/master/assets/images/readme/home-menu-screenshot.png)
 
 - At the top of the page is a header section containing the name of the website which always serves as a link back to
   the homepage and a subheading telling the user the nature of this website. I wanted the website name to always remain
@@ -183,13 +183,13 @@ as an original concept design to get the layout of each part or particular featu
   a camera panning back and forth across a crowd.
 - In the center of the page are two main menu buttons.
 
-![Choose Mode Modal Image](https://github.com/Gazroh87/wrestle-match/blob/master/assets/readme/choose-modal-screenshot.png)
+![Choose Mode Modal Image](https://github.com/Gazroh87/wrestle-match/blob/master/assets/images/readme/choose-modal-screenshot.png)
 
 - The 'START GAME' triggers a modal to open where the user chooses
   a mode/difficulty setting before proceeding to the game page. Alternatively the user can select the 'RETURN' button
   below these options, to go back to the main menu.
 
-![Instructions Modal Image](https://github.com/Gazroh87/wrestle-match/blob/master/assets/readme/instruction-modal-screenshot.png)
+![Instructions Modal Image](https://github.com/Gazroh87/wrestle-match/blob/master/assets/images/readme/instruction-modal-screenshot.png)
 
 - The 'HOW TO PLAY' button triggers a different modal to open that provides the user with instructions on how to navigate
   around the website, how to play the game and how the score system works. Again the user can select the 'RETURN' button
@@ -199,7 +199,7 @@ as an original concept design to get the layout of each part or particular featu
 
 #### Game page
 
-![Game Page Image](https://github.com/Gazroh87/wrestle-match/blob/master/assets/readme/game-screenshot.png)
+![Game Page Image](https://github.com/Gazroh87/wrestle-match/blob/master/assets/images/readme/game-screenshot.png)
 
 - The top of the page again features a header section with the same website name text and link, then just below it,
   depending on the game mode selected from the main menu of the homepage, the name of the mode and it's difficulty will
@@ -225,7 +225,7 @@ as an original concept design to get the layout of each part or particular featu
   button asking the user if they would like to start a new game straight away.
 - Again at the bottom of the bottom of the page is the same footer section.
 
-![Game Won Modal Image](https://github.com/Gazroh87/wrestle-match/blob/master/assets/readme/winner-modal-screenshot.png)
+![Game Won Modal Image](https://github.com/Gazroh87/wrestle-match/blob/master/assets/images/readme/winner-modal-screenshot.png)
 
 ### Future features/improvements to be implemented
 
@@ -451,9 +451,7 @@ GitHub repository, type `git remote rm origin` into the terminal and hit 'Enter'
 - CSS - [CSS-Tricks](https://css-tricks.com/)
 - JavaScript Operators - [w3resource](https://www.w3resource.com/javascript/javascript.php)
 - JavaScript - [Developer Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- JavaScript shuffling credit to:
-  - [stackoverflow contributors here](https://stackoverflow.com/questions/7070054/javascript-shuffle-html-list-element-order)
-    and [here](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
+- JavaScript shuffling credit to: [stackoverflow contributors here](https://stackoverflow.com/questions/7070054/javascript-shuffle-html-list-element-order) and [here](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
 
 ### Special thanks / Acknowledgements
 
