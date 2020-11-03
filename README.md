@@ -174,15 +174,23 @@ as an original concept design to get the layout of each part or particular featu
 
 #### Homepage
 
+![Main Menu Image](https://github.com/Gazroh87/wrestle-match/blob/master/assets/readme/home-menu-screenshot.png)
+
 - At the top of the page is a header section containing the name of the website which always serves as a link back to
   the homepage and a subheading telling the user the nature of this website. I wanted the website name to always remain
   on a single line and still be fairly large in size so for smaller screen widths I used a scrolling animation on the text.
 - On smaller screen widths a background image of a filled wrestling arena also uses a scrolling animation similar to
   a camera panning back and forth across a crowd.
 - In the center of the page are two main menu buttons.
+
+![Choose Mode Modal Image](https://github.com/Gazroh87/wrestle-match/blob/master/assets/readme/choose-modal-screenshot.png)
+
 - The 'START GAME' triggers a modal to open where the user chooses
   a mode/difficulty setting before proceeding to the game page. Alternatively the user can select the 'RETURN' button
   below these options, to go back to the main menu.
+
+![Instructions Modal Image](https://github.com/Gazroh87/wrestle-match/blob/master/assets/readme/instruction-modal-screenshot.png)
+
 - The 'HOW TO PLAY' button triggers a different modal to open that provides the user with instructions on how to navigate
   around the website, how to play the game and how the score system works. Again the user can select the 'RETURN' button
   below the instructions, to go back to the main menu, for consistency, or the user can select the 'PLAY' button to open
@@ -190,6 +198,8 @@ as an original concept design to get the layout of each part or particular featu
 - At the bottom of the bottom of the page is a footer section with copyright.
 
 #### Game page
+
+![Game Page Image](https://github.com/Gazroh87/wrestle-match/blob/master/assets/readme/game-screenshot.png)
 
 - The top of the page again features a header section with the same website name text and link, then just below it,
   depending on the game mode selected from the main menu of the homepage, the name of the mode and it's difficulty will
@@ -214,6 +224,8 @@ as an original concept design to get the layout of each part or particular featu
   to finish the game, number of moves made and the user's final match rating out of five stars. Below the stats is a
   button asking the user if they would like to start a new game straight away.
 - Again at the bottom of the bottom of the page is the same footer section.
+
+![Game Won Modal Image](https://github.com/Gazroh87/wrestle-match/blob/master/assets/readme/winner-modal-screenshot.png)
 
 ### Future features/improvements to be implemented
 
@@ -306,6 +318,8 @@ My process of testing included:
 - Reviewing website compatibility on different browsers and devices.
 - Reviewing design responsiveness from custom mobile screen sizes of 320 x 480px to desktop 4K resolutions in DevTools.
 - Making sure all links function correctly.
+- Getting my partner to review my website at different developmental stages and the completed product across multiple
+  device sizes for feedback and to point out any obvious bugs or issues with her experience.
 
 The vast majority of testing conducted across the website was carried out by myself. and involved recreating typical
 scenarios a website like mine can face for a game session and make note of any glaring visual problems, unwanted side-
@@ -412,11 +426,42 @@ GitHub repository, type `git remote rm origin` into the terminal and hit 'Enter'
 
 ### Code
 
+- The [Bootstrap 4.5.3 CDN](https://getbootstrap.com/) was used for it's Grid layout system and existing styled element components for easy and
+  time saving modification. The modals make great use of Bootstrap.
+- All webkit, moz and ms vendor extensions listed in the CSS file were obtained by passing the code through [Autoprefixer CSS.](https://autoprefixer.github.io/)
+- setAttributes function credit to [stackoverflow contributors](https://stackoverflow.com/questions/12274748/setting-multiple-attributes-for-an-element-at-once-with-javascript?)
+
 ### Content
+
+- All of the text content of my website was written by me.
+- The Rubik and Roboto fonts were obtained from [Google Fonts](https://fonts.google.com/).
 
 ### Media
 
+- Steel cage and wrestling ring background images obtained from [Shutterstock.](https://www.shutterstock.com/home)
+- Arena background image obtained from wikimedia Commons ([View source](<https://commons.wikimedia.org/wiki/File:WrestleMania_32_2016-04-03_21-14-46_ILCE-6000_0150_DxO_(27366234424).jpg>)).
+- All other images obtained from [World Wrestling Entertainment, Inc.](https://www.wwe.com/) and [Pro Wrestling Illustrated.](http://pwi-online.com/).
+  I'm only using these images as this project is purely for educational and **NOT** commercial purposes.
+- The icons used in my website were obtained from [Font Awesome](https://fontawesome.bootstrapcheatsheets.com/) and styled by me.
+- All image animation and manipulation was produced by me.
+
+### Useful information sources
+
+- HTML/CSS/JavaScript - [w3schools](https://www.w3schools.com/)
+- CSS - [CSS-Tricks](https://css-tricks.com/)
+- JavaScript Operators - [w3resource](https://www.w3resource.com/javascript/javascript.php)
+- JavaScript - [Developer Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- JavaScript shuffling credit to:
+  - [stackoverflow contributors here](https://stackoverflow.com/questions/7070054/javascript-shuffle-html-list-element-order)
+    and [here](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
+
 ### Special thanks / Acknowledgements
+
+- Thank you to my mentor, Brian Macharia, for his continuous advice, helpful feedback and patience. Sharing his industry experience
+  and methodology in planning with me, gave me great confidence in both himself as a mentor and my ability to produce
+  a quality 2nd milestone project. He took the time to share a project plan with me to update and it also provided some
+  useful resources and sample project links for inspiration. He's also helpd me consolidate this project to fewer files and less code,
+  and helped me by explaining why some images were not appearing and how to fix the problem.
 
 - And just a big thank you to everyone involved with Code Institute, the mentors and fellow students on Slack who have
   helped to make this project possible.
@@ -426,11 +471,3 @@ GitHub repository, type `git remote rm origin` into the terminal and hit 'Enter'
 ## Disclaimer
 
 This project was created for educational purposes only, for submission to the Code Institute Full Stack Software Development Course for IFD Milestone 2 project grading.
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
