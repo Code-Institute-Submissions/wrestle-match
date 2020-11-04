@@ -11,15 +11,15 @@
 
 Wrestle Match is a memory game involving the classic card matching mechanic. To win a game of Wrestle Match,
 users are required to match pairs of cards with backs facing (to hide the image on the front face) until all cards on the game
-board have been revealed. This is a test of a user's short term memory, speed and accuracy as the clock is ticking and the
+board have been revealed. This is a test of a user's short term memory, speed, and accuracy as the clock is ticking and the
 more matching attempts or moves that are made, the lower star rating the user receives upon completion of their current game.
-This game like any typical memory matching game, for it's simple gameplay mechanics, can be enjoyed in short bursts by just
+This game like any typical memory matching game, for simplistic gameplay mechanics, can be enjoyed in short bursts by just
 about anybody, unless you just don't like anything to do with the subject of wrestling then this might not be for you. The
 real challenge is trying to get a 5-star rating whilst completing a game in the shortest possible time. And although this is
-a singleplayer game at it's core, users in the local vacinity to each other can take turns playing the game on a single
-device, trying to beat eachothers star ratings and completion times. This particular game will be quite unique, in that the
+a singleplayer game at the core, users in the local vicinity to each other's can take turns playing the game on a single
+device, trying to beat each other's star ratings and completion times. This particular game will be unique, in that the
 images on the faces of cards can be a completely different set from one game to the next and this adds much more colour and
-variety to the game board aswell as extra replayability as the user doesn't have to see the same small set of imagery each
+variety to the game board as well as extra replayability as the user doesn't have to see the same small set of imagery each
 game they play.
 
 To play WRESTLE MATCH!, click [>>HERE<<](https://gazroh87.github.io/wrestle-match/)
@@ -39,12 +39,12 @@ These are all questions I asked myself throughout the UX design process.
 
 #### Goals for the main users: The Players, and their expectations
 
-- In short bursts, a fun card matching game with flip animation thats very easy for anybody to play with minimal to no
+- In short bursts, a fun card matching game with flip animation that's very easy for anybody to play with minimal to no
   complications during the process.
 - No instructions are really required for anyone to enjoy this game but are provided in any case, without being intrusive.
 - An extra appeal to fans of wrestling from the 1980s to the present day.
-- Users can enjoy a tried and tested colour palette throughout the main layout of the website thats both pleasant and easy
-  on the eyes. Imagery used in the game board during play provides temporary bursts of colour and variety.
+- Users can enjoy a tried and tested colour palette throughout the main layout of the website that's both pleasant and easy
+  on the eyes. The imagery used in the game board during play provides temporary bursts of colour and variety.
 
 User expectations:
 
@@ -55,37 +55,37 @@ User expectations:
 
 - Develop and deploy a fully intuitive, visually attractive gaming experience that engages with anyone in some way.
 - Appeal and gain attention from wrestling fans of old and the current wrestling scene no matter their age.
-- Expand my portfolio of coding projects with a website, design and development process I'm confident in and proud of, to
+- Expand my portfolio of coding projects with a website, design, and development process I'm confident in and proud of, to
   show to prospective employers.
 
 Developer expectations:
 
-- How does this fit my user's needs? - The controls,mechanics and interactive elements should be obvious to the user.
-- Why the user should like my website - Is it visually appealling? There is a continous theme and the colour scheme
+- How does this fit my user's needs? - The controls, mechanics, and interactive elements should be obvious to the user.
+- Why the user should like my website - Is it visually appealing? There is a continuous theme and the colour scheme
   contrasts and compliments well with the overall design.
 - Why the user would like spending time at my website? - The game is fun enough to play in short bursts and the variety in
   game modes, and the large array of imagery helps to increase replayability. The user can play alone or compete against friends
   and family.
 - Is this a website a user might want to return to in the future? - It ticks all the above boxes and with high reliability
-  in the game being accessible and playable on any device with an up to date browser, these reasons should be able entice some
+  in the game being accessible and playable on any device with an up-to-date browser, these reasons should be able to entice some
   users to return in the future.
 
 ### User Stories
 
 - As a new visitor to this website, I want to easily navigate around the site, so I can traverse efficiently.
 - As a new visitor, I would like to be able to easily understand how to play the game.
-- As a new visitor, I would like to Quickly recognise any interactive elements and build an understanding of how one thing
+- As a new visitor, I would like to Quickly recognize any interactive elements and build an understanding of how one thing
   leads to another so the website flows well.
 - As a new visitor, I want responsiveness and a consistent design so I can play the game on a range of devices and screen
   sizes and not be confused by any unnecessary, drastic changes.
 - As a returning visitor to this website, I would like to see some form of variation to what I have previously seen whether
-  it's just different art work or new animations or game modes in the form of updates so I can get increased replayability.
+  it's just different artwork or new animations or game modes in the form of updates so I can get increased replayability.
 - As a developer, I wanted to make my first game as gaming has always been my favourite activity in my spare time. Wrestling
   is another interest of mine so this has been an easy way of killing two birds with one stone.
 - As a developer, I want to have options for projects I can continue to build on with updates introducing enhancements and
-  additions in aesthetics, gameplay, sound and so on as I continue to gain experience and expand on my skills.
+  additions in aesthetics, gameplay, sound, and so on as I continue to gain experience and expand on my skills.
 - As an employer, I want to see what Gary is capable of doing as a software developer by seeing clear and proper usage of
-  JavaScript to produce user interatice elements as is to be expected from an IFD project. If he impresses me with what I see
+  JavaScript to produce user interactive elements as is to be expected from an IFD project. If he impresses me with what I see
   this might help me to decide if he is a good fit for an available position within our company.
 
 ### Design Choices
@@ -95,8 +95,8 @@ Developer expectations:
 ![Colour palette](https://github.com/Gazroh87/wrestle-match/blob/master/assets/images/readme/colour-scheme.png)
 
 - First colour is the dominant/primary element colour throughout the website. This colour is a good fit for various reasons.
-  It works well with background images, the gold accent colour, wrestling company logos I might add in
-  future and its a colour that works well with the theme of wrestling.
+  It works well with background images, the gold accent colour, wrestling company logos I might add in the future and
+  its a colour that works well with the theme of wrestling.
 - Second colour is the accent colour throughout the website.
 - Third colour is the main text colour.
 - Fourth & fifth colours are the contrasting neutral colours to use where necessary.
@@ -106,7 +106,7 @@ Developer expectations:
 
 - Rubik is the font I have chosen to use for headings.
 - Roboto is the font I have chosen to use for all other text.
-- These fonts are imported via the head element of a html file from Google Fonts.
+- These fonts are imported via the head element of an HTML file from Google Fonts.
 - Sans-serif is the fallback font if for some reason the above fonts can't be imported into the site correctly.
 - Both the Rubik and Roboto fonts are very popular in the developer world and are also very easy to read, so they are both
   attractive and appropriate.
@@ -116,18 +116,18 @@ Developer expectations:
 - Font Awesome was used to import icons into the website.
 - In the real world, professional wrestling matches are generally rated using an 'out of 5 stars' rating system so it made
   sense to incorporate star icons into the design as visual feedback as to how the player performs during a game.
-- The background images I chosen for this website fit the professional wrestling them perfectly and add a little immersion
+- The background images I chose for this website fit the professional wrestling theme perfectly and add a little immersion
   and enticement to play the game.
-- The card images add lots of different colour, some very vibrant and others not so, but this occurs in short burts and adds
+- The card images add lots of different colours, some very vibrant and others not so, but this occurs in short bursts and adds
   variety without really detracting from the overall colour scheme.
-- In conclusion I feel all the icons and imagery in combination with the colour scheme and typography produce a modern and
+- In conclusion, I feel all the icons and imagery in combination with the colour scheme and typography produce a modern and
   attractive looking design.
 
 ### Strategy
 
-The focus of this project is on using the knowledge I have learned of JavaScript to build a responsive application in this
-case a card matching memory game to demonstrate to anyone my capabilities in JavaScript alongside HTML and CSS. This game had
-to provide some fun and be memorable for some uniquesness.
+The focus of this project is on using the knowledge I have learned of JavaScript to build a responsive application, in this
+case, a card matching memory game to demonstrate to anyone my capabilities in JavaScript alongside HTML and CSS. This
+game had to provide some fun and be memorable for some uniqueness.
 
 ### Scope
 
@@ -154,8 +154,8 @@ submission deadline. WEBSITE LAYOUT/PAGE DESCRIPTIONS HERE
 
 Listed below are the mobile, tablet and desktop wireframes for my website, created using the Balsamiq Wireframes
 application. These wireframes were produced to show the planned differences in appearance between large and small
-screen sizes, but please note that they do not reflect a 100% replicated end result of my website and were only used
-as an original concept design to get the layout of each part or particular feature of my website started.
+screen sizes, but please note that they do not reflect a 100% replicated result of my website and were only used
+as an original concept design to get the layout of each part or a particular feature of my website started.
 
 1. Mobile Wireframe - [Click to View](https://github.com/Gazroh87/wrestle-match/blob/master/wireframes/mobile-wireframe.png)
 2. Tablet Wireframe - [Click to View](https://github.com/Gazroh87/wrestle-match/blob/master/wireframes/tablet-wireframe.png)
@@ -167,9 +167,9 @@ as an original concept design to get the layout of each part or particular featu
 
 ### Current Features
 
-- Two page website consisting of a homepage and the game page where a score panel and board where cards are laid out.
+- Two-page website consisting of a homepage and the game page where a score panel and board where cards are laid out.
 - Responsiveness to all device sizes makes the website easily accessible and simple to navigate.
-- Predominantly JavaScript powered interactive elements.
+- Predominantly JavaScript-powered interactive elements.
 - All interactive elements have a slightly different visual appearance when in a hover state.
 
 #### Homepage
@@ -178,32 +178,31 @@ as an original concept design to get the layout of each part or particular featu
 
 - At the top of the page is a header section containing the name of the website which always serves as a link back to
   the homepage and a subheading telling the user the nature of this website. I wanted the website name to always remain
-  on a single line and still be fairly large in size so for smaller screen widths I used a scrolling animation on the text.
+  on a single line and still be fairly large so for smaller screen widths I used a scrolling animation on the text.
 - On smaller screen widths a background image of a filled wrestling arena also uses a scrolling animation similar to
   a camera panning back and forth across a crowd.
 - In the center of the page are two main menu buttons.
 
 ![Choose Mode Modal Image](https://github.com/Gazroh87/wrestle-match/blob/master/assets/images/readme/choose-modal-screenshot.png)
 
-- The 'START GAME' triggers a modal to open where the user chooses
-  a mode/difficulty setting before proceeding to the game page. Alternatively the user can select the 'RETURN' button
-  below these options, to go back to the main menu.
+- The 'START GAME' triggers a modal to open where the user chooses a mode/difficulty setting before proceeding to the
+  game page. Alternatively, the user can select the 'RETURN' button below these options, to go back to the main menu.
 
 ![Instructions Modal Image](https://github.com/Gazroh87/wrestle-match/blob/master/assets/images/readme/instruction-modal-screenshot.png)
 
 - The 'HOW TO PLAY' button triggers a different modal to open that provides the user with instructions on how to navigate
-  around the website, how to play the game and how the score system works. Again the user can select the 'RETURN' button
+  around the website, how to play the game and how the scoring system works. Again the user can select the 'RETURN' button
   below the instructions, to go back to the main menu, for consistency, or the user can select the 'PLAY' button to open
   the 'Choose Mode...' modal to choose a mode/difficulty setting before proceeding to the game page.
-- At the bottom of the bottom of the page is a footer section with copyright.
+- At the bottom of the page is a footer section with copyright.
 
 #### Game page
 
 ![Game Page Image](https://github.com/Gazroh87/wrestle-match/blob/master/assets/images/readme/game-screenshot.png)
 
 - The top of the page again features a header section with the same website name text and link, then just below it,
-  depending on the game mode selected from the main menu of the homepage, the name of the mode and it's difficulty will
-  appear as the subtitle text providing clear indication to the user where they are within the website. They can be sure
+  depending on the game mode selected from the main menu of the homepage, the mode name and its difficulty will
+  appear as the subtitle text providing a clear indication to the user where they are within the website. They can be sure
   that what they click on will take them where they are supposed to go.
 - Below the header is the score panel section which houses the match rating box, number of moves made, game duration
   timer, and 'HOME' and 'RESTART' buttons. The 'HOME' button allows the user to return to the homepage and the 'RESTART'
@@ -217,13 +216,13 @@ as an original concept design to get the layout of each part or particular featu
 - Each matching attempt of two cards is classed as one move made and the more moves the user makes before finishing a
   game, the lower match rating they will receive as stars are deducted at certain move count thresholds. An unlimited
   number of moves can be made and there is no time limit in place to complete a game.
-- By deafult cards have a white border. When a matching attempt is made, the selected card's borders will either turn
+- By default cards have a white border. When a matching attempt is made, the selected card's borders will either turn
   red, indicating a failed match or green, indicating a successful match.
 - Once all cards have been matched, all card borders will be green and a modal will pop-up in the center of the screen
   declaring the user as a winner and detailing some game stats including how many pairs found, how long it took the user
   to finish the game, number of moves made and the user's final match rating out of five stars. Below the stats is a
   button asking the user if they would like to start a new game straight away.
-- Again at the bottom of the bottom of the page is the same footer section.
+- Again at the bottom of the page is the same footer section.
 
 ![Game Won Modal Image](https://github.com/Gazroh87/wrestle-match/blob/master/assets/images/readme/winner-modal-screenshot.png)
 
@@ -239,7 +238,7 @@ as an original concept design to get the layout of each part or particular featu
 - Implement a high score leaderboard. The user would submit a form with some way to identify themselves and update the
   leaderboard.
 - Make further improvements to accessibility and performance.
-- Existing or aadditional game modes could be added with different visual themes.
+- Existing or additional game modes could be added with different visual themes.
 - Experiment with automated testing using Jasmine.
 
 ---
@@ -255,7 +254,7 @@ as an original concept design to get the layout of each part or particular featu
 ### Frameworks, libraries, editors and version control
 
 - [Bootstrap 4.5.3 CDN](https://getbootstrap.com/) - Bootstrap was used to assist with some of the structuring and responsiveness
-  of the website and build off of or modify some of it's existing components and styling to save time.
+  of the website and build off of or modify some of its existing components and styling to save time.
 
 - [Google Fonts](https://fonts.google.com/) - Google Fonts were used to embed and link the 'Rubik' and 'Roboto' fonts into the HTML.
 
@@ -276,7 +275,7 @@ as an original concept design to get the layout of each part or particular featu
 - [HTML Color Codes](https://htmlcolorcodes.com/) - HTML Color Codes was used to help choose the colour scheme and obtain
   the relative hex codes for each colour.
 
-- [Coolors](https://coolors.co/) - Coolors was used to quickly get 'inbetween' colours and relative hex codes and save my
+- [Coolors](https://coolors.co/) - Coolors was used to quickly get 'in-between' colours and relative hex codes and save my
   chosen scheme as an image.
 
 - [Shutterstock](https://www.shutterstock.com/home) - Shutterstock provided the ring and steel cage background images.
@@ -301,7 +300,7 @@ as an original concept design to get the layout of each part or particular featu
   and SEO to aid in the testing and improvement of my website.
 
 - [Autoprefixer CSS](https://autoprefixer.github.io/) - Autoprefixer was used to help with making the CSS code compatible and
-  valid for all internet browers as much as possible.
+  valid for all internet browsers as much as possible.
 
 - [Am I Responsive Design?](http://ami.responsivedesign.is/) - This web tool was used to generate screencaps of my website at
   different viewport sizes to form a static demo presentation of my website's responsiveness as can be seen towards the top of this
@@ -330,14 +329,14 @@ A typical instance of testing would involve the following:
 
 - Selecting any new links and awaiting the outcome.
 - Starting a new game and then immediately attempt to select another option.
-- Testing new buttons and repeating selection of buttons and cards very fast.
+- Testing new buttons and repeating the selection of buttons and cards very fast.
 - Testing CSS states of new interactive elements.
 - Spamming refresh requests to the browser to monitor load times, hangs or error messages.
 - Console logging variables, arrays and functions.
 
 My website utilises as much vanilla JavaScript that I have a good understanding of and that fits with a game of this type,
-as possible. Part way through the project I was unable to get the game to function as desired without some snippets of jQuery
-but with further hours of learning and assistance this code has been replaced with JavaScript whilst taking up less space.
+as possible. Partway through the project, I was unable to get the game to function as desired without some snippets of jQuery
+but with further hours of learning and assistance, this code has been replaced with JavaScript whilst taking up less space.
 
 My website has been tested on the latest popular web browsers including:
 
@@ -351,11 +350,11 @@ My website has been tested on the latest popular web browsers including:
 I used the following physical devices for development and testing:
 
 - AMD Ryzen 7 2700X PC running Windows 10, Chrome, Firefox and Edge browsers on two monitors; 1920x1200px and 2560x1440px natively.
-- Apple iphone 6S and SE running Safari browser.
+- Apple iPhone 6S and SE running Safari browser.
 - Laptop running Chrome, Internet Explorer and Edge browsers.
 - Amazon Fire HD tablet running Silk browser.
 
-This project has not received any automated testing like Jasmine, because of a lack of deeper understanding in this kind
+This project has not received any automated testing like Jasmine, because of a lack of deeper understanding of this kind
 of testing. But this is something I will continue to learn more of and implement in future.
 
 The following validators were used to validate all of the HTML, CSS and JavaScript files that make up this project, to
@@ -376,16 +375,16 @@ ensure there are no syntax errors in the project code.
   within a short time frame. The game is fun with flip and matched cards animations. The game is very easy for anyone
   to play with no complications during the process.
 - Instructions are provided from the homepage menu screen.
-- The colour palette works well and it's both pleasant and easy on the eyes. Imagery used on the card faces during
+- The colour palette works well and it's both pleasant and easy on the eyes. The imagery used on the card faces during
   play provides added bursts of different colours and variety.
 - The user is quickly able to develop a clear understanding of the website navigation through a consistent layout of
   buttons and modals in matching colours.
 - The homepage provides quick access to the game via the 'START GAME' button.
-- The user is quickly able to recognise any interative element by background colour and hover state.
+- The user is quickly able to recognise any interactive element by background colour and hover state.
 - The user gets a fully responsive and consistent design so they can play the game and enjoy it on a wide range of
   devices and screen sizes. Switching between devices and screen sizes, the user won't notice any confusing changes
   between game sessions.
-- Returning users can see variation in their game, every time they start a new game. The card images can differ greatly
+- Returning users can see a variation in their game, every time they start a new game. The card images can differ greatly
   from game to game.
 - As the developer of this project, I have made my first game which has always been of great interest to me. I have
   managed to combine another interest of mine, in professional wrestling, to the making of this game.
@@ -426,10 +425,13 @@ GitHub repository, type `git remote rm origin` into the terminal and hit 'Enter'
 
 ### Code
 
-- The [Bootstrap 4.5.3 CDN](https://getbootstrap.com/) was used for it's Grid layout system and existing styled element components for easy and
-  time saving modification. The modals make great use of Bootstrap.
-- All webkit, moz and ms vendor extensions listed in the CSS file were obtained by passing the code through [Autoprefixer CSS.](https://autoprefixer.github.io/)
-- setAttributes function credit to [stackoverflow contributors](https://stackoverflow.com/questions/12274748/setting-multiple-attributes-for-an-element-at-once-with-javascript?)
+- The [Bootstrap 4.5.3 CDN](https://getbootstrap.com/) was used for its Grid layout system and existing styled element components for easy and
+  time-saving modification. The modals make great use of Bootstrap.
+- All WebKit, moz and ms vendor extensions listed in the CSS file were obtained by passing the code through [Autoprefixer CSS.](https://autoprefixer.github.io/)
+- JavaScript shuffling credit to: [stackoverflow contributors here](https://stackoverflow.com/questions/7070054/javascript-shuffle-html-list-element-order)
+  and [here.](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
+- Timer function credit to [w3schools.](https://www.w3schools.com/js/js_timing.asp)
+- setAttributes function credit to [stackoverflow contributors.](https://stackoverflow.com/questions/12274748/setting-multiple-attributes-for-an-element-at-once-with-javascript?)
 
 ### Content
 
@@ -439,7 +441,7 @@ GitHub repository, type `git remote rm origin` into the terminal and hit 'Enter'
 ### Media
 
 - Steel cage and wrestling ring background images obtained from [Shutterstock.](https://www.shutterstock.com/home)
-- Arena background image obtained from wikimedia Commons ([View source](<https://commons.wikimedia.org/wiki/File:WrestleMania_32_2016-04-03_21-14-46_ILCE-6000_0150_DxO_(27366234424).jpg>)).
+- Arena background image obtained from Wikimedia Commons ([View source](<https://commons.wikimedia.org/wiki/File:WrestleMania_32_2016-04-03_21-14-46_ILCE-6000_0150_DxO_(27366234424).jpg>)).
 - All other images obtained from [World Wrestling Entertainment, Inc.](https://www.wwe.com/) and [Pro Wrestling Illustrated.](http://pwi-online.com/).
   I'm only using these images as this project is purely for educational and **NOT** commercial purposes.
 - The icons used in my website were obtained from [Font Awesome](https://fontawesome.bootstrapcheatsheets.com/) and styled by me.
@@ -451,14 +453,13 @@ GitHub repository, type `git remote rm origin` into the terminal and hit 'Enter'
 - CSS - [CSS-Tricks](https://css-tricks.com/)
 - JavaScript Operators - [w3resource](https://www.w3resource.com/javascript/javascript.php)
 - JavaScript - [Developer Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- JavaScript shuffling credit to: [stackoverflow contributors here](https://stackoverflow.com/questions/7070054/javascript-shuffle-html-list-element-order) and [here](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
 
 ### Special thanks / Acknowledgements
 
 - Thank you to my mentor, Brian Macharia, for his continuous advice, helpful feedback and patience. Sharing his industry experience
   and methodology in planning with me, gave me great confidence in both himself as a mentor and my ability to produce
   a quality 2nd milestone project. He took the time to share a project plan with me to update and it also provided some
-  useful resources and sample project links for inspiration. He's also helpd me consolidate this project to fewer files and less code,
+  useful resources and sample project links for inspiration. He's also helped me consolidate this project to fewer files and less code,
   and helped me by explaining why some images were not appearing and how to fix the problem.
 
 - And just a big thank you to everyone involved with Code Institute, the mentors and fellow students on Slack who have
