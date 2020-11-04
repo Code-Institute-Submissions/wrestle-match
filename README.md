@@ -394,6 +394,22 @@ ensure there are no syntax errors in the project code.
 - An employer is able to see my capability as a software developer, up to the completion of this project by seeing clear
   and proper usage of JavaScript to produce user interactive elements as they might expect from an IFD project.
 
+### Bugs Encountered
+
+Below are some bugs I have encountered during testing and fixed:
+
+- Bug: The Rubik variable font was not displaying correctly.
+- Fix: Added @font-face properties and values to the CSS file.
+
+- Bug: document.createElement("li") causes card images to not show when cards are flipped.
+- Fix: Uppercased the element tags in the JS file.
+
+- Bug: When the website was deployed certain images would not show.
+- Fix: Removed ../ from src file paths.
+
+- Bug: Once a game is finished and a new game is started, the game modal paragraph elements were duplicated.
+- Fix: Added stats.remove("p") to the startGame function in the JS file to remove all paragraph elements.
+
 ---
 
 ## Deployment
