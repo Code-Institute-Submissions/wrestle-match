@@ -32,6 +32,10 @@
   box-sizing: inherit;
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
   text-align: center;
 }
@@ -122,7 +126,6 @@ ol li,
 .game-won-modal p,
 footer p {
   font-family: Roboto, sans-serif;
-  font-size: 10px;
   line-height: 14px;
 }
 
@@ -202,7 +205,7 @@ h3 {
 }
 
 h2 {
-  font-size: 27px;
+  font-size: 2.7rem;
   line-height: 38px;
   font-weight: 700;
   word-spacing: 6px;
@@ -236,7 +239,7 @@ h1:hover {
 
 .nav-btn,
 nav button:hover i {
-  font-size: 18px;
+  font-size: 1.8rem;
   line-height: 26px;
   margin: 0 auto;
 }
@@ -244,7 +247,7 @@ nav button:hover i {
 h3,
 .mode-name,
 .modal-body .btn-lg:hover i {
-  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 20px;
 }
 
@@ -267,13 +270,13 @@ header h2 {
 header .far {
   color: #e6bb61;
   position: absolute;
-  font-size: 10px;
+  font-size: 1rem;
   line-height: 14px;
 }
 
 .five-stars .fa-star {
   color: #e6bb61;
-  font-size: 10px;
+  font-size: 1rem;
   line-height: 14px;
   padding: 2.5px 10px;
   margin: 2.5px 10px;
@@ -281,6 +284,7 @@ header .far {
 
 header h2 span {
   color: rgba(225, 225, 225, 0.75);
+  font-size: 1rem;
   font-style: italic;
   display: inline;
   text-transform: capitalize;
@@ -314,7 +318,7 @@ header .far:nth-child(4) {
 }
 
 #home-anchor h1 {
-  font-size: 36px;
+  font-size: 3.6rem;
   line-height: 50px;
   font-weight: 800;
   display: inline;
@@ -485,7 +489,7 @@ main .btn-group-vertical {
 .restart-btn {
   color: #0a0a0a;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 1.8rem;
   line-height: 26px;
   font-weight: 500;
 }
@@ -494,7 +498,7 @@ main .btn-group-vertical {
   display: inline-block;
   padding: 0.5em;
   color: #e6bb61;
-  font-size: 10px;
+  font-size: 1rem;
   line-height: 14px;
   margin: 2.5px;
 }
@@ -690,7 +694,7 @@ footer {
   ol li,
   .game-won-modal p,
   footer p {
-    font-size: 12px;
+    font-size: 1.2em;
     line-height: 18px;
   }
 
@@ -713,22 +717,20 @@ footer {
   }
 
   h2 {
-    font-size: 36px;
+    font-size: 3.6em;
     line-height: 51px;
   }
 
   .nav-btn,
-  nav button:hover i,
   .home-btn,
   .restart-btn {
-    font-size: 24px;
+    font-size: 2.4em;
     line-height: 35px;
   }
 
   h3,
-  .mode-name,
-  .modal-body .btn-lg:hover i {
-    font-size: 18px;
+  .mode-name {
+    font-size: 1.8em;
     line-height: 26px;
   }
 
@@ -743,7 +745,7 @@ footer {
   }
 
   .five-stars .fa-star {
-    font-size: 12px;
+    font-size: 1.2em;
     line-height: 18px;
     padding: 5px 12px;
     margin: 5px 12px;
@@ -775,7 +777,7 @@ footer {
   }
 
   #home-anchor h1 {
-    font-size: 48px;
+    font-size: 4.8em;
     line-height: 67px;
   }
 
@@ -793,7 +795,7 @@ footer {
   }
 
   .close {
-    font-size: 2rem;
+    font-size: 2em;
   }
 
   .modal-footer,
@@ -813,7 +815,7 @@ footer {
 
   .match-rating .star {
     padding: 0.5em;
-    font-size: 12px;
+    font-size: 1.2em;
     line-height: 18px;
     margin: 2.5px;
   }
@@ -911,7 +913,7 @@ footer {
   ol li,
   .game-won-modal p,
   footer p {
-    font-size: 15px;
+    font-size: 1.5em;
     line-height: 22px;
   }
 
@@ -943,22 +945,20 @@ footer {
   }
 
   h2 {
-    font-size: 45px;
+    font-size: 4.5em;
     line-height: 64px;
   }
 
   .nav-btn,
-  nav button:hover i,
   .home-btn,
   .restart-btn {
-    font-size: 30px;
+    font-size: 3em;
     line-height: 44px;
   }
 
   h3,
-  .mode-name,
-  .modal-body .btn-lg:hover i {
-    font-size: 22px;
+  .mode-name {
+    font-size: 2.2em;
     line-height: 32px;
   }
 
@@ -974,7 +974,7 @@ footer {
   }
 
   .five-stars .fa-star {
-    font-size: 15px;
+    font-size: 1.5em;
     line-height: 22px;
     padding: 5px 20px;
     margin: 5px 20px;
@@ -1001,7 +1001,7 @@ footer {
   }
 
   #home-anchor h1 {
-    font-size: 60px;
+    font-size: 6em;
     line-height: 84px;
   }
 
@@ -1023,7 +1023,7 @@ footer {
   }
 
   .close {
-    font-size: 2.5rem;
+    font-size: 2.5em;
   }
 
   .modal-footer,
@@ -1037,7 +1037,7 @@ footer {
 
   .match-rating .star {
     padding: 1em;
-    font-size: 15px;
+    font-size: 1.5em;
     line-height: 22px;
     margin: 2.5px;
   }
@@ -1102,7 +1102,7 @@ footer {
   ol li,
   .game-won-modal p,
   footer p {
-    font-size: 18px;
+    font-size: 1.8em;
     line-height: 27px;
   }
 
@@ -1125,22 +1125,20 @@ footer {
   }
 
   h2 {
-    font-size: 54px;
+    font-size: 5.4em;
     line-height: 77px;
   }
 
   .nav-btn,
-  nav button:hover i,
   .home-btn,
   .restart-btn {
-    font-size: 36px;
+    font-size: 3.6em;
     line-height: 52px;
   }
 
   h3,
-  .mode-name,
-  .modal-body .btn-lg:hover i {
-    font-size: 27px;
+  .mode-name {
+    font-size: 2.7em;
     line-height: 39px;
   }
 
@@ -1155,7 +1153,7 @@ footer {
   }
 
   .five-stars .fa-star {
-    font-size: 18px;
+    font-size: 1.8em;
     line-height: 27px;
     padding: 5px 25px;
     margin: 5px 25px;
@@ -1182,7 +1180,7 @@ footer {
   }
 
   #home-anchor h1 {
-    font-size: 72px;
+    font-size: 7.2em;
     line-height: 100px;
   }
 
@@ -1200,7 +1198,7 @@ footer {
   }
 
   .close {
-    font-size: 3rem;
+    font-size: 3em;
   }
 
   .modal-footer,
@@ -1209,7 +1207,7 @@ footer {
   }
 
   .match-rating .star {
-    font-size: 18px;
+    font-size: 1.8em;
     line-height: 27px;
     margin: 2.5px;
   }
@@ -1271,7 +1269,7 @@ footer {
   ol li,
   .game-won-modal p,
   footer p {
-    font-size: 21px;
+    font-size: 2em;
     line-height: 31px;
   }
 
@@ -1294,22 +1292,20 @@ footer {
   }
 
   h2 {
-    font-size: 63px;
+    font-size: 6.3em;
     line-height: 89px;
   }
 
   .nav-btn,
-  nav button:hover i,
   .home-btn,
   .restart-btn {
-    font-size: 42px;
+    font-size: 4.2em;
     line-height: 61px;
   }
 
   h3,
-  .mode-name,
-  .modal-body .btn-lg:hover i {
-    font-size: 32px;
+  .mode-name {
+    font-size: 3.2em;
     line-height: 47px;
   }
 
@@ -1324,7 +1320,7 @@ footer {
   }
 
   .five-stars .fa-star {
-    font-size: 21px;
+    font-size: 2em;
     line-height: 31px;
     padding: 5px 30px;
     margin: 5px 30px;
@@ -1351,7 +1347,7 @@ footer {
   }
 
   #home-anchor h1 {
-    font-size: 84px;
+    font-size: 8.4em;
     line-height: 118px;
   }
 
@@ -1369,7 +1365,7 @@ footer {
   }
 
   .close {
-    font-size: 4rem;
+    font-size: 4em;
   }
 
   .modal-footer,
@@ -1378,7 +1374,7 @@ footer {
   }
 
   .match-rating .star {
-    font-size: 21px;
+    font-size: 2em;
     line-height: 31px;
     margin: 2.5px;
   }
